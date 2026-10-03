@@ -191,8 +191,10 @@ en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea g
 
 ## 9. Calidad verificada
 
-- Lighthouse (móvil, servidor con gzip): inicio 97 · 100 · 100 · 100; UntiCloud 98 · 100 · 100 · 100
-  (Rendimiento · Accesibilidad · Buenas prácticas · SEO). CLS 0, LCP ≈ 2,3–2,4 s en conexión móvil simulada.
+- Lighthouse en producción (móvil simulado): Accesibilidad, Buenas prácticas y SEO en 100 en todas las
+  páginas medidas. Rendimiento, mediana de 5 corridas: inicio 96, portafolio 99; páginas de solución
+  100 (EduNova, VCodePro). El inicio varía entre corridas (88–100) por el tiempo de bloqueo simulado;
+  CLS 0 y LCP ≈ 2 s.
 - `npm run verificar`: 13 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
 - `npm run pruebas`: menú desplegable y móvil (Escape, foco atrapado), pestañas con flechas/Inicio/Fin,
   acordeón, filtro con anuncio `aria-live`, validación accesible del formulario, preselección por URL,
