@@ -1,5 +1,5 @@
 // Contacto: formulario completo de solicitud de demostración.
-import { icono, migasLd, organizacionLd } from '../lib/plantilla.mjs';
+import { icono, migasLd, organizacionLd, DOMINIO } from '../lib/plantilla.mjs';
 import { formularioCompleto } from '../lib/formularios.mjs';
 
 export default function contacto() {
@@ -56,7 +56,7 @@ export default function contacto() {
     scripts: ['form'],
     jsonld: [
       organizacionLd(),
-      { '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Contacto de Grupo Logic', url: 'https://grupologiclatam.com/contacto/', about: { '@id': 'https://grupologiclatam.com/#organizacion' } },
+      { '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Contacto de Grupo Logic', url: DOMINIO + '/contacto/', about: { '@id': DOMINIO + '/#organizacion' } },
       migasLd([['Inicio', '/'], ['Contacto', '/contacto/']]),
     ],
   };

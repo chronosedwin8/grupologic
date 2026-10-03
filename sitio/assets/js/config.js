@@ -6,7 +6,7 @@
  */
 window.GL_CONFIG = {
   empresa: "Grupo Logic",
-  dominio: "https://grupologiclatam.com",
+  dominio: "https://www.grupologiclatam.com",
   email: "[PENDIENTE]",            // ej. contacto@grupologiclatam.com
   telefono: "[PENDIENTE]",         // ej. +57 605 000 0000 (tal como debe mostrarse)
   whatsapp: "[PENDIENTE]",         // formato internacional sin "+", ej. 573001234567

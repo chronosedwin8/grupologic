@@ -53,7 +53,7 @@ for (const a of archivos) {
   }
 }
 // Sitemap: cada URL debe existir
-for (const [, loc] of fs.readFileSync(path.join(SITIO, 'sitemap.xml'), 'utf8').matchAll(/<loc>https:\/\/grupologiclatam\.com([^<]*)<\/loc>/g)) {
+for (const [, loc] of fs.readFileSync(path.join(SITIO, 'sitemap.xml'), 'utf8').matchAll(/<loc>https:\/\/www\.grupologiclatam\.com([^<]*)<\/loc>/g)) {
   if (!fs.existsSync(path.join(SITIO, loc, 'index.html'))) { errores++; console.log('SITEMAP sin página:', loc); }
 }
 console.log(`${archivos.length} archivos HTML revisados · ${errores} problema(s)`);

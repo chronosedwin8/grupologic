@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 import vm from 'node:vm';
 
 export const SITIO = path.resolve(import.meta.dirname, '../../sitio');
-export const DOMINIO = 'https://grupologiclatam.com';
+export const DOMINIO = 'https://www.grupologiclatam.com';
 export const ANIO = new Date().getFullYear();
 
 const leerSitio = (r) => fs.readFileSync(path.join(SITIO, r), 'utf8');
