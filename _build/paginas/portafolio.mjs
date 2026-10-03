@@ -8,6 +8,7 @@ const ALT = {
   'aulamagica-ia': 'Herramientas de inteligencia artificial de AulaMágica IA para docentes',
   edunova: 'Planeación de una clase con inteligencia artificial en EduNova',
   codexia: 'Reto de programación por bloques en Codexia',
+  'codenest-school': 'Actividad de programación con flechas en CodeNest School',
   vcodepro: 'Editor de código VCodePro con un proyecto evaluado con criterios IB',
   bookstudio: 'Editor de libros interactivos de BookStudio',
 };
@@ -57,15 +58,23 @@ export default function portafolio() {
     <div class="cabecera-seccion" data-aparecer>
       <p class="ceja">Ruta de programación</p>
       <h2 class="titulo-2" id="titulo-ruta">Del primer bloque <em>al primer agente de IA</em></h2>
-      <p class="entrada">Codexia y VCodePro forman una ruta continua de pensamiento computacional, desde preescolar hasta el final del bachillerato.</p>
+      <p class="entrada">Codexia o CodeNest School en preescolar y primaria, y VCodePro desde los 12 años, forman una ruta continua de pensamiento computacional hasta el final del bachillerato.</p>
     </div>
     <div class="ruta" data-aparecer-grupo>
-      <article class="tarjeta tarjeta--oscura" data-aparecer>
-        <p class="ruta__edad">4 – 12 años</p>
-        <h3>${logotipo('codexia')}</h3>
-        <p class="tarjeta__texto">Retos gamificados con bloques y código real, voz natural para quienes aún no leen y diez materias que incluyen lógica, matemáticas e inteligencia artificial.</p>
-        <a class="enlace-flecha" href="/soluciones/codexia/">Conocer Codexia ${icono('flecha')}</a>
-      </article>
+      <div class="ruta__grupo">
+        <article class="tarjeta tarjeta--oscura" data-aparecer>
+          <p class="ruta__edad">4 – 12 años</p>
+          <h3>${logotipo('codexia')}</h3>
+          <p class="tarjeta__texto">Diez materias —programación, lógica, matemáticas, inteligencia artificial y más— con retos gamificados, voz natural y más de 200 juegos.</p>
+          <a class="enlace-flecha" href="/soluciones/codexia/">Conocer Codexia ${icono('flecha')}</a>
+        </article>
+        <article class="tarjeta tarjeta--oscura" data-aparecer>
+          <p class="ruta__edad">4 – 12 años</p>
+          <h3>${logotipo('codenest-school')}</h3>
+          <p class="tarjeta__texto">Solo programación, en tres etapas: flechas sin texto, bloques con código a la vista y JavaScript o Python reales, con voz en español en cada reto.</p>
+          <a class="enlace-flecha" href="/soluciones/codenest-school/">Conocer CodeNest School ${icono('flecha')}</a>
+        </article>
+      </div>
       <div class="ruta__flecha" aria-hidden="true">${icono('flecha')}</div>
       <article class="tarjeta tarjeta--oscura" data-aparecer>
         <p class="ruta__edad">Desde 12 años</p>

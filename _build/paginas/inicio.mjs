@@ -21,6 +21,7 @@ const ALT_PANEL = {
   'aulamagica-ia': 'Buscador de herramientas de AulaMágica IA con accesos a presentaciones, plan de clase, rúbricas y quices',
   edunova: 'Módulo de planeación de EduNova generando una clase de Ciencias Naturales con inteligencia artificial',
   codexia: 'Ventana de Codexia con instrucciones de programación por bloques para mover al personaje',
+  'codenest-school': 'Actividad de CodeNest School: tablero con el personaje, una estrella y una bandera, y el programa armado con flechas',
   vcodepro: 'Editor VCodePro con un proyecto en Python y el panel del aula evaluado con criterios IB',
   bookstudio: 'Editor de BookStudio con una página de plantilla de mapa del cuento',
 };
@@ -47,7 +48,7 @@ function portafolio() {
         <h3 class="titulo-3">${esc(c.nombre)}</h3>
         <p class="entrada">${esc(DESCRIPCION_LINEA[c.id])}</p>
       </div>
-      <div class="vitrinas${productos.length > 1 ? ' vitrinas--2' : ''}">
+      <div class="vitrinas${productos.length > 1 ? ' vitrinas--' + Math.min(productos.length, 3) : ''}">
         ${productos.map(s => vitrina(s, productos.length === 1)).join('\n        ')}
       </div>
     </div>`;
@@ -214,7 +215,7 @@ export default function inicio() {
 
 <section class="franja" aria-label="Soluciones del portafolio">
   <div class="contenedor">
-    <p class="franja__texto">Un portafolio seleccionado en Alemania, Reino Unido y España</p>
+    <p class="franja__texto">Un portafolio seleccionado en Europa y Latinoamérica</p>
     <ul class="franja__logos">${SOLUCIONES.map(s => `<li><a href="/soluciones/${s.slug}/">${logotipo(s.slug)}</a></li>`).join('')}</ul>
   </div>
 </section>
@@ -275,7 +276,7 @@ export default function inicio() {
       <h2 class="titulo-2" id="titulo-mapa">Del mundo <em>a su colegio</em></h2>
       <p class="entrada" style="margin-top:1.2rem">Recorremos el ecosistema internacional de tecnología educativa para identificar soluciones que respondan a los retos de los colegios de la región, y las acercamos a su institución con acompañamiento local.</p>
       <ul class="mapa-leyenda">
-        <li><strong>Origen</strong><span>Plataformas desarrolladas en Alemania, Reino Unido y España, entre otros países.</span></li>
+        <li><strong>Origen</strong><span>Plataformas desarrolladas en Alemania, Reino Unido, España y Latinoamérica.</span></li>
         <li><strong>Selección</strong><span>Revisamos su propuesta pedagógica, su madurez técnica y su tratamiento de datos.</span></li>
         <li><strong>Llegada</strong><span>Acompañamos a colegios de toda Latinoamérica, con un equipo cercano a la región.</span></li>
       </ul>
@@ -318,7 +319,7 @@ export default function inicio() {
       <li class="compromiso" data-aparecer>${icono('ojo')}<div><h3>Supervisión docente</h3><p>En AulaMágica IA, las actividades de los estudiantes las crea y supervisa el docente; en VCodePro, cada conversación con la IA queda registrada para la coordinación.</p></div></li>
       <li class="compromiso" data-aparecer>${icono('escudo')}<div><h3>Datos que no entrenan modelos</h3><p>AulaMágica IA declara que no usa los datos de docentes ni estudiantes para entrenar modelos de inteligencia artificial y que trata la información conforme al RGPD europeo.</p></div></li>
       <li class="compromiso" data-aparecer>${icono('candado')}<div><h3>Cifrado y respaldo</h3><p>AulaMágica IA declara cifrado en tránsito y en reposo; BookStudio, cifrado en tránsito, copia de seguridad diaria y ningún seguimiento publicitario; Veyon Control, comunicación cifrada con TLS y claves propias por institución.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('familia')}<div><h3>Datos de menores</h3><p>Codexia declara cumplir normas de protección de datos de menores, como la Ley 1581 en Colombia, con consentimiento de los tutores; EduNova indica tratar los datos conforme a esa misma ley.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('familia')}<div><h3>Datos de menores</h3><p>Codexia declara cumplir normas de protección de datos de menores, como la Ley 1581 en Colombia, con consentimiento de los tutores; EduNova indica tratar los datos conforme a esa misma ley; CodeNest School registra el consentimiento del tutor y audita todo acceso a los datos de un menor.</p></div></li>
     </ul>
   </div>
 </section>
@@ -338,7 +339,7 @@ ${ctaFinal()}`;
   return {
     ruta: '/',
     titulo: 'Grupo Logic · Tecnología educativa para colegios de Latinoamérica',
-    descripcion: 'Software para colegios seleccionado en Alemania, Reino Unido y España: gestión, IA, programación y contenidos, con implementación y acompañamiento.',
+    descripcion: 'Software para colegios seleccionado en Europa y Latinoamérica: gestión, IA, programación y contenidos, con implementación y acompañamiento.',
     og: 'inicio',
     cuerpo,
     precargar: '',

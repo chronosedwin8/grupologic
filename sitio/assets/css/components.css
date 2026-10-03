@@ -50,6 +50,8 @@
 .logotipo--color.logotipo--vcodepro b, .logotipo--color.logotipo--vcodepro .logotipo__marca { color: #38B6F5; }
 .logotipo--color.logotipo--bookstudio .logotipo__marca { color: #3B74F6; }
 .logotipo--color.logotipo--veyon-control .logotipo__marca { color: #818CF8; }
+.logotipo--color.logotipo--codenest-school .logotipo__marca { color: #38A3F5; }
+.logotipo--codenest-school b { font-weight: 500; margin-left: .22em; }
 .logotipo--veyon-control b { font-weight: 500; margin-left: .22em; }
 
 /* ---------- Franja de confianza ---------- */
@@ -135,7 +137,7 @@
 @media (min-width: 960px) { .linea__cabecera { grid-template-columns: 5fr 7fr; align-items: end; gap: 48px; } }
 .linea__cabecera .entrada { font-size: 1.05rem; }
 .vitrinas { display: grid; gap: 24px; }
-@media (min-width: 960px) { .vitrinas--2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 960px) { .vitrinas--2 { grid-template-columns: 1fr 1fr; } .vitrinas--3 { grid-template-columns: repeat(3, 1fr); } }
 .vitrina { display: grid; background: var(--white); border: 1px solid var(--linea-clara); border-radius: 18px; overflow: hidden; box-shadow: var(--sombra); transition: box-shadow .4s var(--transicion), transform .4s var(--transicion); }
 .vitrina:hover { box-shadow: var(--sombra-alta); transform: translateY(-3px); }
 .vitrina__imagen { background: linear-gradient(160deg, #0E213D, var(--navy-900)); padding: clamp(20px, 3vw, 40px); display: grid; place-items: center; min-height: 240px; }

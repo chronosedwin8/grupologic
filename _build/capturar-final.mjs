@@ -10,6 +10,8 @@ const paneles = {
   bookstudio: ['https://bookstudio.uk/', {}],
   // Veyon: se espera a que termine la animación del titular y se recorta antes de la línea de precio.
   'veyon-control': ['https://www.veyoncontrol.com/', { aula: '.feature-row .fr-media' }, { esperar: 'en una pantalla.', alto: 740 }],
+  // CodeNest: actividad de demostración con un programa a medio armar.
+  'codenest-school': ['https://codenestschool.com/', { demo: '#demo .demo' }, { alto: 778, clics: ['→', '→', '↓', '↓'] }],
 };
 // Opcional: node capturar-final.mjs <slug> para capturar una sola solución
 const solo = process.argv[2];
@@ -34,6 +36,7 @@ for (const [slug, [url, sel, opc = {}]] of Object.entries(paneles)) {
   const p2 = await c2.newPage();
   await p2.goto(url, { waitUntil: 'networkidle' }).catch(() => {});
   await recorrer(p2);
+  for (const t of opc.clics || []) { await p2.locator('#demo button', { hasText: t }).first().click(); await p2.waitForTimeout(250); }
   for (const [nombre, s] of Object.entries(sel)) {
     const el = p2.locator(s).first();
     await el.scrollIntoViewIfNeeded(); await p2.waitForTimeout(1200);

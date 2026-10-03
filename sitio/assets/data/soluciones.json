@@ -143,6 +143,30 @@
       "logo": "texto"
     },
     {
+      "slug": "codenest-school",
+      "nombre": "CodeNest School",
+      "categoria": "programacion",
+      "origen": "Colombia",
+      "lema": "Programación desde los cuatro años, antes de saber leer.",
+      "resumen": "Plataforma para aprender programación de los 4 a los 12 años: 30 mundos, 600 actividades e instrucciones narradas con voz humana en español. Los más pequeños programan arrastrando flechas, sin necesidad de leer.",
+      "beneficios": [
+        "30 mundos y 600 actividades con voz en español",
+        "Tres formas de programar, una por edad",
+        "Panel docente con seguimiento por grupo"
+      ],
+      "publico": [
+        "Coordinación de preescolar y primaria",
+        "Área de tecnología",
+        "Docentes",
+        "Coordinación TIC"
+      ],
+      "urlOficial": "https://codenestschool.com/",
+      "dominio": "codenestschool.com",
+      "imagen": "codenest-school-demo",
+      "portada": "codenest-school-portada",
+      "logo": "texto"
+    },
+    {
       "slug": "vcodepro",
       "nombre": "VCodePro",
       "categoria": "programacion",

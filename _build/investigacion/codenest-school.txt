@@ -1,0 +1,165 @@
+URL: https://codenestschool.com/
+{
+ "title": "CodeNest School | Aprende a programar jugando, desde los 4 años",
+ "description": "Plataforma de programación para niños de 4 a 12 años: 30 mundos, 600 actividades e instrucciones narradas con voz humana. Sin leer para los más pequeños. Planes para familias y colegios.",
+ "lang": "es-CO",
+ "imgs": [],
+ "links": [
+  "https://codenestschool.com/",
+  "https://codenestschool.com/#como-funciona",
+  "https://codenestschool.com/#edades",
+  "https://codenestschool.com/#demo",
+  "https://codenestschool.com/planes.html",
+  "https://codenestschool.com/#faq",
+  "https://codenestschool.com/app/",
+  "https://codenestschool.com/app/portal",
+  "https://codenestschool.com/privacidad.html",
+  "https://codenestschool.com/terminos.html"
+ ]
+}
+
+CodeNest School
+Cómo funciona
+Por edades
+Pruébalo
+Planes
+Preguntas
+Entrar
+Ver planes
+De 4 a 12 años
+Aprende a programar jugando, desde los cuatro años
+
+Treinta mundos, seiscientas actividades y una voz que explica cada reto. Los más pequeños programan arrastrando flechas, sin necesidad de leer.
+
+Empezar ahora
+Probar sin registrarse
+
+Funciona en el navegador, pensado para tableta. Sin descargas y sin publicidad.
+
+30
+mundos por explorar
+600
+actividades
+3
+grupos de edad
+100%
+con voz en español
+Programar antes de saber leer
+
+Un niño de cuatro años no puede leer una instrucción ni escribir una contraseña. Todo en CodeNest está construido alrededor de ese hecho.
+
+🗣️
+Cada reto se explica en voz alta
+
+Las instrucciones están narradas por una voz humana en español. El botón del megáfono las repite cuantas veces haga falta, sin penalización.
+
+🧩
+Se programa arrastrando fichas
+
+Flechas gruesas y grandes, pensadas para dedos pequeños. Sin una sola palabra escrita en los diez primeros mundos.
+
+🎯
+Fallar no castiga
+
+Cuando el programa no funciona, el personaje choca de forma cómica y se anima a probar otra vez. Nunca aparece un mensaje de error en rojo.
+
+🔓
+Las piezas aparecen poco a poco
+
+Se empieza con cuatro flechas. Los bucles, los condicionales y las funciones llegan cuando el niño ya domina lo anterior.
+
+⭐
+Tres estrellas por actividad
+
+La primera por llegar, la segunda por recogerlo todo y la tercera por hacerlo con el programa más corto. Ahí es donde se aprende a optimizar.
+
+📊
+Sabrás cómo va
+
+Un reporte por niño con su progreso por mundo, el tiempo que dedica y las actividades donde se atasca.
+
+Tres formas de programar, una por edad
+
+No es el mismo contenido con letra más grande. Cada grupo tiene su propia manera de escribir un programa, y el paso de una a la siguiente está preparado.
+
+4 a 6 años
+Exploradores
+
+Programan con fichas de flechas. Ninguna palabra escrita, todo narrado.
+
+Secuencias y orden de los pasos
+Condicionales por color de casilla
+Repetir un grupo de acciones
+Corregir el paso equivocado
+7 a 9 años
+Creadores
+
+Programan con bloques y ven al lado el código que generan. Ese panel es el puente hacia escribir.
+
+Bucles contados y condicionales
+Variables y funciones propias
+Operadores lógicos y listas
+Depurar programas con varios errores
+10 a 12+ años
+Hackers
+
+Escriben JavaScript o Python en un editor de verdad, con autocompletado y avisos de error.
+
+Arreglos, objetos y bucles for
+Eventos, async y manejo de errores
+Búsqueda, ordenamiento y rutas
+Refactorizar para gastar menos
+Pruébalo aquí mismo
+
+Así es una actividad del primer mundo. Toca las flechas para armar el programa y pulsa jugar. Cada flecha hace rodar al Fuzz hasta que se acaba el camino.
+
+🔵
+⭐
+🚩
+Tu programa
+→
+↓
+←
+↑
+▶ Jugar
+↺ Borrar
+
+Preguntas frecuentes
+¿Un niño de cuatro años puede usarlo sin saber leer?
+
+Sí. En los diez primeros mundos no hay una sola palabra escrita: se programa arrastrando fichas de flechas, y cada instrucción se narra con voz humana. El niño puede volver a oírla cuantas veces quiera tocando el megáfono.
+
+¿Qué aprende exactamente mi hijo?
+¿Necesita descargar algo?
+¿Qué datos guardan de mi hijo?
+¿Cómo funciona la licencia para colegios?
+¿Puedo cancelar?
+Que su primera clase de programación sea un juego
+
+Elige el plan que encaje con tu familia o con tu colegio y empieza hoy mismo.
+
+Ver los planes
+CodeNest School
+
+Programación para niños de 4 a 12 años. Hecho en Colombia.
+
+Producto
+Cómo funciona
+Por edades
+Demostración
+Planes
+Cuenta
+Entrar a jugar
+Portal del cliente
+Legal
+Tratamiento de datos
+Términos del servicio
+
+CodeNest School. Tratamiento de datos de menores conforme a la Ley 1581 de 2012 y el Decreto 1377 de 2013. 2026
+
+== Texto oculto (pestañas/acordeones) ==
+¿Qué aprende exactamente mi hijo? Secuencias y condicionales de los cuatro a los seis años. Bucles, variables y funciones de los siete a los nueve, con bloques. Y JavaScript o Python real de los diez en adelante, hasta llegar a algoritmos de rutas y manejo de errores.
+¿Necesita descargar algo? No. Funciona en el navegador, en tableta y en computador. Está pensado para tabletas: los botones son grandes y se juega tocando.
+¿Qué datos guardan de mi hijo? Los mínimos. Los niños no tienen correo electrónico: entran con un nombre de jugador y un PIN de cuatro dibujos, siempre bajo la cuenta de un adulto. Cumplimos la Ley 1581 de 2012, el consentimiento del tutor queda registrado y todo acceso a los datos de un menor queda auditado. No hay publicidad ni rastreadores de terceros.
+¿Cómo funciona la licencia para colegios? El plan Escuela cuesta 12.000.000 pesos al año e incluye estudiantes y docentes ilimitados, varias sedes, aulas con código de acceso, alta masiva de estudiantes y un panel de seguimiento por grupo.
+¿Puedo cancelar? Las licencias son anuales y no se renuevan solas: al terminar el año decides si sigues. No guardamos tu tarjeta.

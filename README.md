@@ -1,11 +1,12 @@
 # Sitio web de Grupo Logic — grupologiclatam.com
 
 Sitio corporativo estático de Grupo Logic: HTML5, CSS3 y JavaScript puro, sin frameworks.
-Presenta a Grupo Logic ante colegios de Latinoamérica, muestra el portafolio de siete soluciones
+Presenta a Grupo Logic ante colegios de Latinoamérica, muestra el portafolio de ocho soluciones
 (cada una con página propia) y convierte visitas en solicitudes de demostración.
 
-> **Decisiones del propietario:** ServiVPS se retiró del alcance y se añadió Veyon Control (línea Gestión
-> institucional). El portafolio tiene siete soluciones en cuatro líneas y el sitio tiene 14 páginas.
+> **Decisiones del propietario:** ServiVPS se retiró del alcance; se añadieron Veyon Control (línea Gestión
+> institucional) y CodeNest School (línea Programación). El portafolio tiene ocho soluciones en cuatro líneas
+> y el sitio tiene 15 páginas.
 
 ---
 
@@ -16,7 +17,7 @@ GrupoLogic/
 ├── sitio/                    ← LO QUE SE PUBLICA (raíz del dominio)
 │   ├── index.html                      Inicio
 │   ├── soluciones/index.html           Portafolio con filtro
-│   ├── soluciones/<slug>/index.html    unticloud, veyon-control, aulamagica-ia, edunova, codexia, vcodepro, bookstudio
+│   ├── soluciones/<slug>/index.html    unticloud, veyon-control, aulamagica-ia, edunova, codexia, codenest-school, vcodepro, bookstudio
 │   ├── nosotros/  contacto/  privacidad/  terminos/
 │   ├── 404.html  robots.txt  sitemap.xml  site.webmanifest
 │   ├── favicon.svg  favicon-32.png  apple-touch-icon.png
@@ -100,7 +101,7 @@ a cada solución en `soluciones.json` y muéstrelo en `_build/paginas/solucion.m
    (solo esa solución); revise que no aparezcan precios ni animaciones a medias.
 5. Ejecute `npm run todo` (imágenes, páginas, Open Graph) y luego `npm run verificar`.
    El `sitemap.xml`, el menú, el pie, el filtro, el formulario de contacto y los textos con la cantidad de
-   soluciones («Siete soluciones…») se actualizan solos.
+   soluciones («Ocho soluciones…») se actualizan solos.
 
 ## 5. Construir y previsualizar
 
@@ -189,7 +190,9 @@ en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea g
 - La estimación de EduNova («hasta 70 % menos de tiempo») se presenta como «estimado por el fabricante».
 - EduNova se contradice sobre los usuarios de su Licencia Escuela (10 en la tabla de precios, 60 en sus
   preguntas frecuentes); por eso esa cifra no se publica.
-- El país de origen de Codexia no figura en su sitio, así que no se indica.
+- El país de origen de Codexia no figura en su sitio, así que no se indica. CodeNest School indica «Hecho en
+  Colombia»; Veyon lo desarrolla Tobias Junghans en Alemania (aviso legal de veyon.io).
+- Codexia y CodeNest School cubren las mismas edades (4 a 12 años); ambas páginas explican la diferencia.
 - Las capturas de pantalla son de los sitios oficiales y de la versión de prueba pública de BookStudio.
 
 ## 9. Calidad verificada
@@ -198,7 +201,7 @@ en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea g
   páginas medidas. Rendimiento, mediana de 5 corridas: inicio 96, portafolio 99; páginas de solución
   100 (EduNova, VCodePro). El inicio varía entre corridas (88–100) por el tiempo de bloqueo simulado;
   CLS 0 y LCP ≈ 2 s.
-- `npm run verificar`: 14 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
+- `npm run verificar`: 15 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
 - `npm run pruebas`: menú desplegable y móvil (Escape, foco atrapado), pestañas con flechas/Inicio/Fin,
   acordeón, filtro con anuncio `aria-live`, validación accesible del formulario, preselección por URL,
   movimiento reducido y áreas táctiles de 44 px.

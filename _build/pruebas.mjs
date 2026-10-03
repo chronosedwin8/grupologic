@@ -59,8 +59,8 @@ await p.click('[data-filtro="ia"]'); await p.waitForTimeout(700);
 ok(await p.locator('.tarjeta-solucion:visible').count() === 2, 'filtro IA deja 2 soluciones');
 ok((await p.textContent('#resultado-filtro')).includes('2 soluciones'), 'resultado anunciado por aria-live');
 ok(await p.getAttribute('[data-filtro="ia"]', 'aria-pressed') === 'true', 'aria-pressed en el filtro activo');
-await p.goto(B + '/soluciones/#programacion', { waitUntil: 'networkidle' }); await p.waitForTimeout(300);
-ok(await p.locator('.tarjeta-solucion:visible').count() === 2, 'filtro desde el hash de la URL');
+await p.goto('about:blank'); await p.goto(B + '/soluciones/#programacion', { waitUntil: 'networkidle' }); await p.waitForTimeout(300);
+ok(await p.locator('.tarjeta-solucion:visible').count() === 3, 'filtro desde el hash de la URL');
 await p.close();
 
 // --- Contacto

@@ -271,7 +271,7 @@ export const CONTENIDO = {
       'Además, los niños más pequeños aún no leen, cada estudiante avanza a un ritmo distinto y la coordinación necesita ver el progreso real de cada grupo, no solo la actividad.',
       'Codexia ofrece un programa completo y listo para usar: diez materias organizadas como mundos que se desbloquean, voz natural para quienes aún no leen, un paso progresivo de los bloques al código real y un panel para que el docente asigne y siga el avance.',
     ],
-    nota: '<strong>Una ruta de programación completa.</strong> Codexia acompaña a los estudiantes de 4 a 12 años. Desde los 12, <a href="/soluciones/vcodepro/">VCodePro</a> continúa el camino con un editor profesional, inteligencia artificial y alineación con el Bachillerato Internacional.',
+    nota: '<strong>Una ruta de programación completa.</strong> Codexia acompaña a los estudiantes de 4 a 12 años. Desde los 12, <a href="/soluciones/vcodepro/">VCodePro</a> continúa el camino con un editor profesional, inteligencia artificial y alineación con el Bachillerato Internacional. Si busca una opción centrada solo en programación, con voz en español en cada reto, conozca <a href="/soluciones/codenest-school/">CodeNest School</a>.',
     funciones: [
       ['bloques', 'Bloques y código real', 'Editor de bloques (Blockly) y editor de código (Monaco) con tres bandas de edad: íconos, mixto y código.'],
       ['capas', 'Diez materias', 'Programación, lógica, aritmética, geometría, informática, seguridad en internet, inteligencia artificial, física básica, preescolar y laboratorios.'],
@@ -317,8 +317,70 @@ export const CONTENIDO = {
       ['¿Es seguro para los niños?', 'El código se ejecuta en un entorno aislado. El fabricante declara cumplir normas de protección de datos de menores, como la Ley 1581 en Colombia, con consentimiento de los tutores.'],
       ['¿Qué sigue después de los 12 años?', 'VCodePro continúa la ruta con un editor de código profesional, inteligencia artificial integrada y alineación con las electivas de tecnología del Bachillerato Internacional.'],
     ],
-    relacionadas: ['vcodepro', 'bookstudio', 'aulamagica-ia'],
+    relacionadas: ['codenest-school', 'vcodepro', 'bookstudio'],
     ld: { applicationSubCategory: 'Programación y pensamiento computacional', operatingSystem: 'Web' },
+  },
+
+  'codenest-school': {
+    titulo: 'CodeNest School: programación para niños desde los 4 años',
+    descripcion: 'CodeNest School enseña programación de 4 a 12 años con 30 mundos, 600 actividades y voz en español. Los más pequeños programan sin necesidad de leer.',
+    h1: 'CodeNest School: programación para niños desde los cuatro años',
+    altPortada: 'Página de inicio de CodeNest School, plataforma para aprender a programar jugando desde los cuatro años',
+    reto: [
+      'Enseñar programación en preescolar choca con un hecho simple: un niño de cuatro años no puede leer una instrucción ni escribir una contraseña. La mayoría de las plataformas presuponen ambas cosas.',
+      'A eso se suma que el colegio necesita una progresión real hasta el final de la primaria, docentes que puedan asignar y seguir el trabajo de cada grupo, y un tratamiento cuidadoso de los datos de los menores.',
+      'CodeNest School está construido alrededor de esas condiciones: cada reto se narra con voz humana en español, los más pequeños programan arrastrando flechas y, con la edad, pasan a bloques y después a JavaScript o Python reales.',
+    ],
+    nota: '<strong>¿CodeNest School o Codexia?</strong> Ambas enseñan programación de los 4 a los 12 años. CodeNest School se concentra en programar, en tres etapas que van de las flechas sin texto al código real, con voz en español en cada reto. <a href="/soluciones/codexia/">Codexia</a> amplía el alcance a diez materias —matemáticas, lógica, inteligencia artificial, física y más— con más de 200 juegos. Le ayudamos a elegir según el enfoque de su institución. Desde los 12 años, la ruta continúa con <a href="/soluciones/vcodepro/">VCodePro</a>.',
+    funciones: [
+      ['voz', 'Cada reto en voz alta', 'Las instrucciones están narradas por una voz humana en español y se repiten cuantas veces haga falta, sin penalización.'],
+      ['bloques', 'Programar arrastrando fichas', 'Flechas grandes, pensadas para dedos pequeños: en los diez primeros mundos no hay una sola palabra escrita.'],
+      ['capas', 'Piezas que aparecen poco a poco', 'Se empieza con cuatro flechas; bucles, condicionales y funciones llegan cuando el niño domina lo anterior.'],
+      ['insignia', 'Tres estrellas por actividad', 'La primera por llegar, la segunda por recogerlo todo y la tercera por resolverlo con el programa más corto.'],
+      ['objetivo', 'Fallar no castiga', 'Si el programa no funciona, el personaje choca de forma cómica y anima a intentarlo otra vez, sin mensajes de error en rojo.'],
+      ['grafica', 'Seguimiento del progreso', 'Reporte por estudiante con su avance por mundo, el tiempo dedicado y las actividades donde se atasca.'],
+    ],
+    galeria: [
+      ['codenest-school-demo', 'Actividad del primer mundo de CodeNest School: tablero con el personaje, una estrella y una bandera, y el programa armado con fichas de flechas', 'Una actividad del primer mundo', 'El estudiante arma su programa con flechas y lo ejecuta para llevar al personaje hasta la bandera.'],
+    ],
+    extra: {
+      titulo: 'Tres formas de programar, una por edad',
+      items: [
+        'Exploradores (4 a 6 años): fichas de flechas, sin palabras escritas.',
+        'Creadores (7 a 9 años): bloques, con el código generado a la vista.',
+        'Hackers (10 a 12 años o más): JavaScript o Python en un editor real.',
+        'Secuencias, condicionales, bucles, variables y funciones propias.',
+        'Al final: algoritmos de búsqueda, ordenamiento y rutas.',
+        'Funciona en el navegador, pensado para tableta y sin publicidad.',
+      ],
+    },
+    publico: [
+      ['birrete', 'Coordinación de preescolar y primaria', 'Programación desde los cuatro años.', ['Sin necesidad de saber leer', 'Progresión hasta los 12 años', 'Voz en español en cada reto']],
+      ['codigo', 'Área de tecnología', 'Del juego al código real.', ['Flechas, bloques y después código', 'JavaScript o Python con editor real', 'Algoritmos y depuración']],
+      ['usuarios', 'Docentes', 'Asignar y seguir sin esfuerzo.', ['Aulas con código de acceso', 'Mundos asignados con fecha límite', 'Matriz de seguimiento por grupo']],
+      ['escudo', 'Coordinación TIC', 'Datos de menores protegidos.', ['Ingreso sin correo, con PIN de dibujos', 'Consentimiento del tutor registrado', 'Auditoría de accesos a datos de menores']],
+    ],
+    implementacion: [
+      ['Licencia Escuela', 'Se activa el plan anual de la institución, con estudiantes y docentes ilimitados y varias sedes.'],
+      ['Aulas y estudiantes', 'Cada aula recibe su código de acceso y la lista de estudiantes se carga de una sola vez.'],
+      ['Asignación', 'Los docentes asignan mundos o actividades concretas a cada grupo, con fecha límite.'],
+      ['Seguimiento', 'La matriz por estudiante y mundo muestra el avance y las actividades donde el grupo se atasca, para retomarlas en clase.'],
+    ],
+    licencias: {
+      intro: 'Para colegios, CodeNest School ofrece una licencia anual que no se renueva automáticamente: al terminar el año, la institución decide si continúa.',
+      modalidades: [
+        ['Plan Escuela', 'Para colegios: sedes, docentes, aulas y seguimiento pedagógico completo.', ['Estudiantes y docentes ilimitados', 'Varias sedes y aulas con código de acceso', 'Alta masiva de estudiantes', 'Asignación de mundos y actividades por aula', 'Matriz de seguimiento y estadísticas por grupo', 'Capacitación inicial y soporte prioritario']],
+      ],
+    },
+    preguntas: [
+      ['¿Un niño de cuatro años puede usarlo sin saber leer?', 'Sí. En los diez primeros mundos no hay una sola palabra escrita: se programa arrastrando fichas de flechas y cada instrucción se narra con voz humana, que el niño puede volver a oír tocando el megáfono.'],
+      ['¿Qué aprenden los estudiantes?', 'Secuencias y condicionales de los cuatro a los seis años; bucles, variables y funciones de los siete a los nueve, con bloques; y JavaScript o Python reales desde los diez, hasta algoritmos de rutas y manejo de errores.'],
+      ['¿Hay que instalar algo?', 'No. Funciona en el navegador, en tableta y en computador, y está pensado para tabletas: botones grandes y juego táctil.'],
+      ['¿Qué datos se guardan de los estudiantes?', 'Según el fabricante, los mínimos: los niños entran con un nombre de jugador y un PIN de cuatro dibujos, sin correo electrónico. Declara cumplir la Ley 1581 de 2012, registrar el consentimiento del tutor y auditar todo acceso a los datos de un menor, sin publicidad ni rastreadores de terceros.'],
+      ['¿En qué se diferencia de Codexia?', 'CodeNest School se concentra en programación, con tres etapas por edad y voz en español en cada reto. Codexia abarca diez materias, entre ellas matemáticas, lógica, inteligencia artificial y física, con más de 200 juegos. Le ayudamos a elegir según el enfoque de su institución.'],
+    ],
+    relacionadas: ['codexia', 'vcodepro', 'bookstudio'],
+    ld: { applicationSubCategory: 'Programación para niños', operatingSystem: 'Web' },
   },
 
   vcodepro: {
@@ -331,7 +393,7 @@ export const CONTENIDO = {
       'Las asignaturas de tecnología del Bachillerato Internacional exigen además evidencias del proceso, evaluación por criterios y documentación del ciclo de diseño, una carga que suele recaer por completo en el docente.',
       'VCodePro lleva al aula un editor profesional con inteligencia artificial en modo pedagógico, un estudio para crear agentes de IA y las herramientas de evaluación del IB integradas, para que el docente enseñe y evalúe en un mismo lugar.',
     ],
-    nota: '<strong>Una ruta de programación completa.</strong> VCodePro recibe a los estudiantes desde los 12 años. Para preescolar y primaria, <a href="/soluciones/codexia/">Codexia</a> desarrolla el pensamiento computacional de los 4 a los 12 años.',
+    nota: '<strong>Una ruta de programación completa.</strong> VCodePro recibe a los estudiantes desde los 12 años. Para preescolar y primaria, <a href="/soluciones/codexia/">Codexia</a> y <a href="/soluciones/codenest-school/">CodeNest School</a> desarrollan el pensamiento computacional de los 4 a los 12 años.',
     funciones: [
       ['chispa', 'Asistente en modo pedagógico', 'La IA responde con preguntas, pistas y ejemplos análogos, no con soluciones. El docente decide cuánta ayuda recibe cada curso.'],
       ['robot', 'Estudio de agentes de IA', 'Los estudiantes definen el propósito de un agente, le asignan herramientas, lo prueban, miden su desempeño y lo publican para el curso.'],

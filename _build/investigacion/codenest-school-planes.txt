@@ -1,0 +1,104 @@
+URL: https://codenestschool.com/planes.html
+{
+ "title": "Planes y precios | CodeNest School",
+ "description": "Planes de CodeNest School: Personal y Padres para familias, y Escuela por $12.000.000 COP al año para colegios, con estudiantes y docentes ilimitados. Pago seguro con Mercado Pago.",
+ "lang": "es-CO",
+ "imgs": [],
+ "links": [
+  "https://codenestschool.com/",
+  "https://codenestschool.com/#como-funciona",
+  "https://codenestschool.com/#edades",
+  "https://codenestschool.com/#demo",
+  "https://codenestschool.com/planes.html",
+  "https://codenestschool.com/#faq",
+  "https://codenestschool.com/app/",
+  "https://codenestschool.com/checkout.html?plan=personal",
+  "https://codenestschool.com/checkout.html?plan=padres",
+  "https://codenestschool.com/checkout.html?plan=escuela"
+ ]
+}
+
+CodeNest School
+Cómo funciona
+Por edades
+Pruébalo
+Planes
+Preguntas
+Entrar
+Un pago al año, sin renovación automática
+
+Elige según cuántos niños vayan a jugar. Todos los planes incluyen los 30 mundos, las 600 actividades y la voz en español.
+
+Personal
+
+Para un niño o niña que aprende en casa, con acompañamiento de su tutor.
+
+$180.000 COP
+al año · 1 niño
+1 perfil de niño con avatar personalizable
+Los 30 mundos y las 600 actividades
+Instrucciones narradas con voz humana
+Tienda de accesorios para el Fuzz
+Reporte de progreso para el tutor
+Vigencia de 1 año
+Elegir Personal
+El más elegido
+Padres
+
+Para familias con varios hijos: un solo pago, hasta 4 perfiles.
+
+$480.000 COP
+al año · 4 niños
+Hasta 4 perfiles de niños
+Todo lo del plan Personal para cada hijo
+Reportes comparativos por hijo
+Control de tiempo de juego
+Notificaciones de logros
+Vigencia de 1 año
+Elegir Padres
+Escuela
+
+Para colegios: sedes, docentes, aulas y seguimiento pedagógico completo.
+
+$12.000.000 COP
+al año · estudiantes ilimitados
+Estudiantes ilimitados
+Múltiples sedes y aulas con código de acceso
+Docentes ilimitados con panel propio
+Alta masiva de estudiantes
+Asignación de mundos y actividades por aula
+Matriz de seguimiento y estadísticas por grupo
+Auditoría de accesos y cumplimiento Ley 1581
+Capacitación inicial y soporte prioritario
+Vigencia de 1 año
+Elegir Escuela
+
+Pago seguro con Mercado Pago. No guardamos los datos de tu tarjeta.
+
+¿Eres un colegio?
+
+El plan Escuela incluye todo lo que un colegio necesita para dar la asignatura, no solo acceso al juego.
+
+🏫
+Varias sedes y aulas
+
+Cada aula tiene su código de acceso. Los estudiantes entran con su nombre de jugador y su PIN de dibujos, sin correo electrónico.
+
+📋
+Alta masiva y asignaciones
+
+Carga la lista de estudiantes de una vez y asigna mundos o actividades concretas a cada grupo, con fecha límite.
+
+📈
+Seguimiento por grupo
+
+Matriz de estudiante por mundo, tiempo dedicado, y las actividades donde el grupo se atasca, para poder explicarlas en clase.
+
+🔐
+Cumplimiento y auditoría
+
+Consentimiento del tutor registrado por estudiante y auditoría de todo acceso de un adulto a los datos de un menor, según la Ley 1581.
+
+CodeNest School. Tratamiento de datos de menores conforme a la Ley 1581 de 2012. 2026
+
+== Texto oculto (pestañas/acordeones) ==
