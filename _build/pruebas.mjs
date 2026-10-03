@@ -1,6 +1,6 @@
 // Pruebas de interacción, teclado y accesibilidad básica (requiere el servidor local en :8080).
 import { chromium } from 'playwright';
-const B = 'http://127.0.0.1:8080';
+const B = process.env.BASE || 'http://127.0.0.1:8080';
 const b = await chromium.launch();
 let fallos = 0;
 const ok = (cond, msg) => { console.log((cond ? '  ✓ ' : '  ✗ ') + msg); if (!cond) fallos++; };

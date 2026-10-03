@@ -300,19 +300,33 @@
       cuadro = window.requestAnimationFrame(ciclo);
     }
     function reanudar() { if (!cuadro && activo && !reducido.matches) cuadro = window.requestAnimationFrame(ciclo); }
-    medir(); dibujar();
+    // El primer cuadro (estático) se dibuja cuando el navegador queda libre, para no
+    // competir con la carga. El movimiento empieza con la primera interacción.
+    var enReposo = window.requestIdleCallback || function (fn) { return setTimeout(fn, 200); };
+    var iniciado = false;
+    activo = false;
+    enReposo(function () { medir(); dibujar(); });
     if (reducido.matches) return; // con movimiento reducido queda un cuadro estático
     var temporizador;
     window.addEventListener("resize", function () {
       clearTimeout(temporizador);
       temporizador = setTimeout(function () { medir(); dibujar(); }, 200);
     });
+    var visible = true;
     if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (e) { activo = e[0].isIntersecting && !document.hidden; reanudar(); }).observe(canvas);
+      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; activo = iniciado && visible && !document.hidden; reanudar(); }).observe(canvas);
     }
-    document.addEventListener("visibilitychange", function () { activo = !document.hidden; reanudar(); });
-    // Iniciar después de la carga para no competir con el contenido principal (LCP).
-    if (document.readyState === "complete") reanudar(); else window.addEventListener("load", reanudar);
+    document.addEventListener("visibilitychange", function () { activo = iniciado && visible && !document.hidden; reanudar(); });
+    var eventos = ["pointermove", "pointerdown", "touchstart", "scroll", "keydown"];
+    var iniciar = function () {
+      if (iniciado) return;
+      iniciado = true;
+      eventos.forEach(function (ev) { window.removeEventListener(ev, iniciar); });
+      activo = visible && !document.hidden;
+      if (!puntos.length) medir();
+      reanudar();
+    };
+    eventos.forEach(function (ev) { window.addEventListener(ev, iniciar, { passive: true }); });
   }
 
   /* ---------- Analítica opcional y aviso de cookies ---------- */
