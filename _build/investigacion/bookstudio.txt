@@ -1,0 +1,306 @@
+URL: https://bookstudio.uk/
+{
+ "title": "BookStudio · Libros interactivos que el alumnado crea, escucha y comparte",
+ "description": "Crea libros interactivos con voz, video, mapas, gráficas y preguntas autocorregibles. Con valoraciones, seguimiento del trabajo y grupos formados con alumnado de varios cursos. Para centros educativos y equipos profesionales, desde un docente hasta toda la institucion.",
+ "imgs": [],
+ "links": [
+  "https://bookstudio.uk/#inicio",
+  "https://bookstudio.uk/#funciones",
+  "https://bookstudio.uk/#casos",
+  "https://bookstudio.uk/#como",
+  "https://bookstudio.uk/#precios",
+  "https://bookstudio.uk/#faq",
+  "https://bookstudio.uk/login",
+  "https://bookstudio.uk/contratar",
+  "https://bookstudio.uk/contratar",
+  "https://bookstudio.uk/contratar?plan=individual",
+  "https://bookstudio.uk/contratar?plan=escuela",
+  "https://bookstudio.uk/contratar?plan=institucional",
+  "https://bookstudio.uk/contratar",
+  "https://bookstudio.uk/#funciones",
+  "https://bookstudio.uk/#casos",
+  "https://bookstudio.uk/#como",
+  "https://bookstudio.uk/#precios",
+  "https://bookstudio.uk/#faq",
+  "https://bookstudio.uk/login",
+  "https://bookstudio.uk/login/qr",
+  "https://bookstudio.uk/contratar",
+  "https://bookstudio.uk/clientes/facturacion"
+ ]
+}
+
+B
+BookStudio
+Funciones
+Casos de uso
+Como funciona
+Precios
+Preguntas
+Entrar
+Contratar
+
+Para colegios y equipos profesionales · Se usa desde el navegador
+
+Libros interactivos que el alumnado crea, escucha y comparte
+
+Un lienzo libre donde caben texto, voz, video, mapas, gráficas y preguntas que se corrigen solas. Sin instalar nada: se abre en el navegador y se empieza a trabajar.
+
+Probar sin registrarse
+Ver planes y contratar
+✓ Sin cuenta ni tarjeta: 1 libro de 2 páginas
+✓ Tus datos donde tu decidas
+✓ Exportación a PDF y web
+▶
+¡Muy bien!
+Todo lo que cabe en una página
+
+No es un procesador de textos con adornos: es un lienzo donde cada elemento se coloca donde tiene sentido.
+
+🎨
+Lienzo libre, no plantillas rigidas
+
+Coloca texto, imagenes, formas, iconos y dibujos donde quieras. 26 formas, 2.048 iconos, emojis y 17 tipografías pensadas para leerse bien, incluida OpenDyslexic.
+
+🎙️
+Voz, foto y video sin salir de la página
+
+Se graba desde el navegador con la camara y el microfono del equipo. Los audios se insertan como puntos de escucha con el color que elijas.
+
+❓
+Preguntas que se corrigen solas
+
+Respuesta única, varias respuestas u ordenar. Con texto e imagenes, y una animación de celebracion al acertar. La solucion se comprueba en el servidor: no se puede espiar.
+
+📊
+Gráficas y formulas
+
+Seis tipos de gráfica con datos editables y formulas matemáticas en LaTeX. Todo se dibuja en el propio documento, sin capturas de pantalla.
+
+🗺️
+Mapas, medios libres e incrustaciones
+
+Mapas de OpenStreetMap, un buscador de imagenes y sonidos con licencia Creative Commons y atribución automática, y contenido de YouTube, Google, Canva o Genially.
+
+🎯
+Valoraciones con nota y comentario
+
+Pon nota a cada libro las veces que haga falta, con título y el porqué. Una cuadrícula reúne a toda la clase con el promedio de cada alumno, y ellos ven sus notas y tus comentarios en su propio libro.
+
+📬
+Entrega material a toda la clase
+
+Manda una página o un libro entero y cada alumno recibe su copia editable. Eliges si va en un libro aparte o dentro de los que ya tiene, y si cae al principio o al final.
+
+🧭
+Bitácora de trabajo
+
+Cuántas veces ha entrado cada alumno a un libro, cuándo y cuánto tiempo. Las sesiones se cierran solas tras unos minutos, así que mide trabajo real y no pestañas olvidadas.
+
+🧩
+Grupos con alumnos de varios cursos
+
+Arma una biblioteca con cinco de 10A, seis de 10B y nueve de 10C: eliges el curso, ves su lista y marcas. Se conecta con el sistema académico del centro para traer los grupos.
+
+🔗
+Se comparte con un enlace
+
+Público para cualquiera, o restringido a tu grupo. Siempre en solo lectura, con enlace revocable en un clic. Puedes decidir si el alumnado ve las creaciones de sus compañeros.
+
+👥
+Trabajo en grupo
+
+Marca un libro como colaborativo y toda la clase aporta contenido al mismo documento, cada quien desde su equipo.
+
+📤
+Tu contenido sale contigo
+
+Exporta a PDF o a una página web autonoma de un solo archivo, que se abre con doble clic sin necesitar la plataforma. Sin secuestro de datos.
+
+🔒
+Datos tratados con cuidado
+
+Sin seguimiento publicitario ni cesion de datos a terceros. Los videos de YouTube se sirven por el dominio sin cookies y solo se cargan si alguien los pulsa.
+
+En el aula y en la oficina
+
+La misma herramienta resuelve dos problemas parecidos: explicar algo para que se entienda y se recuerde.
+
+🎓 EDUCACION
+
+Del cuaderno al libro que se puede escuchar
+→
+Cuentos, diarios de lectura y portafolios donde el alumnado graba su propia voz.
+→
+Organizadores gráficos listos: Venn, KWL, mapa del cuento, espina de pescado, Cornell.
+→
+Autoevaluacion con preguntas que se corrigen solas y dan animo al acertar.
+→
+Valoraciones con nota y comentario, y una cuadrícula con el promedio de la clase.
+→
+Reparte la misma ficha a todo el grupo y cada alumno trabaja sobre su copia.
+→
+Bibliotecas con alumnado de varios cursos, traido del sistema académico del centro.
+→
+Accesibilidad de serie: tipografías para dislexia, tamaño mínimo legible y audio.
+
+💼 PROFESIONAL
+
+Documentos vivos que nadie deja sin leer
+→
+Manuales de acogida y procedimientos con video, audio y pasos ilustrados.
+→
+Propuestas y memorias de proyecto con gráficas y mapas dentro del propio documento.
+→
+Formacion interna con comprobaciones de comprension al final de cada capitulo.
+→
+Catalogos y presentaciones que se comparten con un enlace y se exportan a PDF.
+→
+Sin seguimiento publicitario ni cesion de datos a terceros.
+Cuatro pasos y ya hay libro
+
+Sin cursillo previo. La primera sesión de clase ya produce algo.
+
+1
+Crea el libro
+
+Elige formato y arranca de cero o con una de las 24 plantillas.
+
+2
+Llena las páginas
+
+Arrastra texto, imagenes, audio, gráficas o preguntas al lienzo.
+
+3
+Invita a tu grupo
+
+Con un enlace, un código QR o eligiendo alumnos curso por curso.
+
+4
+Corrige y publica
+
+Pon nota con tu comentario, comparte el enlace o llevatelo en PDF.
+
+Precios sin letra pequeña
+
+Desde un mes suelto hasta la licencia de todo el centro, con factura a tu nombre.
+
+Individual
+
+Para un docente o un profesional que trabaja por su cuenta.
+
+$50.000
+COP al mes, con pago anual
+
+✓
+Todas las funciones del editor
+✓
+Libros y páginas ilimitados
+✓
+Enlaces para compartir y modo lectura
+✓
+Exportación a PDF y a página web
+✓
+Soporte por correo
+
+Facturación anual: $500.000 COP al año.
+
+Contratar
+
+El más elegido
+
+Escuela
+
+Hasta 5 profesores y 500 estudiantes.
+
+$8.000.000
+COP al año
+
+✓
+Hasta 5 profesores y 500 estudiantes
+✓
+Alojamiento, copias de seguridad y actualizaciones
+✓
+Importación de grupos desde tu sistema académico
+✓
+Edición colaborativa por curso
+✓
+Formacion inicial para el profesorado
+✓
+Soporte por correo en 48 horas
+
+Si superas los cupos, pasas al plan institucional.
+
+Contratar
+Institucional y empresas
+
+Usuarios ilimitados.
+
+$20.000.000
+COP al año
+
+✓
+Usuarios ilimitados
+✓
+Dominio e imagen propios
+✓
+Integración con vuestro directorio de usuarios
+✓
+Acuerdo de nivel de servicio y soporte prioritario
+✓
+Formacion y acompañamiento continuo
+Contratar
+
+Importes en pesos colombianos, sin IVA. Los centros públicos y las entidades sin animo de lucro tienen condiciones especiales: escribenos y lo vemos.
+
+Preguntas frecuentes
+Como se contrata y como se factura?
++
+Que pasa si mi colegio supera los cupos del plan Escuela?
++
+Puedo probarlo antes de pagar?
++
+Que necesito para empezar?
++
+Donde se guardan los datos del alumnado?
++
+Que necesita el alumnado para entrar?
++
+Puedo poner notas y llevar el seguimiento?
++
+Puedo hacer un grupo con alumnos de cursos distintos?
++
+Y si un alumno se va del centro?
++
+Se pueden sacar los libros de la plataforma?
++
+Sirve fuera del aula?
++
+Varias personas pueden editar el mismo libro?
++
+Que pasa si no renuevo?
++
+Empieza esta misma tarde
+
+Pruebalo sin dar ningun dato, y cuando te convenza contrata en dos minutos: pagas, se crea tu cuenta y entras directo al editor.
+
+Probarlo ahora mismo
+Contratar ahora
+
+B
+BookStudio
+
+Libros interactivos que el alumnado crea, escucha y comparte.
+
+Producto
+Funciones
+Casos de uso
+Como funciona
+Precios
+Preguntas
+Acceso
+Entrar a la plataforma
+Acceso del alumnado con QR
+Contratar
+Mi licencia y facturas
+
+BookStudio · Libros interactivos para el aula y el trabajo.

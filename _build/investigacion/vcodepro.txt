@@ -1,0 +1,378 @@
+URL: https://www.vcodepro.de/
+{
+ "title": "VCodePro · Editor de código con IA para enseñar programación | Bachillerato Internacional",
+ "description": "VCodePro es el editor de código con inteligencia artificial incorporada para crear agentes en clase. Enseña programación desde los 12 años alineado con las electivas de tecnología del Bachillerato Internacional. Descarga gratuita para Windows, macOS y Linux.",
+ "imgs": [
+  "https://www.vcodepro.de/assets/img/logo-mark.svg",
+  "https://www.vcodepro.de/assets/img/logo-mark.svg"
+ ],
+ "links": [
+  "https://www.vcodepro.de/#contenido",
+  "https://www.vcodepro.de/index.html",
+  "https://www.vcodepro.de/caracteristicas.html",
+  "https://www.vcodepro.de/educacion.html",
+  "https://www.vcodepro.de/descargas.html",
+  "https://www.vcodepro.de/precios.html",
+  "https://www.vcodepro.de/licencias.html",
+  "https://www.vcodepro.de/documentacion.html",
+  "https://www.vcodepro.de/contacto.html",
+  "https://www.vcodepro.de/portal/",
+  "https://www.vcodepro.de/portal/login.php",
+  "https://www.vcodepro.de/descargas.html",
+  "https://update.code.visualstudio.com/latest/win32-x64-user/stable",
+  "https://update.code.visualstudio.com/latest/win32-x64-user/stable",
+  "https://update.code.visualstudio.com/latest/win32-arm64-user/stable",
+  "https://update.code.visualstudio.com/latest/win32-x64/stable",
+  "https://update.code.visualstudio.com/latest/darwin-universal/stable",
+  "https://update.code.visualstudio.com/latest/darwin-arm64/stable",
+  "https://update.code.visualstudio.com/latest/darwin/stable",
+  "https://update.code.visualstudio.com/latest/linux-deb-x64/stable",
+  "https://update.code.visualstudio.com/latest/linux-deb-arm64/stable",
+  "https://update.code.visualstudio.com/latest/linux-rpm-x64/stable",
+  "https://www.vcodepro.de/descargas.html",
+  "https://www.vcodepro.de/precios.html",
+  "https://code.visualstudio.com/Download",
+  "https://www.vcodepro.de/caracteristicas.html#agentes",
+  "https://www.vcodepro.de/caracteristicas.html",
+  "https://www.vcodepro.de/educacion.html",
+  "https://www.vcodepro.de/precios.html#personal",
+  "https://www.vcodepro.de/precios.html#escuela",
+  "https://www.vcodepro.de/precios.html#sitio",
+  "https://www.vcodepro.de/contacto.html?motivo=sitio",
+  "https://www.vcodepro.de/descargas.html",
+  "https://www.vcodepro.de/index.html",
+  "https://www.vcodepro.de/caracteristicas.html",
+  "https://www.vcodepro.de/caracteristicas.html#agentes",
+  "https://www.vcodepro.de/descargas.html",
+  "https://www.vcodepro.de/documentacion.html",
+  "https://www.vcodepro.de/documentacion.html#requisitos",
+  "https://www.vcodepro.de/educacion.html",
+  "https://www.vcodepro.de/educacion.html#niveles",
+  "https://www.vcodepro.de/educacion.html#docentes",
+  "https://www.vcodepro.de/documentacion.html#aula",
+  "https://www.vcodepro.de/precios.html",
+  "https://www.vcodepro.de/precios.html#calculadora",
+  "https://www.vcodepro.de/licencias.html",
+  "https://www.vcodepro.de/precios.html#faq",
+  "https://www.vcodepro.de/contacto.html",
+  "https://www.vcodepro.de/portal/",
+  "https://www.vcodepro.de/contacto.html#ventas",
+  "https://www.vcodepro.de/privacidad.html",
+  "https://www.vcodepro.de/privacidad.html#terminos"
+ ]
+}
+
+Saltar al contenido principal
+vcodepro
+Características
+Educación IB
+Descargas
+Precios
+Licencias
+Documentación
+Contacto
+Portal
+Entrar
+Descargar
+
+Versión 2.4 · Estudio de agentes de IA incluido
+
+El editor con IA que enseña a crear agentes
+
+VCodePro lleva la potencia de un editor profesional al salón de clase, con inteligencia artificial incorporada para que cada estudiante diseñe, pruebe y publique sus propios agentes. Todo alineado con las electivas de tecnología del Bachillerato Internacional, desde los 12 años.
+
+Descargar para Windows
+Ver planes y precios
+
+Descarga gratuita y sin registro · Los instaladores provienen de los servidores oficiales · Windows, macOS y Linux
+
+sensor_temperatura.py — Proyecto Criterio C — VCodePro
+
+AULA 9.º B · PROYECTO 3
+
+▾ proyecto-sensor
+  sensor_temperatura.py
+  pruebas_criterio_b.py
+  bitacora_diseno.md
+  datos.csv
+▸ rubrica-ib
+▸ entregas
+sensor_temperatura.py
+bitacora_diseno.md
+1# Proyecto: estación de temperatura — Criterio C (creación de la solución)
+2from vcodepro.aula import Tablero
+3
+4def promedio(lecturas: list[float]) -> float:
+5    """Calcula el promedio de las lecturas del sensor."""
+6    if not lecturas:
+7        raise ValueError("No hay lecturas registradas")
+8    return sum(lecturas) / len(lecturas)
+9
+10datos = [21.5, 22.1, 23.8, 22.9]
+11print(f"Temperatura media: {promedio(datos):.2f} °C")
+12Tablero.publicar("grupo-3", promedio(datos))
+
+
+PANEL DEL AULA
+
+$ vcodepro revisar --rubrica ib-myp
+✓ 12 de 12 pruebas superadas · Criterio B 6/6 · Criterio C 5/6
+⚠ Sugerencia: documenta la validación de datos en la bitácora.
+Aula 9.º B
+24 estudiantes conectados
+Python 3.12
+Ln 12, Col 34
+
+DISEÑADO PARA LAS ELECTIVAS DE TECNOLOGÍA
+
+Informática NM y NS
+Agentes de IA en el aula
+Diseño (Design Technology)
+ITGS
+Diseño MYP
+Proyecto Personal
+Monografía de Informática
+CAS con enfoque digital
+
+INTELIGENCIA ARTIFICIAL INCORPORADA
+
+Tus estudiantes no solo usan la IA: la construyen
+
+VCodePro trae un asistente de programación y un estudio de agentes integrados. En la misma ventana donde escriben código, los estudiantes definen el propósito de un agente, le asignan herramientas, lo prueban y lo publican para el resto del curso.
+
+Estudio de agentes — tutor-algoritmos.agent
+NOMBRE DEL AGENTE
+Tutor de Algoritmos
+INSTRUCCIONES
+Acompaña a estudiantes de 9.º. Nunca entregues la solución completa: haz una pregunta que los acerque al siguiente paso.
+HERRAMIENTAS HABILITADAS
+ejecutar_pruebas
+leer_proyecto
+buscar_en_apuntes
+graficar_datos
+ESTUDIANTE
+Mi función de búsqueda binaria se queda en un ciclo infinito.
+TUTOR DE ALGORITMOS
+Ejecuté tus pruebas: 3 de 5 fallan cuando el objetivo no existe. ¿Qué pasa con inicio y fin cuando el valor del medio es menor que el buscado?
+ESTUDIANTE
+Creo que no estoy moviendo inicio.
+TUTOR DE ALGORITMOS
+Esa es la pista. Cámbialo y vuelve a ejecutar; te muestro la comparación de resultados.
+Describe el agente en español
+
+Un formulario guiado convierte la intención del estudiante en instrucciones claras. No hace falta escribir código para tener el primer agente funcionando.
+
+Conecta herramientas reales
+
+Ejecutar pruebas, leer archivos del proyecto, consultar un conjunto de datos o llamar a una API aprobada por el colegio. Cada herramienta se habilita con un permiso explícito.
+
+Prueba, mide y documenta
+
+El banco de evaluación mide si el agente responde bien, y la bitácora guarda cada versión como evidencia para los criterios del IB.
+
+Publica para el curso
+
+El docente aprueba el agente y queda disponible para el grupo, con límites de uso y registro de conversaciones.
+
+Asistente que explica, no que resuelve
+
+En modo pedagógico la IA responde con preguntas, pistas y ejemplos análogos. El docente decide cuánta ayuda recibe cada curso.
+
+Registro completo para el colegio
+
+Cada conversación y cada versión del agente quedan registradas. La coordinación puede auditar el uso de la IA y demostrar integridad académica.
+
+Límites pensados para menores
+
+Filtros de contenido, tope de consumo por curso y modo examen que desactiva la IA con un solo interruptor.
+
+Ver el estudio de agentes en detalle
+
+POR QUÉ VCODEPRO
+
+Un editor profesional con andamiaje pedagógico
+
+Los estudiantes trabajan con las mismas herramientas de la industria, pero acompañados por explicaciones, pistas y criterios de evaluación que crecen con ellos.
+
+IA incorporada y estudio de agentes
+
+El asistente explica el código en lenguaje claro y el estudio de agentes permite crear asistentes propios con instrucciones, herramientas y memoria, sin salir del editor.
+
+Editor completo desde el primer día
+
+Resaltado de sintaxis, autocompletado, depurador, terminal integrada y control de versiones para Python, JavaScript, HTML, CSS, Java y C++.
+
+Modo aula
+
+El docente ve el avance de cada estudiante en tiempo real, comparte plantillas de proyecto y abre sesiones de programación en pareja sin instalar nada más.
+
+Rúbricas del IB integradas
+
+Cada proyecto se puede evaluar con los criterios A, B, C y D del programa. El estudiante ve qué le falta antes de entregar y el docente exporta las notas.
+
+Bitácora de diseño automática
+
+El ciclo de diseño del MYP queda documentado solo: investigación, ideas, creación y evaluación se registran a medida que el estudiante trabaja.
+
+Funciona en salas con equipos modestos
+
+Arranca en segundos, pesa poco y trabaja sin conexión permanente. Ideal para salas de informática con computadores de varios años.
+
+Seguro y apropiado para menores
+
+Sin publicidad, sin extensiones de terceros sin aprobar y con control de qué puede instalar cada curso. Los datos del aula quedan bajo el control del colegio.
+
+Ver todas las características
+
+BACHILLERATO INTERNACIONAL
+
+Alineado con las electivas de tecnología
+
+VCodePro no es un editor genérico con un cartel educativo. Cada módulo se construyó a partir de las guías de las asignaturas de tecnología del IB y del ciclo de diseño del MYP.
+
+Informática NM y NS
+
+Plantillas para estructuras de datos, algoritmos, bases de datos y la solución del trabajo interno, con verificación de complejidad y casos de prueba.
+
+Diseño y Diseño MYP
+
+Bitácora del ciclo de diseño, especificaciones del producto y evidencias fotográficas enlazadas al código de cada prototipo.
+
+ITGS
+
+Casos de estudio con datos reales, análisis de impacto social y hojas de trabajo sobre privacidad, seguridad y ética digital.
+
+Conocer la propuesta pedagógica
+
+Lo que recibe cada colegio
+Plan de aula por nivel
+De 6.º a 12.º, con 32 sesiones por año y proyectos evaluables.
+Banco de proyectos
+Más de 120 retos clasificados por criterio, dificultad y duración.
+Formación docente
+Cuatro talleres en vivo y certificación interna para el equipo de tecnología.
+Panel de coordinación
+Seguimiento de licencias, cursos y evidencias listas para la visita de evaluación.
++120
+proyectos y agentes listos para el aula
+32
+sesiones planeadas por año escolar
+6
+lenguajes de programación soportados
+3
+tipos de licencia para cada realidad
+
+PUESTA EN MARCHA
+
+De la descarga a la primera clase en una tarde
+Descarga e instala
+
+Elige el instalador de tu sistema operativo. En salas de cómputo puedes usar el paquete de instalación silenciosa para desplegar en todos los equipos a la vez.
+
+Activa la licencia del colegio
+
+Con la clave que recibe el coordinador se habilitan el modo aula, las rúbricas y el panel de seguimiento. La activación se hace una sola vez por institución.
+
+Crea tus cursos y asigna licencias
+
+Importa la lista de estudiantes, reparte los puestos disponibles y comparte el primer proyecto con un código de clase.
+
+Enseña y evalúa
+
+Los estudiantes programan, el editor los acompaña con pistas y tú evalúas con los criterios del IB desde el mismo panel.
+
+LICENCIAMIENTO
+
+Tres formas de licenciar VCodePro
+
+Precios en pesos colombianos. El editor se descarga gratis; la licencia habilita las funciones de aula, las rúbricas y el soporte.
+
+Personal
+
+Para el docente que prepara sus clases y para el estudiante que quiere seguir practicando en casa.
+
+$150.000
+COP / mes
+
+Por licencia · de 1 a 10 · sin permanencia mínima
+
+De 1 a 10 licencias individuales
+Asistente de IA y estudio de agentes
+Todas las plantillas y rúbricas
+Banco de proyectos completo
+Soporte por correo
+
+Ver detalles
+
+EL MÁS ELEGIDO
+Escuela
+
+Para el colegio que dicta las electivas de tecnología con uno o varios grupos por nivel.
+
+$5.000.000
+COP / año
+
+Hasta 100 licencias · $4.167 por licencia al mes
+
+Hasta 100 licencias
+IA de aula y agentes publicados por curso
+Modo aula y panel docente
+Rúbricas del IB y exportación de notas
+Formación para el equipo docente
+Soporte prioritario
+
+Ver detalles
+
+Licencia de Sitio
+
+Para la institución que quiere programación en todos los niveles y en todas las salas.
+
+$20.000.000
+COP / año
+
+Hasta 500 licencias · $3.333 por licencia al mes
+
+Hasta 500 licencias
+IA de aula con cuotas por sede y modo examen
+Despliegue asistido en todas las salas
+Panel de coordinación académica
+Acompañamiento pedagógico anual
+Soporte con tiempo de respuesta acordado
+
+Ver detalles
+
+¿Necesitas más de 500 licencias o varias sedes? Preparamos un acuerdo a la medida.
+
+Empieza hoy con tu grupo de tecnología
+
+Descarga VCodePro sin costo, prueba el banco de proyectos y solicita la licencia cuando tu colegio esté listo.
+
+Descargar VCodePro
+vcodepro
+
+El editor de código para enseñar programación en colegios, especializado en las electivas de tecnología del Bachillerato Internacional.
+
+PRODUCTO
+Características
+IA y agentes
+Descargas
+Documentación
+Requisitos del sistema
+EDUCACIÓN
+Propuesta IB
+Plan por niveles
+Formación docente
+Guía del modo aula
+LICENCIAS
+Precios
+Calculadora
+Portal de licencias
+Preguntas frecuentes
+COMPAÑÍA
+Contacto
+Portal
+Hablar con ventas
+Privacidad
+Términos de uso
+© 2026 VCodePro · Berlín, Alemania
+Hecho para docentes de tecnología

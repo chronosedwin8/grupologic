@@ -1,0 +1,26 @@
+{
+  "name": "grupologic-build",
+  "private": true,
+  "type": "module",
+  "description": "Generador estático opcional del sitio de Grupo Logic",
+  "scripts": {
+    "investigar": "node capturar.mjs",
+    "capturas": "node capturar-final.mjs && node capturar-bookstudio.mjs",
+    "imagenes": "node imagenes.mjs",
+    "build": "node build.mjs",
+    "og": "node og.mjs",
+    "todo": "node imagenes.mjs && node build.mjs && node og.mjs",
+    "servir": "node servidor.mjs 8080",
+    "verificar": "node verificar.mjs",
+    "pruebas": "node pruebas.mjs"
+  },
+  "devDependencies": {
+    "html-validate": "^11.16.1",
+    "lighthouse": "^13.5.0",
+    "opentype.js": "^2.0.0",
+    "playwright": "^1.63.0",
+    "sharp": "^0.35.5",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

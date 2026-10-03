@@ -1,0 +1,8 @@
+# Dependencias y archivos generados del entorno de construcción
+node_modules/
+_build/capturas/
+_build/revision/
+_build/og-tmp.html
+_build/paginas.json
+.DS_Store
+Thumbs.db

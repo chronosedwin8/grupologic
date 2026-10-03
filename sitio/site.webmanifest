@@ -1,0 +1,27 @@
+{
+  "name": "Grupo Logic",
+  "short_name": "Grupo Logic",
+  "description": "Tecnología educativa para colegios de Latinoamérica",
+  "lang": "es-419",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06101F",
+  "theme_color": "#0B1B33",
+  "icons": [
+    {
+      "src": "/assets/img/iconos/icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/iconos/icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+ "aulamagica-ia-panel": {
+  "anchos": [
+   1092,
+   560
+  ],
+  "ratio": 0.9359
+ },
+ "aulamagica-ia-portada": {
+  "anchos": [
+   1440,
+   960,
+   640
+  ],
+  "ratio": 0.5625
+ },
+ "bookstudio-editor": {
+  "anchos": [
+   1440,
+   960,
+   640
+  ],
+  "ratio": 0.5625
+ },
+ "bookstudio-portada": {
+  "anchos": [
+   1440,
+   960,
+   640
+  ],
+  "ratio": 0.5625
+ },
+ "codexia-panel": {
+  "anchos": [
+   966,
+   560
+  ],
+  "ratio": 0.5217
+ },
+ "codexia-portada": {
+  "anchos": [
+   1440,
+   960,
+   640
+  ],
+  "ratio": 0.5625
+ },
+ "edunova-libros": {
+  "anchos": [
+   1048,
+   560
+  ],
+  "ratio": 0.7729
+ },
+ "edunova-panel": {
+  "anchos": [
+   1070,
+   560
+  ],
+  "ratio": 0.8579
+ },
+ "edunova-portada": {
+  "anchos": [
+   1440,
+   960,
+   640
+  ],
+  "ratio": 0.5625
+ },
+ "unticloud-ausentismo": {
+  "anchos": [
+   1100,
+   560
+  ],
+  "ratio": 0.287
+ },
+ "unticloud-ib": {
+  "anchos": [
+   1100,
+   560
+  ],
+  "ratio": 0.7281
+ },
+ "unticloud-importaciones": {
+  "anchos": [
+   1088,
+   560
+  ],
+  "ratio": 0.7151
+ },
+ "unticloud-panel": {
+  "anchos": [
+   1088,
+   560
+  ],
+  "ratio": 0.4908
+ },
+ "unticloud-portada": {
+  "anchos": [
+   1440,
+   960,
+   640
+  ],
+  "ratio": 0.5625
+ },
+ "vcodepro-agentes": {
+  "anchos": [
+   1100,
+   560
+  ],
+  "ratio": 1.0761
+ },
+ "vcodepro-panel": {
+  "anchos": [
+   1100,
+   560
+  ],
+  "ratio": 0.4481
+ },
+ "vcodepro-portada": {
+  "anchos": [
+   1440,
+   960,
+   640
+  ],
+  "ratio": 0.5625
+ }
+}

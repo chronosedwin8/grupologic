@@ -1,0 +1,325 @@
+URL: https://codexialab.com/
+{
+ "title": "Codexia — La tierra donde cada reto se resuelve programando",
+ "description": "Codexia es la plataforma educativa gamificada que enseña programación, matemáticas, lógica, IA y más a niños de 4 a 12 años. Bloques y código, voz natural, mini-juegos y panel docente. ¡Aprende jugando!",
+ "imgs": [],
+ "links": [
+  "https://codexialab.com/index.html",
+  "https://codexialab.com/index.html",
+  "https://codexialab.com/modulos.html",
+  "https://codexialab.com/funcionalidades.html",
+  "https://codexialab.com/como-funciona.html",
+  "https://codexialab.com/planes.html",
+  "https://codexialab.com/testimonios.html",
+  "https://codexialab.com/wiki.html",
+  "https://codexialab.com/planes.html",
+  "https://codexialab.com/app",
+  "https://codexialab.com/app",
+  "https://codexialab.com/#demo",
+  "https://codexialab.com/modulos.html",
+  "https://codexialab.com/como-funciona.html",
+  "https://codexialab.com/funcionalidades.html",
+  "https://codexialab.com/testimonios.html",
+  "https://codexialab.com/checkout.html?plan=prueba",
+  "https://codexialab.com/checkout.html?plan=individual",
+  "https://codexialab.com/checkout.html?plan=escuela",
+  "https://codexialab.com/planes.html",
+  "https://codexialab.com/app",
+  "https://codexialab.com/planes.html",
+  "https://codexialab.com/index.html",
+  "https://codexialab.com/modulos.html",
+  "https://codexialab.com/funcionalidades.html",
+  "https://codexialab.com/como-funciona.html",
+  "https://codexialab.com/planes.html",
+  "https://codexialab.com/wiki.html",
+  "https://codexialab.com/testimonios.html",
+  "https://codexialab.com/index.html#demo",
+  "https://codexialab.com/index.html#faq",
+  "https://codexialab.com/app",
+  "https://codexialab.com/planes.html",
+  "https://codexialab.com/#",
+  "https://codexialab.com/#"
+ ]
+}
+
+🚀
+Codexia
+Inicio
+Módulos
+Funcionalidades
+Cómo funciona
+Planes
+Testimonios
+Wiki
+🔑
+Renovar licencia
+▶
+Entrar a
+Codexia
+PLATAFORMA EDUCATIVA GAMIFICADA · 4–12 AÑOS
+La tierra donde cada reto se resuelve programando
+
+Codexia convierte el aprendizaje de programación, matemáticas, lógica e inteligencia artificial en una aventura. Bloques y código, voz natural, mini-juegos y recompensas que motivan a cada niño.
+
+🚀 Comenzar gratis
+🎮 Probar el demo
+🧩 Bloques + 💻 Código
+🔊 Voz natural
+🏆 Gamificación
+👩‍🏫 Panel docente
+codexia · nivel 3
+🧩 heroe.avanzar()
+🔄 heroe.girarDerecha()
+🔁 repetir(3) { heroe.avanzar() }
+🤖
+🌟
+1.2M+
+estudiantes
+45
+países
+8.5K+
+escuelas
+96%
+docentes recomiendan
+
+* Cifras ilustrativas de adopción del programa.
+
+CURRÍCULO COMPLETO
+Muchos mundos, una sola aventura
+
+Diez materias diseñadas por pedagogos, con cientos de actividades que crecen en dificultad.
+
+💜
+Programación
+
+Secuencias, bucles, condicionales, variables, funciones y recursión.
+
+🔵
+Lógica
+
+Patrones, clasificación, comparación y pensamiento computacional.
+
+🟢
+Aritmética
+
+Del conteo a fracciones, decimales y potencias.
+
+🟠
+Geometría
+
+Figuras, perímetro, área, volumen y ángulos.
+
+🔷
+Informática
+
+Hardware, redes, ofimática y ciudadanía digital.
+
+🔴
+Seguridad en Internet
+
+Contraseñas, phishing, privacidad y huella digital.
+
+🤖
+Inteligencia Artificial
+
+Datos, patrones y tu primera neurona artificial.
+
+🧲
+Física Básica
+
+Fuerzas, gravedad, luz, sonido, calor e imanes.
+
+🧒
+Preescolar
+
+Matemáticas y Lectoescritura con voz natural para quienes aún no leen.
+
+NUEVO · 4–6 años
+🎮
+Juegos & Laboratorios
+
+Arcade, simuladores interactivos y 10 plantillas de mini-juegos.
+
++200 juegos
+Ver todos los módulos →
+CÓMO FUNCIONA
+Aprender es jugar, paso a paso
+1
+Elige tu mundo
+
+Cada materia es una región con mundos que se desbloquean al avanzar.
+
+2
+Programa
+
+Arrastra bloques o escribe código real. Tú eliges la modalidad.
+
+3
+Ejecuta y observa
+
+El héroe cobra vida y resuelve el reto con tus instrucciones.
+
+4
+Gana recompensas
+
+Estrellas, monedas, logros y objetos para tu avatar.
+
+Conoce la metodología →
+PRUÉBALO AHORA
+Programa al robot 🤖 hasta la 🌟
+
+Una muestra real de la mecánica de Codexia, aquí mismo en tu navegador.
+
+Bloques
+➡️ avanzar
+🔄 girar
+Tu programa
+Toca los bloques para crear tu programa…
+▶ Ejecutar
+↺ Reiniciar
+💡 Pista
+🌟
+🤖
+BONDADES PEDAGÓGICAS
+Tecnología al servicio del aprendizaje
+🧩
+Bloques + Código
+
+Editor de bloques (Blockly) y editor de texto (Monaco) con tres bandas de edad: íconos, mixto y código.
+
+🛡️
+Ejecución segura
+
+El código del niño corre en un entorno aislado (sandbox) con límites de tiempo e instrucciones.
+
+🔊
+Voz natural
+
+Instrucciones narradas con voz natural para Preescolar: aprenden aunque no sepan leer.
+
+🏆
+Gamificación real
+
+Logros que desbloquean mundos especiales, tienda con monedas y gemas, y avatar personalizable.
+
+👩‍🏫
+Panel docente
+
+Grupos, sedes, asignaciones por estudiante o aula y estadísticas de progreso en vivo.
+
+📈
+Seguimiento
+
+Estrellas por desempeño, rachas y reportes que muestran el avance de cada estudiante.
+
+Ver todas las funcionalidades →
+TESTIMONIOS
+Familias y docentes lo aman
+
+“Mi hija de 5 años entra sola a Preescolar y la voz la guía. Aprendió las vocales jugando.”
+
+👩
+Laura M.
+Mamá · Bogotá
+
+“Uso el panel docente con mis tres grupos. Asignar actividades y ver el progreso me ahorra horas.”
+
+👨‍🏫
+Prof. Andrés R.
+Docente · Medellín
+
+“Pasó de bloques a escribir código real sin darse cuenta. Los mini-juegos lo enganchan.”
+
+👧
+Familia Torres
+Cali
+Leer más historias →
+PLANES · PRECIOS EN COP
+Empieza hoy, aprende sin límites
+
+Pruébalo por 24 horas por solo $10.000 o activa tu licencia anual. Compra 100% segura procesada por Codexia.
+
+Para probar
+Prueba
+$10.000 COP / 24 horas
+
+Acceso total por un día
+
+Acceso completo a las 10 materias
++200 juegos, arcade y laboratorios
+Preescolar con voz natural
+Sin compromiso de renovación
+Ideal para conocer la plataforma
+Probar 24 h →
+Para familias
+Individual
+$2.000.000 COP / año
+
+Renovación anual · 1 estudiante
+
+Todas las materias y +200 juegos
+Preescolar, Arcade y Laboratorios
+Editores de bloques y de código real
+Logros, tienda, avatares y progreso
+Actualizaciones incluidas todo el año
+Comprar Individual →
+Para instituciones
+Escuela
+$12.000.000 COP / año
+
+Renovación anual · institución completa
+
+Todo lo del plan Individual, para tus estudiantes
+Panel docente: grupos, sedes y asignaciones
+Código de institución para inscribir estudiantes
+Estadísticas de progreso en vivo
+Soporte prioritario y acompañamiento
+Comprar Escuela →
+PREGUNTAS FRECUENTES
+Resolvemos tus dudas
+¿Desde qué edad pueden usar Codexia?
+⌄
+Desde los 4 años con la sección Preescolar (voz natural e íconos grandes) hasta los 12+ con programación en código.
+¿Necesitan saber leer para empezar?
+⌄
+No. Preescolar narra cada instrucción con voz natural, así que aprenden aunque aún no lean ni escriban.
+¿Sirve para colegios?
+⌄
+Sí. El panel docente permite crear grupos y sedes, asignar actividades y ver estadísticas de progreso por estudiante o aula.
+¿Es seguro para los niños?
+⌄
+El código se ejecuta en un entorno aislado y cumplimos normativas de protección de datos de menores (p. ej. Ley 1581 en Colombia), con consentimiento de tutores.
+¿Funciona en tablets?
+⌄
+Sí, Codexia es responsive y está optimizada para tablets escolares, además de computadores.
+¿Cómo renuevo mi licencia?
+⌄
+Desde el botón “Renovar licencia” en la parte superior o en la página de Planes.
+¿List@ para empezar la aventura?
+
+Únete a las familias y escuelas que ya aprenden programando con Codexia.
+
+🚀 Entrar a Codexia
+🔑 Renovar licencia
+🚀
+Codexia
+
+La tierra donde cada reto se resuelve programando. Educación STEM gamificada para niños.
+
+Producto
+Módulos
+Funcionalidades
+Cómo funciona
+Planes
+Recursos
+Wiki / Documentación
+Testimonios
+Demo interactivo
+Preguntas frecuentes
+Acceso
+Entrar a Codexia
+Renovar licencia
+Soporte
+Contacto
+© 2026 Codexia. Todos los derechos reservados.
+Hecho con 💜 para que cada niño programe su futuro.

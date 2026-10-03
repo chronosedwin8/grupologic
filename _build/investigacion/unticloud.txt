@@ -1,0 +1,681 @@
+URL: https://www.unticloud.de/
+{
+ "title": "UntiCloud — Horarios, Guardias y Estadísticas desde Untis",
+ "description": "UntiCloud transforma los archivos de Untis en un panel web moderno: horarios en tiempo real, gestión de guardias de recreo y estadísticas de ausentismo para toda la institución. Sin instalaciones. Sin complicaciones.",
+ "imgs": [],
+ "links": [
+  "https://www.unticloud.de/index.html",
+  "https://www.unticloud.de/#como-funciona",
+  "https://www.unticloud.de/#funcionalidades",
+  "https://www.unticloud.de/#modulo-ib",
+  "https://www.unticloud.de/#estadisticas",
+  "https://www.unticloud.de/#testimonios",
+  "https://www.unticloud.de/#planes",
+  "https://www.unticloud.de/doc/index.html",
+  "https://www.unticloud.de/caleman/login.php",
+  "https://www.unticloud.de/portal-login.html",
+  "https://www.unticloud.de/#como-funciona",
+  "https://www.unticloud.de/#funcionalidades",
+  "https://www.unticloud.de/#modulo-ib",
+  "https://www.unticloud.de/#estadisticas",
+  "https://www.unticloud.de/#testimonios",
+  "https://www.unticloud.de/#planes",
+  "https://www.unticloud.de/doc/index.html",
+  "https://www.unticloud.de/caleman/login.php",
+  "https://www.unticloud.de/portal-login.html",
+  "https://www.unticloud.de/index.html",
+  "https://www.unticloud.de/#funcionalidades",
+  "https://www.unticloud.de/#modulo-ib",
+  "https://www.unticloud.de/#estadisticas",
+  "https://www.unticloud.de/doc/index.html",
+  "https://www.unticloud.de/#guardias",
+  "https://www.unticloud.de/#planes",
+  "https://www.unticloud.de/sobre.html",
+  "https://www.unticloud.de/faq.html",
+  "https://www.unticloud.de/soporte.html",
+  "https://www.unticloud.de/privacidad.html",
+  "https://mpago.li/2bAqqQx",
+  "https://mpago.li/1JUASvr",
+  "https://mpago.li/1p1wRZQ"
+ ]
+}
+
+UntiCloud
+Cómo funciona
+Funcionalidades
+IB
+Estadísticas
+Testimonios
+Planes
+Wiki
+Plataforma
+Renovar ahora
+Acceder
+✦ VERSIÓN 2026 DISPONIBLE
+Toda la potencia de Untis,
+ahora en la web.
+
+UntiCloud lee los archivos exportados de Untis y los convierte en un panel web moderno: horarios en vivo, gestión de guardias, estadísticas de ausentismo y mucho más. Sin instalaciones. Sin servidores propios. Sin complicaciones.
+
+Renovar ahora
+Ver cómo funciona ↓
+✓ Sin instalación
+✓ Compatible Untis 2020+
+✓ Multidispositivo
+app.unticloud.de / panel
+Panel de Administración
+94
+Docentes
+48
+Cursos
+213
+Materias
+72
+Salones
+2.840
+Bloques
+156
+Guardias
+2.418
+Sustituciones
+📋
+Reemplazos del día
+📊
+Estadísticas
+🎓
+Indicadores IB
+📅
+Ver Horarios
+1.2K
+Colegios que confían en UntiCloud
+8.4M
+Horarios analizados
+47K
+Usuarios en el mundo
+2.1M
+Reportes descargados
+PROCESO
+Listo en una tarde, no en meses
+
+Si su institución ya tiene Untis Desktop, tiene el 80% del trabajo hecho. UntiCloud toma sus datos existentes y los publica en la web sin migraciones ni configuraciones complejas.
+
+1
+UNTIS DESKTOP
+Exporta los archivos GPU
+
+Desde Untis Desktop genera los archivos GPU*.TXT de siempre — los mismos que ya produce para respaldo. No requiere ningún cambio en su flujo actual de planificación.
+
+2
+PANEL ADMIN
+Importa con un solo clic
+
+El responsable TIC sube los archivos al panel y hace clic en "Importar". El sistema procesa los datos en segundos, sin duplicados, con historial de auditoría completo.
+
+3
+TODA LA INSTITUCIÓN
+Accede desde cualquier dispositivo
+
+Docentes ven su horario y guardias desde el celular. Coordinadores gestionan sustituciones. Directivos consultan estadísticas de ausentismo. Todo en tiempo real.
+
+FUNCIONALIDADES
+Todo lo que su institución necesita en un solo lugar
+
+Diseñado desde cero para colegios que usan Untis. Cada módulo resuelve un problema real que los equipos de coordinación y dirección enfrentan a diario.
+
+📅
+Horarios en tiempo real
+
+Docentes y coordinadores consultan horarios actualizados desde cualquier dispositivo. Vistas por docente, por curso y en agenda semanal con cambios al instante.
+
+Para todos los roles
+📊
+Estadísticas de ausentismo
+
+Índice de ausentismo docente por mes, motivos y cursos más afectados. Ahora con filtro por sección (IB, Bachillerato, Primaria…): una sola vista de analítica que se adapta a cualquier nivel.
+
+Para dirección y rectoría
+🛡️
+Guardias de recreo
+
+Cada docente ve qué día y en qué zona le corresponde vigilar. Sin papeles, sin llamadas. La asignación viene directamente desde Untis, sin reconfiguración.
+
+Para coordinación y docentes
+🔀
+Comparador de horarios
+
+Seleccione hasta 4 docentes o cursos y compare sus horarios en paralelo. Detecte solapamientos y horas libres simultáneas al instante. Herramienta favorita de coordinación.
+
+Exclusivo coordinadores
+🔁
+Reemplazos y planificación
+
+Vista diaria de sustituciones con PDF imprimible. Planificación de ausencias con vista de disponibilidad docente y registro histórico por motivo para tomar decisiones con datos.
+
+Para coordinación académica
+🎓
+Indicadores IB
+
+Módulo exclusivo para programas de Bachillerato Internacional: cumplimiento de horas HL/SL, seguimiento del núcleo EE·TdC·CAS y horas perdidas por ausentismo en la sección IB.
+
+Para coordinación IB
+📋
+Carga horaria docente
+
+Vista detallada tipo Untis de la carga por docente o curso: lecciones, grupos, materias, salones y horas semanales. Base objetiva para conversaciones de equipo y reasignaciones.
+
+Para rectoría y TIC
+PARA EL RECTOR Y EL TIC
+Un solo panel para gobernar toda la institución
+
+Importa los archivos GPU*.TXT de Untis con un clic. UntiCloud actualiza la base de datos de forma idempotente y pone al instante los indicadores clave en manos de la dirección.
+
+Importación directa desde Untis
+
+Sube los archivos exportados de Untis Desktop y UntiCloud los procesa sin duplicados. Historial de importaciones con fecha, archivo, filas importadas y errores detectados.
+
+KPIs institucionales en tiempo real
+
+Un único vistazo muestra el total de docentes, cursos, materias, salones, bloques de horario, guardias asignadas y sustituciones cubiertas en el año lectivo.
+
+Gestión de usuarios y roles
+
+Administre accesos para directivos, coordinadores y docentes. Cada rol ve solo lo que necesita: el rector ve todo, el docente ve su propio horario.
+
+Historial de Importaciones
+↑ Importar Ahora
+Fecha	Archivo	Filas OK	Errores
+2026-06-14 08:32	GPU004.TXT	93	0
+2026-06-14 08:32	GPU014.TXT	7.420	0
+2026-06-14 08:32	GPU013.TXT	1.381	0
+2026-06-14 08:32	GPU001.TXT	2.840	4
+2026-06-14 08:32	GPU006.TXT	213	0
+2026-06-14 08:32	GPU009.TXT	156	0
+PARA EL RECTOR Y COORDINACIÓN
+Estadísticas que transforman decisiones
+
+Filtre por mes, año lectivo o rango libre. UntiCloud calcula automáticamente el índice de ausentismo docente considerando solo las horas que el docente debía impartir y no impartió.
+
+312
+Horas sustituidas
+en el mes de referencia
+22
+Días con sustituciones
+de 22 días lectivos
+53
+Docentes sustituidos
+en el período
+61
+Docentes que cubrieron
+comprometidos con el centro
+3.8%
+ÍNDICE DE AUSENTISMO DOCENTE
+302 DE 7.950 HORAS BASE EN EL PERÍODO
+94
+Docentes activos
+1.875 h
+Base/semana (clase + vigil.)
+7.950 h
+Horas base del período
+68
+Horas sin cubrir
+Índice de ausentismo por mes — Año lectivo 2025–2026
+2.0%
+Ago
+4.6%
+Sep
+3.8%
+Oct
+2.1%
+Nov
+0.5%
+Dic
+1.7%
+Ene
+4.3%
+Feb
+3.8%
+Mar
+2.8%
+Abr
+4.2%
+May
+1.9%
+Jun
+Verde <5% — Óptimo
+Amarillo 5–10% — Atención
+Rojo ≥10% — Crítico
+Motivos de ausencia
+
+Distribución por tipo de justificación registrada en Untis
+
+Incapacidad Médica
+87 h
+Sin certificado
+59 h
+Asunto personal
+48 h
+Capacitación docente
+37 h
+Cita médica
+26 h
+Sin especificar
+17 h
+Licencia gremial
+9 h
+Cursos con más horas afectadas
+
+Identifica los grupos con mayor impacto académico
+
+Sin grupo asignado
+38 h
+11B
+18 h
+10A
+16 h
+K9A
+13 h
+K8B
+11 h
+12GIB
+10 h
+K7C
+8 h
+EXCLUSIVO PARA PROGRAMAS IB
+Indicadores IB: cumplimiento de horas y núcleo
+
+El módulo que cruza el horario de Untis con los estándares del Bachillerato Internacional. Sepa en tiempo real si sus cursos IB cumplen las horas mínimas oficiales — sin hojas de cálculo ni revisiones manuales.
+
+Indicadores IB — Sección IB · 2025–2026
+38 semanas · HL 240 h · SL 150 h
+MATERIA	NIVEL	H/SEM	PROYECCIÓN	MÍNIMO IB	ESTADO
+Historia	HL	6–7	266 h	240 h	✓ Cumple
+Biología	HL	5–6	228 h	240 h	⚡ En riesgo
+Español A	SL	4	152 h	150 h	✓ Cumple
+Matemáticas	HL	5	190 h	240 h	✗ No cumple
+Química	SL	4	152 h	150 h	✓ Cumple
+NÚCLEO IB — EE · TDC · CAS
+✓
+TdC / Teoría del Conocimiento  4 h/sem · en horario (sección B)
+✓
+CAS (Creatividad, Actividad, Servicio)  2 h/sem · actividad registrada
+—
+Monografía / Extended Essay  Investigación independiente — no figura en el horario
+🎓
+Semáforo de cumplimiento por materia
+
+Proyecta las horas semanales al año lectivo y las compara con los mínimos HL y SL. Semáforo Cumple / En riesgo / No cumple al instante, por materia y grupo.
+
+🔬
+Núcleo IB detectado automáticamente
+
+Identifica TdC, CAS y Monografía dentro del horario de Untis aunque estén en secciones distintas. Sin nada hardcodeado: funciona con los códigos de su colegio.
+
+📉
+Horas perdidas en clases IB
+
+Cuántas horas de cursos IB tuvieron ausencias, cuáles se cubrieron con sustituto y cuáles quedaron sin docente. Filtrado exclusivamente a la sección IB.
+
+⚙️
+Mínimos editables por materia y año
+
+Define desde el panel si cada materia es HL o SL, con los valores IBO como referencia. Actualizable para el próximo año sin tocar código.
+
+🔎
+Filtro por Sección en todas las estadísticas
+
+Filtre cualquier reporte de ausentismo por sección con un solo clic. Las secciones se leen automáticamente de los archivos Untis; no hay nada que configurar manualmente.
+
+IB
+Bachillerato
+Primaria
+Kinder
++ cualquier sección definida en Untis
+PARA COORDINADORES Y DOCENTES
+Comparación de horarios entre docentes y cursos
+
+Seleccione hasta 4 docentes o cursos simultáneamente y compare sus horarios semana a semana. Identifique solapamientos, horas libres y vigilancias en un solo vistazo.
+
+Docentes (máx. 4)
+Cursos (máx. 4)
+WAGNERH
+STEINP
+NOVAKJ
+BAUERM
+RITTERL
+FISCHERJ
+KRAUSEA
+WEBERP
+MEYERT
+RICHTERA
+KLEINS
+4 seleccionados: BAUERM, RITTERL, KRAUSEA, MEYERT
+BAUERM
+Martin Bauer
+#
+Lun
+Mar
+Mié
+Jue
+Vie
+1
+MAT11
+MAT11
+MAT11
+MAT11
+MAT11
+2
+MAT10
+MAT10
+Vig.
+MAT10
+MAT10
+3
+—
+—
+—
+—
+—
+4
+FIS11
+—
+FIS11
+—
+—
+RITTERL
+Laura Ritter
+#
+Lun
+Mar
+Mié
+Jue
+Vie
+1
+BIO11
+BIO11
+BIO11
+BIO11
+BIO11
+2
+BIO9
+—
+QUI9
+BIO9
+Coord
+3
+—
+BIO11
+—
+—
+—
+4
+Vig.
+QUI9
+BIO11
+QUI9
+BIO11
+KRAUSEA
+Anna Krause
+#
+Lun
+Mar
+Mié
+Jue
+Vie
+1
+—
+LEN9
+LEN11
+LEN11
+LEN11
+2
+LEN9
+LEN9
+LEN8
+—
+—
+3
+LEN11
+LEN11
+LEN8
+LEN11
+—
+4
+Vig.Z3
+LEN12
+LEN9
+LEN9
+LEN9
+Vigilancia de recreo
+Coord = Hora de coordinación
+Horario por docente
+
+Cualquier profesor accede a su horario semanal desde el celular: materias, cursos, aulas y vigilancias de recreo asignadas. Sin necesidad de imprimir nada.
+
+Horario por curso
+
+Los estudiantes y padres consultan el horario del curso en tiempo real. Incluye la materia, docente responsable y salón para cada bloque del día.
+
+Comparar hasta 4 docentes
+
+Herramienta exclusiva de coordinación que permite comparar simultáneamente los horarios de hasta 4 docentes o 4 cursos para detectar conflictos de planificación.
+
+PARA COORDINACIÓN DE CONVIVENCIA
+Vigilancias de recreo: organizadas, auditables
+
+Cada docente sabe exactamente qué día y en qué zona le corresponde vigilar. UntiCloud convierte la guardia de recreo en un proceso transparente y trazable.
+
+156
+Guardias registradas en el año
+
+Cada bloque de vigilancia está identificado por docente, zona, fecha y turno de recreo.
+
+100%
+Visibles en el horario del docente
+
+Las vigilancias aparecen integradas en el horario semanal junto a las clases regulares.
+
+0
+Papeles necesarios
+
+Todo digital. La coordinación no imprime listas; los docentes consultan desde su dispositivo.
+
+Mis guardias del día — Jueves 19 Jun 2026
+Recreo 1 (10:30)
+Patio Principal — Zona A
+✓ Asignada
+Recreo 2 (13:00)
+Canchas — Zona C
+⚠ Sustitución
+La sustitución fue cubierta por WEBERP según el registro de hoy.
+TESTIMONIOS
+Lo que dicen quienes ya lo usan
+
+Colegios bilingües que trabajan con Untis y encontraron en UntiCloud la capa web que les faltaba.
+
+★
+★
+★
+★
+★
+
+El rector puede entrar un lunes y ver en 30 segundos cómo fue el ausentismo de todo el mes anterior. Eso antes nos tomaba dos horas de Excel y siempre había errores de cálculo.
+
+👩‍💼
+Andrea Müller
+Coordinadora Académica — Instituto Bilingüe Miraflores
+★
+★
+★
+★
+★
+
+La implementación fue sorprendentemente rápida. En una tarde teníamos los datos importados y los docentes consultando sus horarios desde el celular. Cero complicaciones técnicas.
+
+👨‍💻
+Tobias Richter
+Responsable TIC — Colegio Continental Europa
+★
+★
+★
+★
+★
+
+Los Indicadores IB nos salvaron en la última auditoría. En segundos mostramos el cumplimiento de horas por materia y el estado del núcleo. Antes tardábamos días cruzando Untis con hojas de cálculo.
+
+👨‍🏫
+Roberto Vargas
+Coordinador IB — Centro Educativo del Valle
+Diseñado para cada rol de su institución
+
+UntiCloud adapta la información según quién la consulta. Un solo sistema, múltiples perspectivas.
+
+🏛️
+Rector / CEO
+
+Vista estratégica: índice de ausentismo global, comparativos mensuales y KPIs de la institución. Tome decisiones respaldadas por datos en lugar de informes manuales.
+
+Índice de ausentismo por período
+Tendencias mes a mes
+Horas sin cubrir con alerta visual
+⚙️
+Coordinador TIC
+
+Integración limpia con Untis Desktop vía exportación de archivos GPU. Sin APIs complejas. Arquitectura robusta y auditable con historial completo de importaciones.
+
+Importación idempotente de archivos Untis
+Historial de importaciones con errores
+Gestión de usuarios y permisos
+📋
+Coordinador Académico
+
+Herramientas de planificación y supervisión: compare horarios, gestione sustituciones, analice la carga docente y, si su colegio tiene programa IB, haga seguimiento de cumplimiento de horas.
+
+Reemplazos del día y planificación de ausencias
+Carga horaria detallada por docente y curso
+Indicadores IB: semáforo HL/SL y núcleo
+Estadísticas filtradas por sección
+👨‍🏫
+Docente
+
+Consulta rápida desde cualquier dispositivo. Sin imprimir. Sin llamar a coordinación. El docente ve su horario completo, incluyendo vigilancias, en segundos.
+
+Horario personal en el celular
+Vigilancias y zonas asignadas
+Avisos de sustitución que le corresponden
+PLANES
+Transparente y sin letra pequeña
+
+Cada institución es diferente. Hablamos con usted para definir el plan que mejor se adapta a su tamaño y necesidades. Todos incluyen demo gratuita.
+
+Institución
+
+Para un solo centro educativo con hasta 150 docentes. Todo lo esencial para empezar a sacar valor de sus datos de Untis.
+
+$11.200.000
+COP / año · facturación anual
+✓
+Horarios docente y curso en tiempo real
+✓
+Gestión de guardias y recreos
+✓
+Estadísticas de ausentismo mensual
+✓
+Módulo de sustituciones del día
+✓
+Gestión de usuarios y roles
+✓
+Onboarding guiado + soporte por correo
+Renovar ahora
+MÁS ELEGIDO
+Profesional
+
+Para centros que quieren sacar el máximo partido a sus datos con herramientas avanzadas de análisis y gestión.
+
+$15.000.000
+COP / año · facturación anual
+✓
+Todo del plan Institución
+✓
+Módulo Indicadores IB (cumplimiento HL/SL + núcleo)
+✓
+Filtro por Sección en estadísticas
+✓
+Planificación y carga horaria docente
+✓
+Comparador de 4 horarios simultáneos
+✓
+Exportación PDF + informes para junta
+✓
+Soporte prioritario + videollamada
+Renovar ahora
+Red de Colegios
+
+Para redes con múltiples sedes que necesitan un panel unificado con estadísticas comparativas entre campus.
+
+A medida
+presupuesto personalizado para su red
+✓
+Todo del plan Profesional
+✓
+Múltiples sedes en un panel
+✓
+Estadísticas comparativas por sede
+✓
+Acceso multi-institución por usuario
+✓
+SLA garantizado por contrato
+✓
+Gerente de cuenta dedicado
+Renovar ahora
+
+Todos los planes incluyen demo gratuita, soporte de implementación y actualizaciones de la plataforma durante el contrato.
+
+¿Su institución trabaja con Untis?
+
+Renueve su licencia de Untis 2027 o actualice a UntiCloud. Ingrese su número de licencia para ver los servicios disponibles y sus precios.
+
+Renovar ahora →
+
+Ingrese su número de licencia — sin espacios ni guiones.
+
+40%
+Reducción en tiempo de coordinación
+<5 min
+Para importar datos desde Untis
+100%
+Web — sin instalar nada
+UntiCloud
+
+La plataforma web que transforma los datos de Untis en inteligencia institucional para colegios bilingües y centros de enseñanza.
+
+PLATAFORMA
+Funcionalidades
+Indicadores IB
+Estadísticas
+Documentación
+Vigilancias
+Precios
+EMPRESA
+Sobre UntiCloud
+Preguntas frecuentes
+Soporte técnico
+Política de privacidad
+CONTACTO
+
+info@unticloud.com
+
+Lunes a viernes, 8:00–17:00
+
+Renovar ahora
+
+© 2026 UntiCloud. Desarrollado para instituciones que usan Untis. Todos los derechos reservados.
+
+✕
+🔑
+Verificar su licencia
+
+Ingrese su número de licencia Untis para ver los servicios de renovación disponibles.
+
+Número de licencia
+ Sin espacios ni guiones
+Validar licencia →
