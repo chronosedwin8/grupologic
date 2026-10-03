@@ -2,14 +2,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  SOLUCIONES, CATEGORIAS, categoria, solucion, esc, icono, logotipo, imagen, acordeon, faqLd, organizacionLd, DOMINIO,
+  SOLUCIONES, CATEGORIAS, esc, N_SOLUCIONES, N_LINEAS, mayuscula, icono, logotipo, imagen, acordeon, faqLd, organizacionLd, DOMINIO,
 } from '../lib/plantilla.mjs';
 import { formularioCorto } from '../lib/formularios.mjs';
 
 const MAPA = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname, '../mapa.json'), 'utf8'));
 
 const DESCRIPCION_LINEA = {
-  gestion: 'Información confiable para dirigir: horarios, ausentismo docente e indicadores académicos, al alcance de rectoría y coordinación.',
+  gestion: 'Información y control para dirigir: horarios, ausentismo docente e indicadores académicos, y el manejo de las salas de informática desde un solo panel.',
   ia: 'Inteligencia artificial bajo control institucional, para que el equipo docente recupere tiempo y los estudiantes aprendan con acompañamiento.',
   programacion: 'Una ruta completa de pensamiento computacional: de los primeros bloques en preescolar a la creación de agentes de IA en bachillerato.',
   contenidos: 'Herramientas para que estudiantes y docentes creen contenido propio, interactivo y accesible.',
@@ -17,6 +17,7 @@ const DESCRIPCION_LINEA = {
 
 const ALT_PANEL = {
   unticloud: 'Panel de administración de UntiCloud con totales de docentes, cursos, materias, guardias y sustituciones',
+  'veyon-control': 'Veyon Master con las pantallas de los equipos del aula en miniatura y el menú de acciones del docente',
   'aulamagica-ia': 'Buscador de herramientas de AulaMágica IA con accesos a presentaciones, plan de clase, rúbricas y quices',
   edunova: 'Módulo de planeación de EduNova generando una clase de Ciencias Naturales con inteligencia artificial',
   codexia: 'Ventana de Codexia con instrucciones de programación por bloques para mover al personaje',
@@ -117,7 +118,7 @@ const ROLES = [
       'Inicio de sesión con cuentas institucionales e integraciones con Google Workspace y Microsoft 365, según la solución.',
       'Usuarios y roles bien definidos, con registros para auditoría.',
     ],
-    soluciones: [['unticloud', 'Importación directa desde Untis'], ['aulamagica-ia', 'Integraciones y control por roles'], ['vcodepro', 'Despliegue en salas y modo examen']],
+    soluciones: [['veyon-control', 'Control de las salas de informática'], ['unticloud', 'Importación directa desde Untis'], ['aulamagica-ia', 'Integraciones y control por roles']],
   },
   {
     id: 'academica', nombre: 'Coordinación académica', titulo: 'Coordinación académica e IB',
@@ -248,7 +249,7 @@ export default function inicio() {
 <section class="seccion seccion--oscura cifras-seccion" aria-label="El portafolio en cifras">
   <div class="contenedor">
     <div class="cifras" data-aparecer-grupo>
-      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="6">6</p><p class="cifra__texto">soluciones especializadas para colegios</p></div>
+      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="${SOLUCIONES.length}">${SOLUCIONES.length}</p><p class="cifra__texto">soluciones especializadas para colegios</p></div>
       <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="4">4</p><p class="cifra__texto">líneas: gestión, IA, programación y contenidos</p></div>
       <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="80" data-prefijo="+">+80</p><p class="cifra__texto">herramientas de IA para docentes en AulaMágica IA<span class="cifra__fuente">Fuente: magicschools.es</span></p></div>
       <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="120" data-prefijo="+">+120</p><p class="cifra__texto">proyectos de programación listos para el aula en VCodePro<span class="cifra__fuente">Fuente: vcodepro.de</span></p></div>
@@ -260,7 +261,7 @@ export default function inicio() {
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
       <p class="ceja">Portafolio</p>
-      <h2 class="titulo-2" id="titulo-portafolio">Seis soluciones, <em>cuatro líneas</em> de trabajo</h2>
+      <h2 class="titulo-2" id="titulo-portafolio">${mayuscula(N_SOLUCIONES)} soluciones, <em>${N_LINEAS} líneas</em> de trabajo</h2>
       <p class="entrada">Software para colegios que cubre la gestión institucional, la inteligencia artificial en el aula, la programación y los contenidos interactivos. Explore cada línea.</p>
     </div>
     ${portafolio()}
@@ -316,7 +317,7 @@ export default function inicio() {
       <li class="compromiso" data-aparecer>${icono('llave')}<div><h3>Control por roles</h3><p>Cada perfil ve solo lo que necesita: directivos, coordinadores, docentes y estudiantes tienen permisos distintos en UntiCloud, AulaMágica IA y EduNova.</p></div></li>
       <li class="compromiso" data-aparecer>${icono('ojo')}<div><h3>Supervisión docente</h3><p>En AulaMágica IA, las actividades de los estudiantes las crea y supervisa el docente; en VCodePro, cada conversación con la IA queda registrada para la coordinación.</p></div></li>
       <li class="compromiso" data-aparecer>${icono('escudo')}<div><h3>Datos que no entrenan modelos</h3><p>AulaMágica IA declara que no usa los datos de docentes ni estudiantes para entrenar modelos de inteligencia artificial y que trata la información conforme al RGPD europeo.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('candado')}<div><h3>Cifrado y respaldo</h3><p>AulaMágica IA declara cifrado en tránsito y en reposo; BookStudio, cifrado en tránsito, copia de seguridad diaria y ningún seguimiento publicitario.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('candado')}<div><h3>Cifrado y respaldo</h3><p>AulaMágica IA declara cifrado en tránsito y en reposo; BookStudio, cifrado en tránsito, copia de seguridad diaria y ningún seguimiento publicitario; Veyon Control, comunicación cifrada con TLS y claves propias por institución.</p></div></li>
       <li class="compromiso" data-aparecer>${icono('familia')}<div><h3>Datos de menores</h3><p>Codexia declara cumplir normas de protección de datos de menores, como la Ley 1581 en Colombia, con consentimiento de los tutores; EduNova indica tratar los datos conforme a esa misma ley.</p></div></li>
     </ul>
   </div>
@@ -349,4 +350,3 @@ ${ctaFinal()}`;
     ],
   };
 }
-void categoria; void solucion;

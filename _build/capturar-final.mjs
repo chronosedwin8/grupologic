@@ -8,19 +8,26 @@ const paneles = {
   codexia: ['https://codexialab.com/', { panel: '.demo-window' }],
   vcodepro: ['https://www.vcodepro.de/', { panel: '.editor-shot', agentes: '.agent-studio' }],
   bookstudio: ['https://bookstudio.uk/', {}],
+  // Veyon: se espera a que termine la animación del titular y se recorta antes de la línea de precio.
+  'veyon-control': ['https://www.veyoncontrol.com/', { aula: '.feature-row .fr-media' }, { esperar: 'en una pantalla.', alto: 740 }],
 };
+// Opcional: node capturar-final.mjs <slug> para capturar una sola solución
+const solo = process.argv[2];
+if (solo) for (const k of Object.keys(paneles)) if (k !== solo) delete paneles[k];
 const b = await chromium.launch();
 async function recorrer(p) {
   const alto = await p.evaluate(() => document.body.scrollHeight);
   for (let y = 0; y < alto; y += 500) { await p.evaluate(v => window.scrollTo(0, v), y); await p.waitForTimeout(120); }
   await p.evaluate(() => window.scrollTo(0, 0)); await p.waitForTimeout(900);
 }
-for (const [slug, [url, sel]] of Object.entries(paneles)) {
+for (const [slug, [url, sel, opc = {}]] of Object.entries(paneles)) {
   const c1 = await b.newContext({ viewport: { width: 1440, height: 900 } });
   const p1 = await c1.newPage();
   await p1.goto(url, { waitUntil: 'networkidle' }).catch(() => {});
   await recorrer(p1);
-  await p1.screenshot({ path: `${D}${slug}-portada.png`, clip: { x: 0, y: 0, width: 1440, height: 810 } });
+  if (opc.esperar) await p1.waitForFunction(t => document.body.innerText.includes(t), opc.esperar, { timeout: 20000 }).catch(() => console.log('aviso: texto no encontrado'));
+  await p1.waitForTimeout(1500);
+  await p1.screenshot({ path: `${D}${slug}-portada.png`, clip: { x: 0, y: 0, width: 1440, height: opc.alto || 810 } });
   await c1.close();
   if (!Object.keys(sel).length) continue;
   const c2 = await b.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });

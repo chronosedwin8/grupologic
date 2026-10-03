@@ -38,7 +38,8 @@
 .lista-columnas .icono { width: 20px; height: 20px; color: var(--gold-700); margin-top: 3px; }
 .seccion--oscura .lista-columnas .icono, .seccion--profunda .lista-columnas .icono { color: var(--gold-500); }
 .licencias { display: grid; gap: 20px; }
-@media (min-width: 960px) { .licencias--2 { grid-template-columns: repeat(2, 1fr); } .licencias--3 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 960px) { .licencias--2, .licencias--4 { grid-template-columns: repeat(2, 1fr); } .licencias--3 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1240px) { .licencias--4 { grid-template-columns: repeat(4, 1fr); } }
 .licencia { display: flex; flex-direction: column; gap: 14px; }
 .licencia__nombre { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
 .licencia__para { color: var(--muted); font-size: .97rem; }

@@ -1,11 +1,11 @@
 # Sitio web de Grupo Logic — grupologiclatam.com
 
 Sitio corporativo estático de Grupo Logic: HTML5, CSS3 y JavaScript puro, sin frameworks.
-Presenta a Grupo Logic ante colegios de Latinoamérica, muestra el portafolio de seis soluciones
+Presenta a Grupo Logic ante colegios de Latinoamérica, muestra el portafolio de siete soluciones
 (cada una con página propia) y convierte visitas en solicitudes de demostración.
 
-> **Decisión del propietario:** ServiVPS se retiró del alcance. El portafolio tiene seis soluciones
-> en cuatro líneas y el sitio tiene 13 páginas.
+> **Decisiones del propietario:** ServiVPS se retiró del alcance y se añadió Veyon Control (línea Gestión
+> institucional). El portafolio tiene siete soluciones en cuatro líneas y el sitio tiene 14 páginas.
 
 ---
 
@@ -16,7 +16,7 @@ GrupoLogic/
 ├── sitio/                    ← LO QUE SE PUBLICA (raíz del dominio)
 │   ├── index.html                      Inicio
 │   ├── soluciones/index.html           Portafolio con filtro
-│   ├── soluciones/<slug>/index.html    unticloud, aulamagica-ia, edunova, codexia, vcodepro, bookstudio
+│   ├── soluciones/<slug>/index.html    unticloud, veyon-control, aulamagica-ia, edunova, codexia, vcodepro, bookstudio
 │   ├── nosotros/  contacto/  privacidad/  terminos/
 │   ├── 404.html  robots.txt  sitemap.xml  site.webmanifest
 │   ├── favicon.svg  favicon-32.png  apple-touch-icon.png
@@ -95,9 +95,12 @@ a cada solución en `soluciones.json` y muéstrelo en `_build/paginas/solucion.m
 2. Agregue su contenido en `_build/contenido/soluciones.mjs` con la misma estructura de las demás
    (`titulo`, `descripcion`, `h1`, `reto`, `funciones`, `publico`, `implementacion`, `licencias`, `preguntas`…).
 3. Agregue su logotipo tipográfico en `MARCAS` dentro de `_build/lib/plantilla.mjs`.
-4. Capturas: añada su URL y selectores en `_build/capturar-final.mjs` y ejecute `npm run capturas`.
+4. Investigación: `node investigar-uno.mjs <slug> <url>` guarda el texto del sitio oficial en `investigacion/`.
+   Capturas: añada su URL y selectores en `_build/capturar-final.mjs` y ejecute `node capturar-final.mjs <slug>`
+   (solo esa solución); revise que no aparezcan precios ni animaciones a medias.
 5. Ejecute `npm run todo` (imágenes, páginas, Open Graph) y luego `npm run verificar`.
-   El `sitemap.xml`, el menú, el pie, el filtro y el formulario de contacto se actualizan solos.
+   El `sitemap.xml`, el menú, el pie, el filtro, el formulario de contacto y los textos con la cantidad de
+   soluciones («Siete soluciones…») se actualizan solos.
 
 ## 5. Construir y previsualizar
 
@@ -195,7 +198,7 @@ en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea g
   páginas medidas. Rendimiento, mediana de 5 corridas: inicio 96, portafolio 99; páginas de solución
   100 (EduNova, VCodePro). El inicio varía entre corridas (88–100) por el tiempo de bloqueo simulado;
   CLS 0 y LCP ≈ 2 s.
-- `npm run verificar`: 13 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
+- `npm run verificar`: 14 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
 - `npm run pruebas`: menú desplegable y móvil (Escape, foco atrapado), pestañas con flechas/Inicio/Fin,
   acordeón, filtro con anuncio `aria-live`, validación accesible del formulario, preselección por URL,
   movimiento reducido y áreas táctiles de 44 px.

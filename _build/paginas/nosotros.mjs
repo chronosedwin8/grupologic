@@ -1,5 +1,5 @@
 // Quiénes somos, misión y cómo trabajamos.
-import { SOLUCIONES, esc, icono, logotipo, migasLd, organizacionLd } from '../lib/plantilla.mjs';
+import { SOLUCIONES, esc, icono, logotipo, migasLd, organizacionLd, N_SOLUCIONES, mayuscula } from '../lib/plantilla.mjs';
 import { pasos, PASOS_TRABAJO } from './inicio.mjs';
 
 const CRITERIOS = [
@@ -92,7 +92,7 @@ export default function nosotros() {
 <section class="seccion seccion--profunda" aria-labelledby="titulo-cta">
   <div class="contenedor cta-simple" data-aparecer>
     <p class="ceja">Portafolio</p>
-    <h2 class="titulo-2" id="titulo-cta">Seis soluciones, <em>un solo aliado</em></h2>
+    <h2 class="titulo-2" id="titulo-cta">${mayuscula(N_SOLUCIONES)} soluciones, <em>un solo aliado</em></h2>
     <ul class="franja__logos" style="margin-top:2rem">${SOLUCIONES.map(s => `<li><a href="/soluciones/${s.slug}/">${logotipo(s.slug)}</a></li>`).join('')}</ul>
     <div class="botones">
       <a class="boton boton--primario" href="/contacto/">Solicitar demostración ${icono('flecha')}</a>

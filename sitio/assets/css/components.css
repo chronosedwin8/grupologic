@@ -49,6 +49,8 @@
 .logotipo--color.logotipo--codexia .logotipo__marca { color: #8B7BFF; }
 .logotipo--color.logotipo--vcodepro b, .logotipo--color.logotipo--vcodepro .logotipo__marca { color: #38B6F5; }
 .logotipo--color.logotipo--bookstudio .logotipo__marca { color: #3B74F6; }
+.logotipo--color.logotipo--veyon-control .logotipo__marca { color: #818CF8; }
+.logotipo--veyon-control b { font-weight: 500; margin-left: .22em; }
 
 /* ---------- Franja de confianza ---------- */
 .franja { padding-block: 40px 56px; background: var(--navy-900); color: var(--ivory); border-top: 1px solid var(--linea-oscura); }

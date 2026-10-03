@@ -63,8 +63,74 @@ export const CONTENIDO = {
       ['¿El módulo de Indicadores IB está en todos los planes?', 'No. Indicadores IB se incluye en los planes Profesional y Red de Colegios. En la propuesta le indicamos qué modalidad corresponde a su institución.'],
       ['¿Cada usuario ve toda la información?', 'No. Cada rol ve solo lo que necesita: rectoría ve la información global, las coordinaciones sus herramientas de gestión y cada docente su propio horario y sus guardias.'],
     ],
-    relacionadas: ['edunova', 'vcodepro', 'aulamagica-ia'],
+    relacionadas: ['veyon-control', 'edunova', 'vcodepro'],
     ld: { applicationSubCategory: 'Gestión escolar y horarios', operatingSystem: 'Web' },
+  },
+
+  'veyon-control': {
+    titulo: 'Veyon Control: gestión de aulas de informática · Grupo Logic',
+    descripcion: 'Veyon Control permite supervisar, guiar y controlar cada equipo del aula de informática desde un panel, con licencia anual, actualizaciones y soporte.',
+    h1: 'Veyon Control: supervisión y control de aulas de informática',
+    altPortada: 'Página de inicio de Veyon Control con el panel que muestra las pantallas de los equipos del aula',
+    reto: [
+      'En una sala de informática el docente no ve qué hay en cada pantalla. Mantener al grupo enfocado, resolver dudas puesto por puesto y repartir material con memorias USB consume buena parte de la clase.',
+      'Para el área de TI el reto es otro: mantener al día el software de decenas de equipos, en varias salas y con distintos sistemas operativos, sin depender de servicios externos.',
+      'Veyon resuelve las dos cosas: el docente dirige la clase desde un panel con todas las pantallas en vivo, y Veyon Control mantiene cada puesto en la versión vigente, capacita al profesorado y da soporte durante todo el año.',
+    ],
+    nota: '<strong>Veyon y Veyon Control.</strong> Veyon es un software de gestión de aulas desarrollado en Alemania. Veyon Control ofrece su licenciamiento anual, las actualizaciones en cada puesto, la capacitación docente y el soporte.',
+    funciones: [
+      ['ojo', 'Supervisión en vivo', 'Miniaturas en tiempo real de todos los puestos, ordenadas según la distribución real del aula, con vista ampliada de cualquier equipo.'],
+      ['soporte', 'Control remoto', 'El docente toma el teclado y el ratón de un equipo para resolver dudas sin levantarse, o accede en modo de solo observación.'],
+      ['presentacion', 'Demostración', 'Emite su pantalla, o la de un estudiante, a toda la clase: a pantalla completa o en ventana para practicar mientras se observa.'],
+      ['candado', 'Bloqueo y atención', 'Congela pantallas, teclados y ratones con un clic. También enciende por red, cierra sesiones, reinicia y apaga el grupo.'],
+      ['exportar', 'Envío de archivos', 'Reparte enunciados y plantillas a todos los puestos a la vez, con apertura automática si se desea. Sin memorias USB.'],
+      ['usuarios', 'Integración con su directorio', 'Lee aulas, equipos y grupos desde LDAP o Active Directory, y desde Microsoft Entra ID mediante complemento.'],
+    ],
+    galeria: [
+      ['veyon-control-aula', 'Veyon Master con la lista de aulas y equipos, las pantallas en miniatura y el menú de acciones sobre un equipo', 'Veyon Master', 'El panel del docente: lista de aulas, pantallas en vivo y acciones como demostración, bloqueo o control remoto.'],
+    ],
+    extra: {
+      titulo: 'Seguridad y despliegue',
+      items: [
+        'Comunicación cifrada con TLS y claves propias por institución.',
+        'Funciona en la red local, sin servidor externo ni cuentas en la nube.',
+        'Windows (32 y 64 bits) y Linux: Debian, Ubuntu, Fedora, openSUSE, RHEL y Rocky Linux.',
+        'Instalación silenciosa y configuración por línea de comandos.',
+        'Interfaz disponible en más de 30 idiomas.',
+        'Complementos opcionales: control de internet, grabación de pantalla, chat, audio y USB.',
+      ],
+    },
+    publico: [
+      ['ajustes', 'Coordinación TIC', 'Un sistema que se mantiene al día.', ['Actualizaciones en todos los puestos', 'Despliegue silencioso o por imagen', 'Integración con LDAP o Active Directory']],
+      ['usuarios', 'Docentes de informática', 'La clase, bajo control.', ['Pantallas del grupo en vivo', 'Demostraciones a pantalla completa', 'Bloqueo para recuperar la atención']],
+      ['rubrica', 'Coordinación académica', 'Evaluaciones más ordenadas.', ['Reparto simultáneo del enunciado', 'Bloqueo de equipos al terminar', 'Restricción de internet y USB con complementos']],
+      ['institucion', 'Rectoría', 'Salas de informática bien aprovechadas.', ['Licencia anual según el número de equipos', 'Capacitación incluida en cada plan', 'Soporte durante toda la vigencia']],
+    ],
+    implementacion: [
+      ['Levantamiento', 'Se revisa cuántos equipos hay, qué sistemas operativos usan y cómo está la red. De ahí salen el plan y el cronograma.'],
+      ['Licencia y actualización', 'Se activa la licencia y todos los puestos quedan en la versión vigente, con paquetes listos para las próximas actualizaciones.'],
+      ['Capacitación', 'Formación del profesorado en el uso diario y del área de TI en la administración, con material que queda en la institución.'],
+      ['Soporte y actualizaciones', 'Durante la vigencia se atienden incidencias, se publica cada nueva versión en los equipos y se revisa que todo esté al día.'],
+    ],
+    licencias: {
+      intro: 'Cada plan incluye la licencia anual, las actualizaciones de versión en todos los puestos, la capacitación del profesorado y doce meses de soporte. Se elige según el número de equipos.',
+      modalidades: [
+        ['Licencia Aula', 'Para un aula única o una sala de cómputo pequeña.', ['Hasta 10 equipos', '1 panel docente (Veyon Master)', 'Actualizaciones en todos los puestos', 'Capacitación inicial de 2 horas', 'Soporte por correo durante 12 meses']],
+        ['Licencia Laboratorio', 'Para varias salas o un laboratorio grande.', ['Hasta 50 equipos', 'Hasta 3 paneles docentes', 'Integración con LDAP o Active Directory', 'Paquetes de actualización listos para distribuir', 'Capacitación de 4 horas y soporte prioritario']],
+        ['Licencia Campus', 'Para sedes con varias aulas y equipo de TI propio.', ['Hasta 100 equipos', 'Paneles docentes sin límite', 'Actualizaciones coordinadas por aula', 'Capacitación por sedes', 'Revisión semestral del estado de actualización']],
+        ['Licencia de Sitio', 'Cobertura total de una sede, sin contar puestos.', ['Equipos ilimitados en la sede', 'Integración con Microsoft Entra ID', 'Paquetes para imagen del sistema o GPO', 'Capacitación sin límite durante el año', 'Soporte dedicado con tiempos acordados']],
+      ],
+      pie: 'Para varias sedes se prepara una propuesta a la medida.',
+    },
+    preguntas: [
+      ['¿Necesita conexión a internet o una cuenta en la nube?', 'No. Todo funciona dentro de la red local de la institución: el panel del docente se comunica directamente con cada equipo, sin servidor externo obligatorio ni registro de cuentas.'],
+      ['¿Qué sistemas operativos admite?', 'Windows (32 y 64 bits) y las principales distribuciones Linux: Debian, Ubuntu, Fedora, openSUSE, RHEL y Rocky Linux. Equipos Windows y Linux pueden convivir en la misma aula y verse en el mismo panel.'],
+      ['¿Cómo se protege el acceso a los equipos?', 'La comunicación va cifrada con TLS. El acceso se autoriza con una clave criptográfica propia de la institución o con credenciales de usuario validadas contra el sistema o el directorio, restringidas a un grupo.'],
+      ['¿Sirve para exámenes?', 'Sí. Permite repartir el enunciado a todos los equipos a la vez y bloquearlos al terminar. Con complementos también se puede restringir el acceso a internet y a los puertos USB.'],
+      ['¿Qué pasa si el colegio tiene más equipos que los del plan?', 'Se pasa al plan siguiente. Según el fabricante, solo se cobra la diferencia proporcional al tiempo restante de vigencia; con varias sedes o bastante más de 100 equipos, la Licencia de Sitio suele resultar más conveniente.'],
+    ],
+    relacionadas: ['unticloud', 'vcodepro', 'codexia'],
+    ld: { applicationSubCategory: 'Gestión de aulas de informática', operatingSystem: 'Windows, Linux', softwareVersion: '4.11.2' },
   },
 
   'aulamagica-ia': {
@@ -316,7 +382,7 @@ export const CONTENIDO = {
       ['¿Qué lenguajes de programación soporta?', 'Python, JavaScript, HTML, CSS, Java y C++, con resaltado de sintaxis, autocompletado, depurador, terminal integrada y control de versiones.'],
       ['¿Cómo se relaciona con Codexia?', 'Son dos etapas de una misma ruta: Codexia desarrolla el pensamiento computacional de los 4 a los 12 años y VCodePro continúa desde los 12 con programación profesional e inteligencia artificial.'],
     ],
-    relacionadas: ['codexia', 'unticloud', 'aulamagica-ia'],
+    relacionadas: ['codexia', 'veyon-control', 'unticloud'],
     ld: { applicationSubCategory: 'Editor de código educativo', operatingSystem: 'Windows, macOS, Linux', softwareVersion: '2.4' },
   },
 

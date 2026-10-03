@@ -1,9 +1,10 @@
 // Portafolio completo con filtro por línea.
-import { SOLUCIONES, CATEGORIAS, categoria, esc, icono, logotipo, imagen, migasLd, DOMINIO } from '../lib/plantilla.mjs';
+import { SOLUCIONES, CATEGORIAS, categoria, esc, icono, logotipo, imagen, migasLd, DOMINIO, N_SOLUCIONES, N_LINEAS, mayuscula } from '../lib/plantilla.mjs';
 import { ctaFinal } from './inicio.mjs';
 
 const ALT = {
   unticloud: 'Panel de UntiCloud con los totales de la institución importados desde Untis',
+  'veyon-control': 'Panel Veyon Master con las pantallas de los equipos del aula',
   'aulamagica-ia': 'Herramientas de inteligencia artificial de AulaMágica IA para docentes',
   edunova: 'Planeación de una clase con inteligencia artificial en EduNova',
   codexia: 'Reto de programación por bloques en Codexia',
@@ -35,7 +36,7 @@ export default function portafolio() {
     <div class="hero__contenido">
       <p class="ceja">Portafolio</p>
       <h1 class="titulo-1" id="titulo-principal">Soluciones tecnológicas <em>para colegios</em></h1>
-      <p class="hero__texto">Seis plataformas seleccionadas en cuatro líneas: gestión institucional, inteligencia artificial para la enseñanza, programación y contenidos digitales interactivos.</p>
+      <p class="hero__texto">${mayuscula(N_SOLUCIONES)} plataformas seleccionadas en ${N_LINEAS} líneas: gestión institucional, inteligencia artificial para la enseñanza, programación y contenidos digitales interactivos.</p>
     </div>
   </div>
 </section>

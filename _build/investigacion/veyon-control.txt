@@ -1,0 +1,521 @@
+URL: https://www.veyoncontrol.com/
+{
+ "title": "Veyon Control — Gestión y control de aulas informáticas",
+ "description": "Veyon Control: licenciamiento, actualizaciones y soporte de Veyon para aulas y laboratorios. Planes desde 10 equipos hasta licencia de sitio, con capacitación y soporte incluidos.",
+ "lang": "es",
+ "imgs": [
+  "https://www.veyoncontrol.com/assets/img/logo.svg",
+  "https://www.veyoncontrol.com/assets/img/veyon-master-1.jpg",
+  "https://www.veyoncontrol.com/assets/img/veyon-master-2.png",
+  "https://www.veyoncontrol.com/assets/img/demo.png",
+  "https://www.veyoncontrol.com/assets/img/filetransfer.png",
+  "https://www.veyoncontrol.com/assets/img/ldap.png",
+  "https://www.veyoncontrol.com/assets/img/veyon-master-1.jpg",
+  "https://www.veyoncontrol.com/assets/img/veyon-configurator-1.png",
+  "https://www.veyoncontrol.com/assets/img/veyon-cli-1.png",
+  "https://www.veyoncontrol.com/assets/img/veyon-features.png",
+  "https://www.veyoncontrol.com/assets/img/add-ons.png",
+  "https://www.veyoncontrol.com/assets/img/logo.svg"
+ ],
+ "links": [
+  "https://www.veyoncontrol.com/#contenido",
+  "https://www.veyoncontrol.com/index.php",
+  "https://www.veyoncontrol.com/index.php#funciones",
+  "https://www.veyoncontrol.com/index.php#planes",
+  "https://www.veyoncontrol.com/descargas.php",
+  "https://www.veyoncontrol.com/complementos.php",
+  "https://www.veyoncontrol.com/index.php#video",
+  "https://docs.veyon.io/es/latest/",
+  "https://veyon.nodebb.com/",
+  "https://veyon.io/blog/",
+  "https://www.veyoncontrol.com/participa.php",
+  "https://www.veyoncontrol.com/acerca.php",
+  "https://www.veyoncontrol.com/portal/login.php",
+  "https://www.veyoncontrol.com/#planes",
+  "https://www.veyoncontrol.com/#video",
+  "https://www.veyoncontrol.com/checkout.php?plan=aula",
+  "https://www.veyoncontrol.com/checkout.php?plan=laboratorio",
+  "https://www.veyoncontrol.com/checkout.php?plan=campus",
+  "https://www.veyoncontrol.com/checkout.php?plan=sitio",
+  "https://youtu.be/MP0ypeqDndM",
+  "https://www.veyoncontrol.com/#contacto",
+  "https://www.veyoncontrol.com/index.php#capturas",
+  "https://www.veyoncontrol.com/index.php#plan-aula",
+  "https://www.veyoncontrol.com/index.php#plan-laboratorio",
+  "https://www.veyoncontrol.com/index.php#plan-campus",
+  "https://www.veyoncontrol.com/index.php#plan-sitio",
+  "https://www.veyoncontrol.com/portal/registro.php",
+  "https://www.veyoncontrol.com/index.php#faq"
+ ]
+}
+
+Saltar al contenido
+Veyon
+Control
+Inicio
+Funciones
+Precios
+Descargas
+Complementos
+Recursos
+Nosotros
+COP
+EUR
+Ingresar
+Ver planes
+VERSIÓN 4.11.2 · ACTUALIZACIONES INCLUIDAS
+El aula informática,
+en una pantalla.
+
+Ve, guía y asiste cada equipo del aula desde un único panel: pantallas en vivo, control remoto, demostraciones a pantalla completa, bloqueo de puestos y envío de archivos. Nosotros mantenemos cada puesto al día con las nuevas versiones, capacitamos a tu equipo docente y respondemos cuando algo falla.
+
+Ver planes y precios
+Ver el video
+4.11.2
+versión implantada
+·
+Windows
+y
+Linux
+· desde
+$ 3.000.000
+por año
+24 equipos
+Conectados y visibles
+Cifrado TLS
+Claves propias por centro
+WINDOWS 10 · 11
+WINDOWS SERVER
+DEBIAN
+UBUNTU
+FEDORA
+OPENSUSE
+RHEL · ROCKY LINUX
+LDAP · ACTIVE DIRECTORY
+MICROSOFT ENTRA ID
+CAPACITACIÓN INCLUIDA
+SOPORTE EN ESPAÑOL
+WINDOWS 10 · 11
+WINDOWS SERVER
+DEBIAN
+UBUNTU
+FEDORA
+OPENSUSE
+RHEL · ROCKY LINUX
+LDAP · ACTIVE DIRECTORY
+MICROSOFT ENTRA ID
+CAPACITACIÓN INCLUIDA
+SOPORTE EN ESPAÑOL
+Actualizaciones incluidas
+Cada puesto siempre en la última versión
+Soporte con respuesta
+48 horas hábiles durante la vigencia
+Capacitación docente
+Para que se use desde el primer día
+Factura institucional
+Documentación para contratación
+4.11
+Versión que implantamos
+48 h
+Respuesta de soporte prioritario
+30+
+Idiomas de la interfaz
+$ 3.000.000
+Licencia Aula, hasta 10 equipos
+QUÉ HACE VEYON
+Todo lo que necesitas para dirigir una clase digital
+
+Cuatro bloques de funciones integradas, listas desde la instalación y sin servicios externos de por medio.
+
+Supervisión en vivo
+
+Miniaturas en tiempo real de todos los puestos, con actualización configurable y vista ampliada de cualquier equipo.
+
+Control remoto
+
+Toma el teclado y el ratón de un equipo para resolver dudas sin levantarte, o accede en modo solo lectura.
+
+Demostración
+
+Emite tu pantalla —o la de un alumno— a toda la clase, a pantalla completa o en ventana para que puedan seguir trabajando.
+
+Bloqueo y atención
+
+Congela pantallas, teclados y ratones con un clic para recuperar la atención del grupo en el momento clave.
+
+MONITORIZAR Y CONTROLAR
+Toda el aula en una sola pantalla
+
+Veyon Master muestra cada ordenador como una miniatura viva. Ordena los puestos según la distribución real del aula, agrúpalos por ubicaciones y actúa sobre uno, varios o todos a la vez.
+
+✓
+Vista en directo con tamaño de miniatura e intervalo ajustables.
+✓
+Control remoto completo o acceso en modo observación.
+✓
+Bloqueo instantáneo de pantalla, teclado y ratón.
+✓
+Encendido por red, cierre de sesión, reinicio y apagado del grupo.
+Probar en tu aula
+DEMOSTRACIÓN
+Enseña una vez, llega a todos
+
+Comparte tu escritorio con el grupo entero para explicar un procedimiento paso a paso. En modo ventana, el alumnado puede seguir la explicación mientras reproduce los mismos pasos en su equipo.
+
+✓
+Emisión a pantalla completa para captar toda la atención.
+✓
+Modo ventana para practicar mientras se observa.
+✓
+Cualquier equipo puede convertirse en la fuente de la demostración.
+✓
+Transmisión optimizada para redes de centro educativo.
+TRANSFERENCIA DE ARCHIVOS
+Reparte y recoge material sin USB
+
+Envía enunciados, plantillas o recursos a todos los puestos de una vez, y decide si el archivo simplemente se guarda o se abre automáticamente al llegar. Ideal para exámenes y prácticas guiadas.
+
+✓
+Envío simultáneo a toda la clase o a una selección.
+✓
+Apertura automática del documento en el equipo de destino.
+✓
+Destino configurable dentro del perfil de cada usuario.
+✓
+Sin memorias USB ni servicios externos en la ecuación.
+INTEGRACIÓN
+Se conecta con la infraestructura que ya tienes
+
+Veyon puede leer aulas, equipos y grupos directamente de tu directorio, de modo que el panel se mantiene actualizado sin listas manuales. Compatible con servidores LDAP, Active Directory y —mediante complemento— Microsoft Entra ID.
+
+✓
+Importación de ubicaciones y equipos desde LDAP o AD.
+✓
+Autenticación por clave criptográfica o por credenciales de usuario.
+✓
+Despliegue silencioso y configuración centralizada por línea de comandos.
+✓
+Descubrimiento automático de equipos con el complemento de red.
+Ver complementos
+PLANES Y LICENCIAS
+Licenciamiento según el tamaño de tu aula
+
+Cada plan cubre la licencia anual, las actualizaciones de versión en todos los puestos, la capacitación del profesorado y doce meses de soporte. Precios en COP, sin IVA, con vigencia de un año.
+
+HASTA 10 EQUIPOS
+Licencia Aula
+
+Para un aula única o una sala de cómputo pequeña.
+
+$ 3.000.000
+COP
+
+por año · un aula
+
+Licencia para hasta 10 equipos
+1 panel docente (Veyon Master)
+Actualizaciones de versión en todos los puestos
+Verificación de que cada equipo esté al día
+Capacitación inicial de 2 horas
+Soporte por correo durante 12 meses
+Comprar en línea
+MÁS SOLICITADO
+HASTA 50 EQUIPOS
+Licencia Laboratorio
+
+Para instituciones con varias salas o un laboratorio grande.
+
+$ 8.000.000
+COP
+
+por año · hasta 50 equipos
+
+Todo lo del plan Aula
+Licencia para hasta 50 equipos
+Hasta 3 paneles docentes
+Compatibilidad con LDAP o Active Directory
+Paquetes de actualización listos para distribuir
+Capacitación de 4 horas para el equipo docente
+Soporte prioritario durante 12 meses
+Comprar en línea
+HASTA 100 EQUIPOS
+Licencia Campus
+
+Para sedes con varias aulas simultáneas y equipo de TI propio.
+
+$ 10.000.000
+COP
+
+por año · hasta 100 equipos
+
+Todo lo del plan Laboratorio
+Licencia para hasta 100 equipos
+Paneles docentes sin límite
+Actualizaciones coordinadas por aula
+Capacitación por sedes y material para el profesorado
+Revisión semestral del estado de actualización
+Comprar en línea
+EQUIPOS ILIMITADOS
+Licencia de Sitio
+
+Cobertura total de una sede, sin contar puestos uno a uno.
+
+$ 22.000.000
+COP
+
+por año · sede completa
+
+Todo lo del plan Campus
+Equipos ilimitados dentro de la sede
+Paquetes de actualización para imagen del sistema o GPO
+Integración con Microsoft Entra ID
+Capacitación sin límite durante el año
+Soporte dedicado con tiempos de respuesta acordados
+Acompañamiento en auditorías y políticas de uso
+Comprar en línea
+Vigencia: 12 meses desde la activación
+Pago seguro: Mercado Pago (tarjeta, PSE, efectivo)
+Multisede: presupuesto a medida
+Moneda: cámbiala en la barra superior
+Comparativa rápida de planes
+QUÉ INCLUYE	AULA	LABORATORIO	CAMPUS	SITIO
+Equipos cubiertos	10	50	100	Ilimitados
+Paneles docentes	1	3	Sin límite	Sin límite
+Actualizaciones de versión	Sí	Sí	Sí	Sí
+Integración LDAP / Active Directory	—	Sí	Sí	Sí
+Integración Microsoft Entra ID	—	—	Opcional	Sí
+Paquetes de actualización (GPO / imagen)	—	Sí	Sí	Sí
+Capacitación del profesorado	2 h	4 h	Por sedes	Sin límite
+Soporte	Correo	Prioritario	Prioritario	Dedicado
+Revisión de actualizaciones	—	—	Semestral	Trimestral
+Precio anual	$ 3.000.000	$ 8.000.000	$ 10.000.000	$ 22.000.000
+INTERFAZ
+Tres herramientas, un mismo sistema
+
+Veyon se instala como un conjunto: el panel del docente, el configurador del administrador y una herramienta de línea de comandos para automatizarlo todo.
+
+Veyon Master
+Configurador
+Línea de comandos
+Funciones
+
+Veyon Master: el puesto de mando del profesorado, con las miniaturas de todos los equipos.
+
+GUÍA EN VIDEO
+Instalación y uso, paso a paso
+
+Un recorrido en video por la instalación y el uso diario de Veyon. Útil para el área de TI y como material de repaso para el profesorado.
+
+¿Prefieres verlo en YouTube? Abrir el video en una pestaña nueva ↗
+
+Qué vas a encontrar
+01
+Instalación del panel en el equipo del docente
+02
+Instalación del servicio en los puestos del aula
+03
+Claves de acceso y autenticación entre equipos
+04
+Alta del aula y de los equipos en el panel
+05
+Uso diario: supervisar, controlar, bloquear y demostrar
+Ir a descargas
+Ver planes
+
+Con cualquiera de los planes mantenemos cada puesto en la última versión y capacitamos al equipo docente durante todo el año.
+
+CÓMO TRABAJAMOS
+De la primera llamada al aula funcionando
+Levantamiento
+
+Revisamos cuántos equipos hay, qué sistemas operativos usan y cómo está la red. De ahí sale el plan que te corresponde y el cronograma.
+
+Licencia y actualización
+
+Activamos la licencia del plan y dejamos todos los puestos en la versión vigente, con los paquetes listos para las próximas actualizaciones.
+
+Capacitación
+
+Formamos al profesorado en el uso diario y al área de TI en la administración, con material de apoyo que queda en la institución.
+
+Soporte y actualizaciones
+
+Durante la vigencia atendemos incidencias, publicamos cada nueva versión en tus equipos y revisamos periódicamente que todo esté al día.
+
+veyon-ctl · powershell
+Copiar
+# Instalación silenciosa en el puesto del alumnado
+$ veyon-4.11.2.0-win64-setup.exe /S /NoMaster
+
+# Importar la clave pública del centro
+$ veyon-ctl authkeys import profesorado/public \
+      --filename C:\claves\profesorado_public.pem
+
+# Cargar las aulas desde un archivo CSV
+$ veyon-ctl networkobjects import aulas.csv \
+      --format "%location%;%name%;%host%"
+
+# Comprobar el estado del servicio
+$ veyon-ctl service status
+Veyon Service is running.
+
+Tu área de TI recibe los paquetes de actualización y la documentación del proceso, sin quedar atada a nosotros para operar el sistema.
+
+ESCENARIOS
+Pensado para quien enseña cada día
+Aulas de informática
+
+Colegios, institutos y centros de formación profesional que necesitan guiar prácticas y mantener el grupo enfocado.
+
+Exámenes y evaluaciones
+
+Reparto simultáneo del enunciado, bloqueo de equipos al terminar y —con complementos— restricción de internet y de puertos USB.
+
+Formación remota
+
+Sesiones de formación distribuidas entre sedes, con acceso a los puestos a través de la red corporativa.
+
+Universidades
+
+Laboratorios con decenas de puestos, integrados con el directorio institucional y desplegados por imagen del sistema.
+
+Soporte técnico
+
+Asistencia remota puntual a los equipos del centro sin instalar herramientas adicionales de terceros.
+
+Administraciones públicas
+
+Centros de formación municipales o autonómicos que requieren software auditable y sin dependencia de licencias.
+
+COMPLEMENTOS
+Amplía Veyon cuando lo necesites
+
+Sobre cualquiera de los planes puedes sumar complementos que añaden control de acceso a internet, grabación de pantalla, chat, gestión de audio y USB, descubrimiento de red e integración con Microsoft Entra ID. Se licencian aparte y también los mantenemos actualizados junto con el resto del sistema.
+
+CONTROL DE INTERNET
+GRABADOR DE PANTALLA
+CHAT
+AUVIDUS
+Ver todos los complementos
+PREGUNTAS FRECUENTES
+Dudas habituales
+¿Qué incluye exactamente el precio de la licencia?
+Cada plan es un servicio completo de licenciamiento y acompañamiento durante doce meses:
+Licencia anual para el número de equipos que cubre el plan.
+Actualizaciones de versión aplicadas en todos los puestos cubiertos.
+Revisión periódica de que cada equipo esté al día y operativo.
+Capacitación al equipo docente y material de apoyo.
+Soporte durante toda la vigencia de la licencia.
+¿Qué pasa cuando termina el año de vigencia?
+¿Y si tengo más equipos de los que cubre mi plan?
+¿Qué sistemas operativos admite?
+¿Necesito conexión a internet o una cuenta en la nube?
+¿Cómo se protege el acceso a los equipos?
+¿Cómo se realiza el pago y qué comprobante recibo?
+LO QUE GANAS
+Tu aula funcionando desde el primer día
+
+Llegamos, lo dejamos andando y capacitamos al equipo. Tú solo entras a clase y lo usas.
+
+01 · SIEMPRE AL DÍA
+Nunca una versión atrasada
+
+Cada vez que sale una nueva versión, la llevamos a todos tus puestos. Tu equipo de TI no persigue actualizaciones ni revisa aula por aula: el sistema se mantiene al día solo.
+
+02 · TRANQUILIDAD
+Todo bajo control
+
+Claves, permisos y red configurados con las mejores prácticas desde el inicio, y un canal de soporte que responde cuando lo necesitas. Sin sorpresas a mitad de clase.
+
+03 · ADOPCIÓN
+Profesorado que lo usa
+
+Capacitamos con casos reales de clase y dejamos material de consulta, para que la herramienta se use de verdad y la inversión se note desde la primera semana.
+
+Demostración sin costo sobre tus propios equipos
+Precio cerrado antes de empezar
+Cronograma definido desde el primer día
+Ver planes y precios
+SOLICITAR PROPUESTA
+Cuéntanos cómo es tu aula
+
+Con el número de equipos y el sistema operativo que usan basta para enviarte una propuesta concreta, con precio cerrado y alcance definido.
+
+✓
+Respuesta a la solicitud en menos de 48 horas hábiles.
+✓
+Demostración en vivo sobre tus propios equipos, sin costo.
+✓
+Propuesta con alcance, cronograma y precio cerrado.
+✓
+Facturación a nombre de la institución y pago en línea con Mercado Pago.
+Atención comercial
+
+Si prefieres hablarlo antes, escríbenos y coordinamos una llamada corta para revisar tu caso.
+
+Solicitud de cotización
+Sitio web 
+Institución *
+Nombre de contacto *
+Cargo
+Correo *
+Teléfono
+Equipos a cubrir *
+Selecciona…
+Hasta 10 equipos
+Hasta 50 equipos
+Hasta 100 equipos
+Equipos ilimitados
+Varias sedes / a medida
+Sistema operativo
+Selecciona…
+Windows
+Linux
+Windows y Linux
+Cuéntanos brevemente tu caso
+Enviar solicitud
+
+Te respondemos en menos de 48 horas hábiles. Usamos tus datos solo para preparar la propuesta.
+
+EMPIEZA HOY
+Tu próxima clase, bajo control
+
+Elige el plan que corresponde al tamaño de tu aula y nos encargamos del resto: actualizaciones permanentes, capacitación y soporte.
+
+Ver planes y precios
+Solicitar una demostración
+Veyon
+Control
+
+Licenciamiento, actualizaciones permanentes y soporte profesional de Veyon para aulas, laboratorios y salas de formación.
+
+PLATAFORMA
+Funciones
+Capturas
+Video tutorial
+Descargas
+Complementos
+LICENCIAS
+Planes y precios
+Hasta 10 equipos
+Hasta 50 equipos
+Hasta 100 equipos
+Equipos ilimitados
+CLIENTES
+Portal de clientes
+Crear cuenta
+Soporte y recursos
+Nosotros
+Preguntas frecuentes
+© 2026 Veyon Control · Todos los precios en COP salvo indicación contraria
+Moneda:
+COP
+EUR
+
+== Texto oculto (pestañas/acordeones) ==
+¿Qué pasa cuando termina el año de vigencia? Todas las licencias son anuales y se renuevan cada año para seguir en uso. Al acercarse el vencimiento te avisamos con antelación y emitimos la renovación, que mantiene activa la licencia junto con el soporte, las actualizaciones de versión, las revisiones técnicas y las capacitaciones. Si no se renueva, la licencia caduca en la fecha de vencimiento y el acompañamiento se interrumpe. En el momento de renovar puedes continuar con el mismo plan o subir al siguiente si el número de equipos creció.
+¿Y si tengo más equipos de los que cubre mi plan? Se ajusta al plan siguiente y solo se cobra la diferencia proporcional al tiempo restante de vigencia. Si tienes varias sedes o superas ampliamente los 100 equipos, la licencia de sitio suele salir más rentable que sumar planes.
+¿Qué sistemas operativos admite? Windows (32 y 64 bits) y las principales distribuciones Linux: Debian, Ubuntu, Fedora, openSUSE, RHEL y Rocky Linux. Los equipos Windows y Linux pueden convivir en la misma aula y verse en el mismo panel.
+¿Necesito conexión a internet o una cuenta en la nube? No. Todo funciona dentro de la red local de la institución: el panel del docente se comunica directamente con cada equipo. No hay servidor externo obligatorio ni registro de cuentas.
+¿Cómo se protege el acceso a los equipos? La comunicación va cifrada con TLS y el acceso se autoriza mediante uno de estos métodos, que tu institución elige según sus políticas: Autenticación por clave: la institución tiene su propia pareja de claves y solo quien posee la privada puede conectarse. Autenticación por credenciales: se valida el usuario contra el sistema o el directorio, restringido a un grupo concreto.
+¿Cómo se realiza el pago y qué comprobante recibo? Puedes pagar en línea con Mercado Pago (tarjeta de crédito o débito, PSE y medios en efectivo) desde el botón «Comprar en línea» o desde el portal de clientes, donde también quedan tus facturas, cotizaciones, pagos y licencias. La contratación se realiza bajo la modalidad de comercio electrónico. Por la diversidad de regímenes tributarios, no nos es posible emitir facturas conforme a la reglamentación fiscal de cada país; todas las operaciones se rigen por las leyes de los Estados Unidos y, en particular, por las del estado de Delaware. Al completar el pago recibes un comprobante electrónico de la transacción, a nombre de la institución, con el detalle del plan contratado, el número de equipos cubiertos y la vigencia anual. Ese documento es el soporte de la compra. Si tu institución requiere condiciones distintas, escríbenos antes de contratar y revisamos tu caso.

@@ -1,9 +1,25 @@
 {
   "categorias": [
-    { "id": "gestion", "nombre": "Gestión institucional", "corto": "Gestión institucional" },
-    { "id": "ia", "nombre": "Inteligencia artificial para la enseñanza", "corto": "IA para la enseñanza" },
-    { "id": "programacion", "nombre": "Programación y pensamiento computacional", "corto": "Programación" },
-    { "id": "contenidos", "nombre": "Contenidos digitales interactivos", "corto": "Contenidos interactivos" }
+    {
+      "id": "gestion",
+      "nombre": "Gestión institucional",
+      "corto": "Gestión institucional"
+    },
+    {
+      "id": "ia",
+      "nombre": "Inteligencia artificial para la enseñanza",
+      "corto": "IA para la enseñanza"
+    },
+    {
+      "id": "programacion",
+      "nombre": "Programación y pensamiento computacional",
+      "corto": "Programación"
+    },
+    {
+      "id": "contenidos",
+      "nombre": "Contenidos digitales interactivos",
+      "corto": "Contenidos interactivos"
+    }
   ],
   "soluciones": [
     {
@@ -18,11 +34,40 @@
         "Índice de ausentismo docente por mes, motivo y sección",
         "Indicadores IB: horas HL/SL y núcleo EE·TdC·CAS"
       ],
-      "publico": ["Rectoría", "Coordinación TIC", "Coordinación académica e IB", "Docentes"],
+      "publico": [
+        "Rectoría",
+        "Coordinación TIC",
+        "Coordinación académica e IB",
+        "Docentes"
+      ],
       "urlOficial": "https://www.unticloud.de/",
       "dominio": "unticloud.de",
       "imagen": "unticloud-panel",
       "portada": "unticloud-portada",
+      "logo": "texto"
+    },
+    {
+      "slug": "veyon-control",
+      "nombre": "Veyon Control",
+      "categoria": "gestion",
+      "origen": "Alemania",
+      "lema": "Toda el aula de informática, en una sola pantalla.",
+      "resumen": "Supervise, guíe y asista cada equipo del aula de informática desde un único panel: pantallas en vivo, control remoto, demostraciones, bloqueo de puestos y envío de archivos.",
+      "beneficios": [
+        "Pantallas de todos los equipos en vivo",
+        "Demostración y bloqueo del grupo con un clic",
+        "Windows y Linux, dentro de la red del colegio"
+      ],
+      "publico": [
+        "Coordinación TIC",
+        "Docentes de informática",
+        "Coordinación académica",
+        "Rectoría"
+      ],
+      "urlOficial": "https://www.veyoncontrol.com/",
+      "dominio": "veyoncontrol.com",
+      "imagen": "veyon-control-aula",
+      "portada": "veyon-control-portada",
       "logo": "texto"
     },
     {
@@ -37,7 +82,12 @@
         "Tutor para estudiantes con supervisión docente",
         "Control institucional de usuarios y políticas de uso"
       ],
-      "publico": ["Rectoría", "Coordinación TIC", "Coordinación académica", "Docentes"],
+      "publico": [
+        "Rectoría",
+        "Coordinación TIC",
+        "Coordinación académica",
+        "Docentes"
+      ],
       "urlOficial": "https://www.magicschools.es/",
       "dominio": "magicschools.es",
       "imagen": "aulamagica-ia-panel",
@@ -56,7 +106,12 @@
         "Indicadores por grado, área y sede para directivos",
         "Studio: libros propios con la identidad de su institución"
       ],
-      "publico": ["Directivos", "Docentes", "Estudiantes", "Familias"],
+      "publico": [
+        "Directivos",
+        "Docentes",
+        "Estudiantes",
+        "Familias"
+      ],
       "urlOficial": "https://www.teachy.es/",
       "dominio": "teachy.es",
       "imagen": "edunova-panel",
@@ -75,7 +130,12 @@
         "Voz natural para quienes aún no leen",
         "Panel docente con grupos, sedes y estadísticas"
       ],
-      "publico": ["Coordinación de primaria y preescolar", "Área de tecnología", "Rectoría", "Docentes"],
+      "publico": [
+        "Coordinación de primaria y preescolar",
+        "Área de tecnología",
+        "Rectoría",
+        "Docentes"
+      ],
       "urlOficial": "https://codexialab.com/",
       "dominio": "codexialab.com",
       "imagen": "codexia-panel",
@@ -94,7 +154,12 @@
         "Rúbricas IB (criterios A–D) y bitácora de diseño MYP",
         "Plan de aula de 6.º a 12.º y más de 120 proyectos"
       ],
-      "publico": ["Área de tecnología", "Coordinación IB", "Coordinación TIC", "Rectoría"],
+      "publico": [
+        "Área de tecnología",
+        "Coordinación IB",
+        "Coordinación TIC",
+        "Rectoría"
+      ],
       "urlOficial": "https://www.vcodepro.de/",
       "dominio": "vcodepro.de",
       "imagen": "vcodepro-panel",
@@ -113,7 +178,12 @@
         "Preguntas autocorregibles y valoraciones con comentario",
         "Exportación a PDF y a página web autónoma"
       ],
-      "publico": ["Coordinación académica", "Docentes", "Estudiantes", "Coordinación TIC"],
+      "publico": [
+        "Coordinación académica",
+        "Docentes",
+        "Estudiantes",
+        "Coordinación TIC"
+      ],
       "urlOficial": "https://bookstudio.uk/",
       "dominio": "bookstudio.uk",
       "imagen": "bookstudio-editor",

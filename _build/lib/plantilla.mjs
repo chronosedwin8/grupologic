@@ -14,6 +14,12 @@ export const SOLUCIONES = DATOS.soluciones;
 export const CATEGORIAS = DATOS.categorias;
 export const categoria = (id) => CATEGORIAS.find(c => c.id === id);
 export const solucion = (slug) => SOLUCIONES.find(s => s.slug === slug);
+// Cantidades en letras (se actualizan solas al añadir soluciones o líneas al JSON)
+const LETRAS = ['cero', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce'];
+export const enLetras = (n) => LETRAS[n] || String(n);
+export const N_SOLUCIONES = enLetras(SOLUCIONES.length);
+export const N_LINEAS = enLetras(CATEGORIAS.length);
+export const mayuscula = (t) => t.charAt(0).toUpperCase() + t.slice(1);
 
 // Lee config.js para usar en el build (JSON-LD) los datos que ya estén completos.
 const ctx = { window: {} };
@@ -131,6 +137,7 @@ const MARCAS = {
   edunova: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg></span>`, 'EduNova'],
   codexia: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="21" height="21" rx="6"/><path d="m9.5 8.5-3.5 3.5 3.5 3.5M14.5 8.5l3.5 3.5-3.5 3.5"/></svg></span>`, 'Codexia'],
   vcodepro: () => [`<span class="logotipo__marca"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 30 L50 88 L82 30" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><rect x="58" y="4" width="24" height="11" rx="5.5" fill="currentColor"/></svg></span>`, 'vcode<b>pro</b>'],
+  'veyon-control': () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="21" height="21" rx="6.5"/><path d="M7.2 8 12 16.5 16.8 8"/></svg></span>`, 'Veyon<b>Control</b>'],
   bookstudio: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><text x="12" y="16.8" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="13" fill="currentColor">B</text></svg></span>`, 'BookStudio'],
 };
 export function logotipo(slug, { color = false, etiqueta = true } = {}) {
@@ -215,7 +222,7 @@ function encabezado(ruta) {
             <div class="contenedor">
               <div class="desplegable__rejilla">${grupos}
               </div>
-              <div class="desplegable__pie"><span>Seis soluciones seleccionadas para colegios de Latinoamérica.</span><a class="enlace-flecha" href="/soluciones/"${actual('/soluciones/')}>Ver el portafolio completo ${icono('flecha')}</a></div>
+              <div class="desplegable__pie"><span>${mayuscula(N_SOLUCIONES)} soluciones seleccionadas para colegios de Latinoamérica.</span><a class="enlace-flecha" href="/soluciones/"${actual('/soluciones/')}>Ver el portafolio completo ${icono('flecha')}</a></div>
             </div>
           </div>
         </li>
