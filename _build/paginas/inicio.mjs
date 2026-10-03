@@ -69,24 +69,24 @@ function mapa() {
   const origenes = [['berlin', 0.3], ['londres', 0.26], ['madrid', 0.22]];
   const destinos = ['mexico', 'lima', 'santiago', 'buenosaires', 'saopaulo'];
   let orden = 0;
-  const arcos = origenes.map(([o, k]) => `<path class="mapa__arco" style="--orden:${orden++}" d="${arco(o, 'barranquilla', k)}"/>`).join('')
-    + destinos.map(d => `<path class="mapa__arco mapa__arco--local" style="--orden:${orden++ + 1}" d="${arco('barranquilla', d, 0.18)}"/>`).join('');
+  const arcos = origenes.map(([o, k]) => `<path class="mapa__arco" style="--orden:${orden++}" d="${arco(o, 'latam', k)}"/>`).join('')
+    + destinos.map(d => `<path class="mapa__arco mapa__arco--local" style="--orden:${orden++ + 1}" d="${arco('latam', d, 0.18)}"/>`).join('');
   const punto = (k, r = 5) => `<circle class="mapa__punto" cx="${c[k][0]}" cy="${c[k][1]}" r="${r}"/>`;
   const halo = (k, o) => `<circle class="mapa__halo" style="--orden:${o}" cx="${c[k][0]}" cy="${c[k][1]}" r="12"/>`;
   return `<div class="mapa" data-aparecer>
         <img src="/assets/img/mapa-puntos.svg" width="${MAPA.ancho}" height="${MAPA.alto}" alt="" loading="lazy" decoding="async">
         <svg viewBox="0 0 ${MAPA.ancho} ${MAPA.alto}" role="img" aria-labelledby="mapa-titulo mapa-desc">
           <title id="mapa-titulo">Del mundo a su colegio</title>
-          <desc id="mapa-desc">Mapa con arcos que parten de Alemania, Reino Unido y España, llegan a Barranquilla, Colombia, y desde allí se extienden a otros países de Latinoamérica.</desc>
+          <desc id="mapa-desc">Mapa con arcos que parten de Alemania, Reino Unido y España, llegan a Latinoamérica y desde allí se extienden a los países de la región.</desc>
           ${arcos}
           ${['berlin', 'londres', 'madrid'].map(k => punto(k)).join('')}
           ${destinos.map(k => punto(k, 3.5)).join('')}
-          ${punto('barranquilla', 7)}${halo('barranquilla', 0)}${halo('berlin', 1)}${halo('londres', 2)}${halo('madrid', 3)}
+          ${punto('latam', 7)}${halo('latam', 0)}${halo('berlin', 1)}${halo('londres', 2)}${halo('madrid', 3)}
           <text class="mapa__etiqueta" x="${c.berlin[0] + 14}" y="${c.berlin[1] + 26}">Alemania</text>
           <text class="mapa__etiqueta" x="${c.londres[0] - 14}" y="${c.londres[1] - 14}" text-anchor="end">Reino Unido</text>
           <text class="mapa__etiqueta" x="${c.madrid[0] - 16}" y="${c.madrid[1] + 6}" text-anchor="end">España</text>
-          <text class="mapa__etiqueta" x="${c.barranquilla[0] - 18}" y="${c.barranquilla[1] - 12}" text-anchor="end">Barranquilla</text>
-          <text class="mapa__etiqueta mapa__etiqueta--sec" x="${c.barranquilla[0] - 18}" y="${c.barranquilla[1] + 12}" text-anchor="end">Grupo Logic</text>
+          <text class="mapa__etiqueta" x="${c.latam[0] - 18}" y="${c.latam[1] - 12}" text-anchor="end">Latinoamérica</text>
+          <text class="mapa__etiqueta mapa__etiqueta--sec" x="${c.latam[0] - 18}" y="${c.latam[1] + 12}" text-anchor="end">Grupo Logic</text>
         </svg>
       </div>`;
 }
@@ -276,7 +276,7 @@ export default function inicio() {
       <ul class="mapa-leyenda">
         <li><strong>Origen</strong><span>Plataformas desarrolladas en Alemania, Reino Unido y España, entre otros países.</span></li>
         <li><strong>Selección</strong><span>Revisamos su propuesta pedagógica, su madurez técnica y su tratamiento de datos.</span></li>
-        <li><strong>Llegada</strong><span>Desde Barranquilla, Colombia, acompañamos a colegios de toda Latinoamérica.</span></li>
+        <li><strong>Llegada</strong><span>Acompañamos a colegios de toda Latinoamérica, con un equipo cercano a la región.</span></li>
       </ul>
     </div>
     ${mapa()}

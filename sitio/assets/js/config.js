@@ -11,7 +11,7 @@ window.GL_CONFIG = {
   telefono: "[PENDIENTE]",         // ej. +57 605 000 0000 (tal como debe mostrarse)
   whatsapp: "[PENDIENTE]",         // formato internacional sin "+", ej. 573001234567
   direccion: "[PENDIENTE]",
-  ciudad: "Barranquilla, Colombia",
+  ciudad: "",                      // opcional: ciudad de la oficina; vacío = no se muestra
   redes: { linkedin: "", instagram: "", youtube: "" },
   formEndpoint: "[PENDIENTE]",     // Formspree, Web3Forms o endpoint propio (URL completa)
   formExtra: {},                   // campos fijos que exija el servicio, ej. { access_key: "..." } en Web3Forms

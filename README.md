@@ -54,7 +54,7 @@ window.GL_CONFIG = {
   telefono: "[PENDIENTE]",     // tal como debe mostrarse: +57 605 000 0000
   whatsapp: "[PENDIENTE]",     // internacional sin "+": 573001234567
   direccion: "[PENDIENTE]",
-  ciudad: "Barranquilla, Colombia",
+  ciudad: "",                  // opcional; vacío = no se muestra
   redes: { linkedin: "", instagram: "", youtube: "" },
   formEndpoint: "[PENDIENTE]", // URL de Formspree, Web3Forms o endpoint propio
   formExtra: {},               // p. ej. { access_key: "..." } para Web3Forms
@@ -133,6 +133,25 @@ sudo nginx -t && sudo systemctl reload nginx
 
 Las rutas son absolutas desde la raíz (`/assets/...`), por lo que el sitio debe servirse en la raíz de
 un dominio o subdominio, no en una subcarpeta.
+
+### Servidor actual (CloudPanel)
+
+El sitio está publicado en `https://www.grupologiclatam.com` (dominio canónico; CloudPanel redirige
+`grupologiclatam.com` y HTTP hacia esa dirección, con certificado Let's Encrypt).
+
+- Carpeta pública: `/home/grupologiclatam/htdocs/www.grupologiclatam.com`
+- Copia del repositorio (no pública): `/home/grupologiclatam/repo-grupologic`
+- Script de despliegue: `/home/grupologiclatam/desplegar-sitio.sh`
+
+Para publicar cambios: haga `git push` a `main` y luego, conectado por SSH como el usuario del sitio
+(`grupologiclatam`), ejecute:
+
+```bash
+~/desplegar-sitio.sh
+```
+
+El script actualiza la copia del repositorio y sincroniza solo la carpeta `sitio/` con la carpeta pública
+(conserva `.well-known`, que usa la renovación del certificado). No afecta a otros sitios del servidor.
 
 ## 7. Datos pendientes del propietario
 

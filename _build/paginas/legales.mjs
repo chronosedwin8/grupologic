@@ -22,7 +22,6 @@ const hero = (ruta, ceja, titulo, texto) => `
 const RESPONSABLE = `<ul>
         <li><strong>Razón social:</strong> <span data-gl="legal.razonSocial" data-gl-modo="texto">Grupo Logic</span></li>
         <li data-gl="legal.nit" hidden><strong>NIT:</strong> <span data-gl-texto></span></li>
-        <li><strong>Domicilio:</strong> Barranquilla, Colombia</li>
         <li data-gl="direccion" hidden><strong>Dirección:</strong> <span data-gl-texto></span></li>
         <li data-gl="legal.emailDatos" hidden><strong>Correo para consultas y reclamos:</strong> <a href="#" data-gl-enlace><span data-gl-texto></span></a></li>
         <li data-gl="telefono" hidden><strong>Teléfono:</strong> <a href="#" data-gl-enlace><span data-gl-texto></span></a></li>
@@ -116,7 +115,7 @@ export function terminos() {
     ['enlaces', 'Enlaces a sitios de terceros', '<p>El sitio incluye enlaces a los sitios oficiales de los fabricantes y a otros servicios. Grupo Logic no controla esos sitios ni responde por su contenido, disponibilidad o políticas de privacidad, que le recomendamos consultar.</p>'],
     ['responsabilidad', 'Responsabilidad', '<p>Procuramos que la información del sitio sea exacta y esté actualizada, pero no garantizamos la ausencia de errores ni la disponibilidad ininterrumpida del sitio. Grupo Logic no será responsable por daños derivados del uso del sitio o de la imposibilidad de usarlo, en la medida permitida por la ley.</p>'],
     ['datos', 'Datos personales', '<p>El tratamiento de los datos que usted nos entrega se rige por nuestra <a href="/privacidad/">política de tratamiento de datos personales</a>.</p>'],
-    ['ley', 'Ley aplicable', '<p>Estos términos se rigen por las leyes de la República de Colombia. Cualquier controversia se someterá a los jueces competentes de la ciudad de Barranquilla, sin perjuicio de las normas de protección al consumidor que resulten aplicables.</p>'],
+    ['ley', 'Ley aplicable', '<p>Estos términos se rigen por las leyes de la República de Colombia. Cualquier controversia se someterá a los jueces competentes del domicilio del responsable del sitio, sin perjuicio de las normas de protección al consumidor que resulten aplicables.</p>'],
     ['cambios', 'Modificaciones', '<p>Grupo Logic puede modificar estos términos en cualquier momento. La versión vigente es la publicada en esta página, con su fecha de actualización.</p>'],
     ['contacto', 'Contacto', '<p>Si tiene preguntas sobre estos términos, escríbanos a través del <a href="/contacto/">formulario de contacto</a>.</p>'],
   ];

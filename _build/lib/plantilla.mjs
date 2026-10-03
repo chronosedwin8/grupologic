@@ -180,9 +180,8 @@ export const organizacionLd = () => {
     name: 'Grupo Logic', url: DOMINIO + '/', logo: DOMINIO + '/assets/img/logo/grupologic-logo.png',
     description: 'Grupo Logic acerca a los colegios de Latinoamérica soluciones de tecnología educativa desarrolladas en otras partes del mundo, con implementación y acompañamiento.',
     areaServed: { '@type': 'Place', name: 'Latinoamérica' },
-    address: { '@type': 'PostalAddress', addressLocality: 'Barranquilla', addressCountry: 'CO' },
   };
-  if (valido(CONFIG.direccion)) org.address.streetAddress = CONFIG.direccion;
+  if (valido(CONFIG.direccion)) org.address = { '@type': 'PostalAddress', streetAddress: CONFIG.direccion };
   const contacto = { '@type': 'ContactPoint', contactType: 'sales', areaServed: 'Latinoamérica', availableLanguage: ['es'] };
   if (valido(CONFIG.email)) contacto.email = CONFIG.email;
   if (valido(CONFIG.telefono)) contacto.telephone = CONFIG.telefono;
@@ -295,7 +294,8 @@ function pie() {
           <li data-gl="telefono" hidden><a href="#" data-gl-enlace>${icono('telefono')}<span data-gl-texto></span></a></li>
           <li data-gl="whatsapp" hidden data-gl-mensaje="Hola, quisiera información sobre las soluciones de Grupo Logic."><a href="#" data-gl-enlace target="_blank" rel="noopener">${icono('whatsapp')}<span>WhatsApp</span></a></li>
           <li data-gl="direccion" hidden><span>${icono('ubicacion')}<span data-gl-texto></span></span></li>
-          <li><span>${icono('globo')}<span>${esc(CONFIG.ciudad)}</span></span></li>
+          <li data-gl="ciudad" hidden><span>${icono('ubicacion')}<span data-gl-texto></span></span></li>
+          <li><span>${icono('globo')}<span>Latinoamérica</span></span></li>
           <li><a href="/contacto/">${icono('mensaje')}<span>Formulario de contacto</span></a></li>
         </ul>
       </div>

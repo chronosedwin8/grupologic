@@ -76,7 +76,7 @@ await p.fill('#ct-correo', 'no-es-correo'); await p.locator('#ct-correo').blur()
 ok((await p.textContent('#ct-correo-error')).includes('correo válido'), 'mensaje de correo inválido');
 await p.fill('#ct-nombre', 'Ana Pérez'); await p.selectOption('#ct-cargo', 'Rector/a');
 await p.fill('#ct-institucion', 'Colegio de prueba'); await p.selectOption('#ct-pais', 'Colombia');
-await p.fill('#ct-ciudad', 'Barranquilla'); await p.fill('#ct-correo', 'ana@colegio.edu.co'); await p.fill('#ct-telefono', '+57 300 123 4567');
+await p.fill('#ct-ciudad', 'Lima'); await p.fill('#ct-correo', 'ana@colegio.edu.co'); await p.fill('#ct-telefono', '+57 300 123 4567');
 await p.check('#ct-acepta'); await p.click('form [type=submit]'); await p.waitForTimeout(300);
 ok((await p.textContent('.formulario__estado')).includes('no está disponible'), 'sin endpoint configurado: estado de error claro');
 await p.close();

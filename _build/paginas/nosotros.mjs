@@ -17,7 +17,7 @@ export default function nosotros() {
     <div class="hero__contenido">
       <p class="ceja">Quiénes somos</p>
       <h1 class="titulo-1" id="titulo-principal">Tecnología educativa del mundo, <em>con acompañamiento cercano</em></h1>
-      <p class="hero__texto">Grupo Logic es una empresa con sede en Barranquilla, Colombia, que acerca a los colegios de Latinoamérica recursos pedagógicos de tipo tecnológico desarrollados en otras partes del mundo.</p>
+      <p class="hero__texto">Grupo Logic es una empresa latinoamericana que acerca a los colegios de la región recursos pedagógicos de tipo tecnológico desarrollados en otras partes del mundo.</p>
     </div>
   </div>
 </section>

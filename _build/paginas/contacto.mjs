@@ -36,7 +36,7 @@ export default function contacto() {
           <li data-gl="whatsapp" hidden data-gl-mensaje="Hola, quisiera hablar con un asesor de Grupo Logic."><a class="enlace-flecha" href="#" data-gl-enlace target="_blank" rel="noopener">${icono('whatsapp')}<span>Hablar con un asesor por WhatsApp</span></a></li>
           <li data-gl="email" hidden><a class="enlace-flecha" href="#" data-gl-enlace>${icono('correo')}<span data-gl-texto></span></a></li>
           <li data-gl="telefono" hidden><a class="enlace-flecha" href="#" data-gl-enlace>${icono('telefono')}<span data-gl-texto></span></a></li>
-          <li>${icono('ubicacion')}<span>Barranquilla, Colombia. Atendemos colegios de toda Latinoamérica.</span></li>
+          <li>${icono('globo')}<span>Atendemos colegios de toda Latinoamérica.</span></li>
         </ul>
       </div>
       <div class="tarjeta">

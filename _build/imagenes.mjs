@@ -83,7 +83,7 @@ await fs.writeFile(path.join(IMG, 'mapa-puntos.svg'),
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${ancho} ${alto}" width="${ancho}" height="${alto}"><path d="${puntos}" stroke="#3A5378" stroke-width="4.2" stroke-linecap="round" fill="none"/></svg>\n`);
 const ciudades = {
   berlin: [13.4, 52.5], londres: [-0.13, 51.5], madrid: [-3.7, 40.4],
-  barranquilla: [-74.8, 11.0], mexico: [-99.1, 19.4], bogota: [-74.1, 4.7], lima: [-77.0, -12.0],
+  latam: [-74.8, 11.0], mexico: [-99.1, 19.4], bogota: [-74.1, 4.7], lima: [-77.0, -12.0],
   santiago: [-70.6, -33.4], buenosaires: [-58.4, -34.6], saopaulo: [-46.6, -23.5], panama: [-79.5, 9.0],
 };
 const proy = Object.fromEntries(Object.entries(ciudades).map(([k, v]) => [k, proyectar(...v).map(n => +n.toFixed(1))]));
