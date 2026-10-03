@@ -85,6 +85,8 @@ button { cursor: pointer; }
 .seccion--blanca { background: var(--white); color: var(--ink); }
 .seccion--oscura { background: var(--navy-700); color: var(--ivory); }
 .seccion--profunda { background: var(--navy-900); color: var(--ivory); }
+/* Las secciones fuera de pantalla no se maquetan ni pintan hasta acercarse (mejor INP/TBT) */
+main > .seccion { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 .cabecera-seccion { max-width: 760px; margin-bottom: clamp(40px, 5vw, 64px); }
 .cabecera-seccion--centro { margin-inline: auto; text-align: center; }
 .cabecera-seccion--centro .ceja::after { content: ""; width: 28px; height: 1px; background: currentColor; }
