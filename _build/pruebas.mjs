@@ -31,7 +31,12 @@ ok(await acc.getAttribute('aria-expanded') === 'true', 'acordeón se abre (aria-
 await p.locator('.cifra__valor').first().scrollIntoViewIfNeeded(); await p.waitForTimeout(2200);
 ok((await p.locator('[data-contador="120"]').textContent()) === '+120', 'contador llega a la cifra real');
 ok(await p.locator('.flotante--whatsapp').isHidden(), 'WhatsApp oculto mientras el número esté pendiente');
-ok(await p.evaluate(() => [...document.querySelectorAll('[data-gl]')].every(e => e.hidden || e.matches('[data-gl-modo]'))), 'datos [PENDIENTE] ocultos');
+ok(await p.evaluate(() => [...document.querySelectorAll('[data-gl]:not([data-gl-modo])')].every(e => {
+  const v = e.getAttribute('data-gl').split('.').reduce((o, k) => (o ? o[k] : ''), window.GL_CONFIG) || '';
+  const valido = typeof v === 'string' && v.trim() !== '' && !v.includes('PENDIENTE');
+  return valido ? !e.hidden : e.hidden;
+})), 'datos completos visibles y vacíos o [PENDIENTE] ocultos');
+ok(await p.locator('[data-gl="telefono"]:visible').count() === 0, 'no se publica ningún teléfono');
 ok(!(await p.content()).includes('PENDIENTE'), 'ningún "[PENDIENTE]" en el HTML');
 ok(await p.locator('h1').count() === 1, 'un solo H1');
 await p.close();

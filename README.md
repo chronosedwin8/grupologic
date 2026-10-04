@@ -66,7 +66,8 @@ window.GL_CONFIG = {
 
 - Mientras un valor siga en `[PENDIENTE]` o vacío, **el elemento que lo usa queda oculto** en la página
   (correo y teléfono del pie, botón flotante y botones de WhatsApp, redes, NIT…). Nunca se muestra el marcador.
-- Basta con editar el archivo y subirlo: el cambio se ve sin reconstruir.
+- Basta con editar el archivo y subirlo: el cambio se ve sin reconstruir. Al ejecutar el build, los datos
+  completos además quedan escritos en el HTML estático (visibles sin JavaScript) y en el JSON-LD.
 - Para que los datos también aparezcan en los datos estructurados (JSON-LD `Organization.contactPoint`),
   ejecute el build después de editarlos (`npm run build` dentro de `_build/`).
 
@@ -161,14 +162,14 @@ El script actualiza la copia del repositorio y sincroniza solo la carpeta `sitio
 
 | Dato | Dónde | Efecto mientras falte |
 |---|---|---|
-| Correo de contacto | `config.js` → `email` | Se oculta en pie, contacto y JSON-LD |
-| Teléfono | `config.js` → `telefono` | Se oculta |
-| WhatsApp | `config.js` → `whatsapp` | Se ocultan el botón flotante y los botones «Hablar con un asesor» |
+| Correo de contacto | `config.js` → `email` | **Completo:** gestion@grupologiclatam.com |
+| Teléfono | `config.js` → `telefono` | **No se publica** por decisión del propietario (vacío a propósito) |
+| WhatsApp | `config.js` → `whatsapp` | Vacío: expone un número de teléfono; se ocultan el botón flotante y «Hablar con un asesor» |
 | Dirección | `config.js` → `direccion` | Se oculta |
 | Endpoint del formulario | `config.js` → `formEndpoint` | El formulario muestra «El envío en línea no está disponible» |
 | Redes sociales | `config.js` → `redes` | No se muestran íconos |
 | GA4 (opcional) | `config.js` → `analyticsId` | Sin analítica ni aviso de cookies |
-| Razón social, NIT y correo de datos | `config.js` → `legal` | La política muestra «Grupo Logic» y oculta NIT y correo |
+| Razón social, NIT y correo de datos | `config.js` → `legal` | **Completos:** Grupo Logic SAS Latinoamerica y gestion@grupologiclatam.com. Falta el NIT (se oculta) |
 | Logotipo oficial | `sitio/assets/img/logo/` | Se usa el logotipo tipográfico provisional |
 | Revisión legal | `/privacidad/`, `/terminos/` y `/reembolsos/` | **Deben ser revisadas por un asesor legal**; confirmar el plazo de reembolso de 14 días con el proveedor de pagos |
 | Relación comercial con fabricantes | Textos del sitio | Se usa «Grupo Logic acerca estas soluciones…»; no se afirma exclusividad ni representación oficial |

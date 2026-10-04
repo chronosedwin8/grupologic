@@ -26,6 +26,36 @@ const ctx = { window: {} };
 vm.runInNewContext(leerSitio('assets/js/config.js'), ctx);
 export const CONFIG = ctx.window.GL_CONFIG;
 export const valido = (v) => typeof v === 'string' && v.trim() !== '' && !v.includes('PENDIENTE');
+const leerConfig = (ruta) => ruta.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : ''), CONFIG);
+
+// Escribe en el HTML estático los datos de config.js que ya estén completos (correo, razón social…),
+// para que se vean aunque no se ejecute JavaScript. Los vacíos o [PENDIENTE] siguen ocultos.
+// main.js aplica la misma lógica en el navegador, así que basta con editar config.js.
+function rellenarDatos(html) {
+  const enlace = (clave, valor, mensaje) => {
+    if (/email/i.test(clave)) return 'mailto:' + valor;
+    if (clave === 'telefono') return 'tel:' + valor.replace(/[^\d+]/g, '');
+    if (clave === 'whatsapp') return 'https://wa.me/' + valor.replace(/\D/g, '') + (mensaje ? '?text=' + encodeURIComponent(mensaje) : '');
+    if (clave.startsWith('redes.')) return valor;
+    return '#';
+  };
+  // Texto con valor por defecto (p. ej. la razón social)
+  html = html.replace(/(<span data-gl="([^"]+)" data-gl-modo="texto">)([^<]*)(<\/span>)/g, (m, ini, clave, def, fin) => {
+    const v = leerConfig(clave);
+    return valido(v) ? ini + esc(v) + fin : m;
+  });
+  // Elementos ocultos que dependen de un dato
+  return html.replace(/<(li|a)\b([^>]*?)data-gl="([^"]+)"([^>]*?) hidden([^>]*)>([\s\S]*?)<\/\1>/g, (m, tag, a1, clave, a2, a3, interior) => {
+    const v = leerConfig(clave);
+    if (!valido(v)) return m;
+    const mensaje = (m.match(/data-gl-mensaje="([^"]*)"/) || [])[1] || '';
+    const href = enlace(clave, v, mensaje.replace(/&quot;/g, '"'));
+    let apertura = `<${tag}${a1}data-gl="${clave}"${a2}${a3}>`;
+    if (tag === 'a') apertura = apertura.replace('href="#"', `href="${esc(href)}"`);
+    interior = interior.replace('href="#" data-gl-enlace', `href="${esc(href)}" data-gl-enlace`).replace('<span data-gl-texto></span>', `<span data-gl-texto>${esc(v)}</span>`);
+    return apertura + interior + `</${tag}>`;
+  });
+}
 
 const CAPTURAS = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname, '../capturas.json'), 'utf8'));
 const LOGO = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname, '../parciales-logo.json'), 'utf8'));
@@ -189,6 +219,7 @@ export const organizacionLd = () => {
     description: 'Grupo Logic acerca a los colegios de Latinoamérica soluciones de tecnología educativa desarrolladas en otras partes del mundo, con implementación y acompañamiento.',
     areaServed: { '@type': 'Place', name: 'Latinoamérica' },
   };
+  if (valido(CONFIG.legal?.razonSocial)) org.legalName = CONFIG.legal.razonSocial;
   if (valido(CONFIG.direccion)) org.address = { '@type': 'PostalAddress', streetAddress: CONFIG.direccion };
   const contacto = { '@type': 'ContactPoint', contactType: 'sales', areaServed: 'Latinoamérica', availableLanguage: ['es'] };
   if (valido(CONFIG.email)) contacto.email = CONFIG.email;
@@ -310,7 +341,7 @@ function pie() {
       </div>
     </div>
     <div class="pie__base">
-      <p>© ${ANIO} Grupo Logic. Todos los derechos reservados.</p>
+      <p>© ${ANIO} ${esc(valido(CONFIG.legal?.razonSocial) ? CONFIG.legal.razonSocial : 'Grupo Logic')}. Todos los derechos reservados.</p>
       <p>Los nombres y logotipos de los productos pertenecen a sus respectivos titulares.</p>
     </div>
   </div>
@@ -323,7 +354,7 @@ export function pagina({ ruta, titulo, descripcion, og, cuerpo, jsonld = [], scr
   const imagenOg = `${DOMINIO}/assets/img/og/${og}.jpg`;
   const ld = jsonld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n');
   const js = { form: V.form, portfolio: V.portfolio };
-  return `<!DOCTYPE html>
+  return rellenarDatos(`<!DOCTYPE html>
 <html lang="es-419" class="sin-js">
 <head>
 <meta charset="utf-8">
@@ -376,5 +407,5 @@ ${pie()}
 <button class="flotante flotante--arriba" type="button" aria-label="Volver arriba">${icono('flechaArriba')}</button>
 </body>
 </html>
-`;
+`);
 }
