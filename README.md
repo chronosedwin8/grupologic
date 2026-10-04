@@ -6,7 +6,7 @@ Presenta a Grupo Logic ante colegios de Latinoamérica, muestra el portafolio de
 
 > **Decisiones del propietario:** ServiVPS se retiró del alcance; se añadieron Veyon Control (línea Gestión
 > institucional) y CodeNest School (línea Programación). El portafolio tiene ocho soluciones en cuatro líneas
-> y el sitio tiene 15 páginas.
+> y el sitio tiene 16 páginas (incluye términos y condiciones, política de privacidad y política de reembolsos).
 
 ---
 
@@ -170,7 +170,7 @@ El script actualiza la copia del repositorio y sincroniza solo la carpeta `sitio
 | GA4 (opcional) | `config.js` → `analyticsId` | Sin analítica ni aviso de cookies |
 | Razón social, NIT y correo de datos | `config.js` → `legal` | La política muestra «Grupo Logic» y oculta NIT y correo |
 | Logotipo oficial | `sitio/assets/img/logo/` | Se usa el logotipo tipográfico provisional |
-| Revisión legal | `/privacidad/` y `/terminos/` | **Deben ser revisadas por un asesor legal antes de publicar** |
+| Revisión legal | `/privacidad/`, `/terminos/` y `/reembolsos/` | **Deben ser revisadas por un asesor legal**; confirmar el plazo de reembolso de 14 días con el proveedor de pagos |
 | Relación comercial con fabricantes | Textos del sitio | Se usa «Grupo Logic acerca estas soluciones…»; no se afirma exclusividad ni representación oficial |
 
 **Logotipo:** `grupologic-claro.svg` (para fondos oscuros) y `grupologic-oscuro.svg` (para fondos claros)
@@ -201,7 +201,7 @@ en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea g
   páginas medidas. Rendimiento, mediana de 5 corridas: inicio 96, portafolio 99; páginas de solución
   100 (EduNova, VCodePro). El inicio varía entre corridas (88–100) por el tiempo de bloqueo simulado;
   CLS 0 y LCP ≈ 2 s.
-- `npm run verificar`: 15 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
+- `npm run verificar`: 16 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
 - `npm run pruebas`: menú desplegable y móvil (Escape, foco atrapado), pestañas con flechas/Inicio/Fin,
   acordeón, filtro con anuncio `aria-live`, validación accesible del formulario, preselección por URL,
   movimiento reducido y áreas táctiles de 44 px.

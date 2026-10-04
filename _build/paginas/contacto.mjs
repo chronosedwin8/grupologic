@@ -50,7 +50,7 @@ export default function contacto() {
   return {
     ruta: '/contacto/',
     titulo: 'Solicitar demostración · Contacto · Grupo Logic',
-    descripcion: 'Solicite una demostración de UntiCloud, AulaMágica IA, EduNova, Codexia, VCodePro o BookStudio para su colegio. Un asesor de Grupo Logic le contactará.',
+    descripcion: 'Solicite una demostración de las soluciones de Grupo Logic para su colegio: gestión, inteligencia artificial, programación y contenidos. Le contactaremos.',
     og: 'contacto',
     cuerpo,
     scripts: ['form'],

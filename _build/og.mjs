@@ -12,8 +12,9 @@ const TEXTOS = {
   soluciones: ['Portafolio', 'Soluciones tecnológicas para colegios'],
   nosotros: ['Nosotros', 'Tecnología educativa del mundo, con acompañamiento cercano'],
   contacto: ['Contacto', 'Solicite una demostración para su institución'],
-  privacidad: ['Tratamiento de datos', 'Política de tratamiento de datos personales'],
-  terminos: ['Términos de uso', 'Términos de uso del sitio'],
+  privacidad: ['Privacidad', 'Política de privacidad y tratamiento de datos'],
+  terminos: ['Legal', 'Términos y condiciones de servicio'],
+  reembolsos: ['Legal', 'Política de reembolsos'],
 };
 for (const s of SOLUCIONES) TEXTOS[s.slug] = [categoria(s.categoria).nombre, s.nombre, s.lema];
 

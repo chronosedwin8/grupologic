@@ -9,7 +9,7 @@ import portafolio from './paginas/portafolio.mjs';
 import paginaSolucion from './paginas/solucion.mjs';
 import nosotros from './paginas/nosotros.mjs';
 import contacto from './paginas/contacto.mjs';
-import { privacidad, terminos } from './paginas/legales.mjs';
+import { privacidad, terminos, reembolsos } from './paginas/legales.mjs';
 import error404 from './paginas/error404.mjs';
 
 const HOY = new Date().toISOString().slice(0, 10);
@@ -22,6 +22,7 @@ const paginas = [
   contacto(),
   privacidad(),
   terminos(),
+  reembolsos(),
   error404(),
 ];
 
