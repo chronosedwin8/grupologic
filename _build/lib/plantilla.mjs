@@ -14,7 +14,7 @@ export const SOLUCIONES = DATOS.soluciones;
 export const CATEGORIAS = DATOS.categorias;
 export const categoria = (id) => CATEGORIAS.find(c => c.id === id);
 export const solucion = (slug) => SOLUCIONES.find(s => s.slug === slug);
-// Cantidades en letras (se actualizan solas al añadir soluciones o líneas al JSON)
+// Cantidades en letras (se actualizan solas al añadir productos o líneas al JSON)
 const LETRAS = ['cero', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce'];
 export const enLetras = (n) => LETRAS[n] || String(n);
 export const N_SOLUCIONES = enLetras(SOLUCIONES.length);
@@ -163,17 +163,14 @@ export const logoGrupoLogic = () =>
 // con { color: true } solo el símbolo o la parte acentuada toma el color de la marca.
 const MARCAS = {
   unticloud: () => ['', '<span class="logotipo__acento">Unti</span><b>Cloud</b>'],
-  'aulamagica-ia': () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 6.5l1.4 4.1 4.1 1.4-4.1 1.4L12 17.5l-1.4-4.1L6.5 12l4.1-1.4z" fill="currentColor"/></svg></span>`, 'AulaMágica<b>IA</b>'],
-  edunova: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg></span>`, 'EduNova'],
   codexia: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="21" height="21" rx="6"/><path d="m9.5 8.5-3.5 3.5 3.5 3.5M14.5 8.5l3.5 3.5-3.5 3.5"/></svg></span>`, 'Codexia'],
   vcodepro: () => [`<span class="logotipo__marca"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 30 L50 88 L82 30" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><rect x="58" y="4" width="24" height="11" rx="5.5" fill="currentColor"/></svg></span>`, 'vcode<b>pro</b>'],
-  'veyon-control': () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="21" height="21" rx="6.5"/><path d="M7.2 8 12 16.5 16.8 8"/></svg></span>`, 'Veyon<b>Control</b>'],
   'codenest-school': () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13" r="9.5"/><circle cx="9" cy="12" r="1.6" fill="currentColor"/><circle cx="15" cy="12" r="1.6" fill="currentColor"/><path d="M9.5 16.2q2.5 1.8 5 0"/><path d="M12 3.5V1.5M8.5 4.2 7.3 2.6M15.5 4.2l1.2-1.6"/></svg></span>`, 'CodeNest<b>School</b>'],
   bookstudio: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><text x="12" y="16.8" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="13" fill="currentColor">B</text></svg></span>`, 'BookStudio'],
 };
 export function logotipo(slug, { color = false, etiqueta = true } = {}) {
   const s = solucion(slug);
-  const clase = slug === 'aulamagica-ia' ? 'aulamagica' : slug;
+  const clase = slug;
   return `<span class="logotipo logotipo--${clase}${color ? ' logotipo--color' : ''}"${etiqueta ? ` role="img" aria-label="${esc(s.nombre)}"` : ' aria-hidden="true"'}>${(([m, t]) => `${m}<span class="logotipo__texto">${t}</span>`)(MARCAS[slug]())}</span>`;
 }
 
@@ -216,12 +213,12 @@ export const organizacionLd = () => {
   const org = {
     '@context': 'https://schema.org', '@type': 'Organization', '@id': DOMINIO + '/#organizacion',
     name: 'Grupo Logic', url: DOMINIO + '/', logo: DOMINIO + '/assets/img/logo/grupologic-logo.png',
-    description: 'Grupo Logic acerca a los colegios de Latinoamérica soluciones de tecnología educativa desarrolladas en otras partes del mundo, con implementación y acompañamiento.',
+    description: 'Grupo Logic desarrolla y comercializa software para instituciones educativas: gestión escolar, programación y contenidos interactivos.',
     areaServed: { '@type': 'Place', name: 'Latinoamérica' },
   };
   if (valido(CONFIG.legal?.razonSocial)) org.legalName = CONFIG.legal.razonSocial;
   if (valido(CONFIG.direccion)) org.address = { '@type': 'PostalAddress', streetAddress: CONFIG.direccion };
-  const contacto = { '@type': 'ContactPoint', contactType: 'sales', areaServed: 'Latinoamérica', availableLanguage: ['es'] };
+  const contacto = { '@type': 'ContactPoint', contactType: 'customer support', areaServed: 'Latinoamérica', availableLanguage: ['es'] };
   if (valido(CONFIG.email)) contacto.email = CONFIG.email;
   if (valido(CONFIG.telefono)) contacto.telephone = CONFIG.telefono;
   if (contacto.email || contacto.telephone) org.contactPoint = [contacto];
@@ -232,13 +229,13 @@ export const organizacionLd = () => {
 
 /* ---------------- Encabezado ---------------- */
 function encabezado(ruta) {
-  const enSoluciones = ruta.startsWith('/soluciones/');
+  const enProductos = ruta.startsWith('/productos/');
   const actual = (r) => (ruta === r ? ' aria-current="page"' : '');
   const grupos = CATEGORIAS.map(c => `
           <div class="desplegable__grupo">
             <p class="desplegable__titulo">${esc(c.nombre)}</p>
             <ul>${SOLUCIONES.filter(s => s.categoria === c.id).map(s => `
-              <li><a class="desplegable__enlace" href="/soluciones/${s.slug}/"${actual(`/soluciones/${s.slug}/`)}><span class="desplegable__nombre">${esc(s.nombre)}</span><span class="desplegable__lema">${esc(s.lema)}</span></a></li>`).join('')}
+              <li><a class="desplegable__enlace" href="/productos/${s.slug}/"${actual(`/productos/${s.slug}/`)}><span class="desplegable__nombre">${esc(s.nombre)}</span><span class="desplegable__lema">${esc(s.lema)}</span></a></li>`).join('')}
             </ul>
           </div>`).join('');
   return `
@@ -249,20 +246,22 @@ function encabezado(ruta) {
     <nav class="nav" aria-label="Principal">
       <ul class="nav__lista">
         <li class="nav__item nav__item--desplegable">
-          <button class="nav__enlace" type="button" aria-expanded="false" aria-controls="menu-soluciones" data-desplegable${enSoluciones ? ' data-seccion-actual' : ''}>Soluciones ${icono('chevron')}</button>
-          <div class="desplegable" id="menu-soluciones" hidden>
+          <button class="nav__enlace" type="button" aria-expanded="false" aria-controls="menu-productos" data-desplegable${enProductos ? ' data-seccion-actual' : ''}>Productos ${icono('chevron')}</button>
+          <div class="desplegable" id="menu-productos" hidden>
             <div class="contenedor">
               <div class="desplegable__rejilla">${grupos}
               </div>
-              <div class="desplegable__pie"><span>${mayuscula(N_SOLUCIONES)} soluciones seleccionadas para colegios de Latinoamérica.</span><a class="enlace-flecha" href="/soluciones/"${actual('/soluciones/')}>Ver el portafolio completo ${icono('flecha')}</a></div>
+              <div class="desplegable__pie"><span>${mayuscula(N_SOLUCIONES)} productos de software desarrollados por Grupo Logic.</span><a class="enlace-flecha" href="/productos/"${actual('/productos/')}>Ver todos los productos ${icono('flecha')}</a></div>
             </div>
           </div>
         </li>
+        <li><a class="nav__enlace" href="/precios/"${actual('/precios/')}>Precios</a></li>
         <li><a class="nav__enlace" href="/nosotros/"${actual('/nosotros/')}>Nosotros</a></li>
+        <li><a class="nav__enlace" href="/soporte/"${actual('/soporte/')}>Soporte</a></li>
         <li><a class="nav__enlace" href="/contacto/"${actual('/contacto/')}>Contacto</a></li>
       </ul>
     </nav>
-    <a class="boton boton--primario encabezado__cta" href="/contacto/">Solicitar demostración</a>
+    <a class="boton boton--primario encabezado__cta" href="/precios/">Ver precios</a>
     <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-movil" data-abrir-menu><span class="sr">Abrir menú</span>${icono('menu')}</button>
   </div>
 </header>
@@ -275,18 +274,20 @@ function encabezado(ruta) {
     <nav aria-label="Principal (móvil)">
       <ul class="menu-movil__lista">
         <li><a class="menu-movil__enlace" href="/">Inicio</a></li>
-        <li><a class="menu-movil__enlace" href="/soluciones/">Soluciones</a>
+        <li><a class="menu-movil__enlace" href="/productos/">Productos</a>
           <ul class="menu-movil__sub">${SOLUCIONES.map(s => `
-            <li><a href="/soluciones/${s.slug}/"><span>${esc(s.nombre)}</span><span>${esc(categoria(s.categoria).corto)}</span></a></li>`).join('')}
+            <li><a href="/productos/${s.slug}/"><span>${esc(s.nombre)}</span><span>${esc(categoria(s.categoria).corto)}</span></a></li>`).join('')}
           </ul>
         </li>
+        <li><a class="menu-movil__enlace" href="/precios/">Precios</a></li>
         <li><a class="menu-movil__enlace" href="/nosotros/">Nosotros</a></li>
+        <li><a class="menu-movil__enlace" href="/soporte/">Soporte</a></li>
         <li><a class="menu-movil__enlace" href="/contacto/">Contacto</a></li>
       </ul>
     </nav>
     <div class="botones">
-      <a class="boton boton--primario" href="/contacto/">Solicitar demostración</a>
-      <a class="boton boton--secundario" href="#" data-gl="whatsapp" data-gl-mensaje="Hola, quisiera hablar con un asesor de Grupo Logic." target="_blank" rel="noopener" hidden>Hablar con un asesor</a>
+      <a class="boton boton--primario" href="/precios/">Ver precios</a>
+      <a class="boton boton--secundario" href="/contacto/">Solicitar demostración</a>
     </div>
   </div>
 </div>`;
@@ -300,23 +301,24 @@ function pie() {
     <div class="pie__rejilla">
       <div class="pie__marca">
         <a class="marca" href="/" aria-label="Grupo Logic, ir al inicio">${logoGrupoLogic()}</a>
-        <p>Acercamos a los colegios de Latinoamérica tecnología educativa desarrollada en otras partes del mundo, con implementación y acompañamiento.</p>
+        <p>Desarrollamos y comercializamos software para colegios de Latinoamérica: gestión escolar, programación y contenidos interactivos.</p>
         <div class="pie__redes">
           <a href="#" data-gl="redes.linkedin" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en LinkedIn">${icono('linkedin')}</a>
           <a href="#" data-gl="redes.instagram" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en Instagram">${icono('instagram')}</a>
           <a href="#" data-gl="redes.youtube" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en YouTube">${icono('youtube')}</a>
         </div>
       </div>
-      <nav aria-label="Soluciones">
-        <p class="pie__titulo">Soluciones</p>
-        <ul>${SOLUCIONES.map(s => `<li><a href="/soluciones/${s.slug}/">${esc(s.nombre)}</a></li>`).join('')}</ul>
+      <nav aria-label="Productos">
+        <p class="pie__titulo">Productos</p>
+        <ul>${SOLUCIONES.map(s => `<li><a href="/productos/${s.slug}/">${esc(s.nombre)}</a></li>`).join('')}</ul>
       </nav>
       <nav aria-label="Empresa">
         <p class="pie__titulo">Empresa</p>
         <ul>
           <li><a href="/nosotros/">Nosotros</a></li>
-          <li><a href="/soluciones/">Portafolio</a></li>
-          <li><a href="/contacto/">Solicitar demostración</a></li>
+          <li><a href="/precios/">Precios</a></li>
+          <li><a href="/soporte/">Soporte</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
@@ -332,7 +334,7 @@ function pie() {
         <ul class="pie__contacto">
           <li data-gl="email" hidden><a href="#" data-gl-enlace>${icono('correo')}<span data-gl-texto></span></a></li>
           <li data-gl="telefono" hidden><a href="#" data-gl-enlace>${icono('telefono')}<span data-gl-texto></span></a></li>
-          <li data-gl="whatsapp" hidden data-gl-mensaje="Hola, quisiera información sobre las soluciones de Grupo Logic."><a href="#" data-gl-enlace target="_blank" rel="noopener">${icono('whatsapp')}<span>WhatsApp</span></a></li>
+          <li data-gl="whatsapp" hidden data-gl-mensaje="Hola, quisiera información sobre los productos de Grupo Logic."><a href="#" data-gl-enlace target="_blank" rel="noopener">${icono('whatsapp')}<span>WhatsApp</span></a></li>
           <li data-gl="direccion" hidden><span>${icono('ubicacion')}<span data-gl-texto></span></span></li>
           <li data-gl="ciudad" hidden><span>${icono('ubicacion')}<span data-gl-texto></span></span></li>
           <li><span>${icono('globo')}<span>Latinoamérica</span></span></li>
@@ -342,7 +344,7 @@ function pie() {
     </div>
     <div class="pie__base">
       <p>© ${ANIO} ${esc(valido(CONFIG.legal?.razonSocial) ? CONFIG.legal.razonSocial : 'Grupo Logic')}. Todos los derechos reservados.</p>
-      <p>Los nombres y logotipos de los productos pertenecen a sus respectivos titulares.</p>
+      <p>${SOLUCIONES.map(s => esc(s.nombre)).join(', ')} son productos de ${esc(valido(CONFIG.legal?.razonSocial) ? CONFIG.legal.razonSocial : 'Grupo Logic')}.</p>
     </div>
   </div>
 </footer>`;
@@ -403,7 +405,7 @@ ${encabezado(ruta)}
 ${cuerpo}
 </main>
 ${pie()}
-<a class="flotante flotante--whatsapp" href="#" target="_blank" rel="noopener" aria-label="Escribir a Grupo Logic por WhatsApp" data-mensaje="${esc(mensajeWa || 'Hola, quisiera información sobre las soluciones de Grupo Logic.')}" hidden>${icono('whatsapp')}</a>
+<a class="flotante flotante--whatsapp" href="#" target="_blank" rel="noopener" aria-label="Escribir a Grupo Logic por WhatsApp" data-mensaje="${esc(mensajeWa || 'Hola, quisiera información sobre los productos de Grupo Logic.')}" hidden>${icono('whatsapp')}</a>
 <button class="flotante flotante--arriba" type="button" aria-label="Volver arriba">${icono('flechaArriba')}</button>
 </body>
 </html>

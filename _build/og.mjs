@@ -8,10 +8,12 @@ import sharp from 'sharp';
 import { SITIO, SOLUCIONES, categoria, logoGrupoLogic } from './lib/plantilla.mjs';
 
 const TEXTOS = {
-  inicio: ['Tecnología educativa para colegios', 'Las mejores soluciones educativas del mundo, al servicio de los colegios de Latinoamérica'],
-  soluciones: ['Portafolio', 'Soluciones tecnológicas para colegios'],
-  nosotros: ['Nosotros', 'Tecnología educativa del mundo, con acompañamiento cercano'],
-  contacto: ['Contacto', 'Solicite una demostración para su institución'],
+  inicio: ['Software educativo', 'Software para colegios, desarrollado por Grupo Logic'],
+  productos: ['Productos', 'Software para colegios de Grupo Logic'],
+  precios: ['Precios', 'Planes y precios de nuestros productos'],
+  soporte: ['Soporte', 'Soporte técnico de nuestros productos'],
+  nosotros: ['Nosotros', 'Una empresa de software educativo'],
+  contacto: ['Contacto', 'Demostraciones, licencias y soporte'],
   privacidad: ['Privacidad', 'Política de privacidad y tratamiento de datos'],
   terminos: ['Legal', 'Términos y condiciones de servicio'],
   reembolsos: ['Legal', 'Política de reembolsos'],

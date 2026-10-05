@@ -3,6 +3,7 @@ import { SOLUCIONES, esc, icono } from './plantilla.mjs';
 
 export const CARGOS = ['Rector/a', 'Director/a administrativo', 'Coordinador/a TIC', 'Coordinador/a académico', 'Docente', 'Otro'];
 export const PAISES = ['Argentina', 'Bolivia', 'Brasil', 'Chile', 'Colombia', 'Costa Rica', 'Cuba', 'Ecuador', 'El Salvador', 'Guatemala', 'Honduras', 'México', 'Nicaragua', 'Panamá', 'Paraguay', 'Perú', 'Puerto Rico', 'República Dominicana', 'Uruguay', 'Venezuela', 'Otro país'];
+export const MOTIVOS = ['Demostración de un producto', 'Compra o cotización de licencias', 'Soporte técnico', 'Pagos, facturación o reembolsos', 'Otro'];
 export const ESTUDIANTES = ['Menos de 300', 'Entre 300 y 800', 'Entre 800 y 1.500', 'Entre 1.500 y 3.000', 'Más de 3.000'];
 
 // Campo genérico con etiqueta, ayuda y mensaje de error asociados.
@@ -65,6 +66,7 @@ export function formularioCompleto() {
     ${campo({ id: `${p}-nombre`, nombre: 'nombre', etiqueta: 'Nombre y apellido', autocompletar: 'name', mensaje: 'Escriba su nombre y apellido.' })}
     ${campo({ id: `${p}-cargo`, nombre: 'cargo', etiqueta: 'Cargo', opciones: CARGOS, mensaje: 'Seleccione su cargo.' })}
   </div>
+  ${campo({ id: `${p}-motivo`, nombre: 'motivo', etiqueta: 'Motivo de su mensaje', opciones: MOTIVOS, mensaje: 'Seleccione el motivo de su mensaje.' })}
   ${campo({ id: `${p}-institucion`, nombre: 'institucion', etiqueta: 'Institución', autocompletar: 'organization', mensaje: 'Escriba el nombre de su institución.' })}
   <div class="formulario__fila formulario__fila--2">
     ${campo({ id: `${p}-pais`, nombre: 'pais', etiqueta: 'País', opciones: PAISES, mensaje: 'Seleccione su país.' })}
@@ -75,14 +77,14 @@ export function formularioCompleto() {
     ${campo({ id: `${p}-telefono`, nombre: 'telefono', etiqueta: 'Teléfono', tipo: 'tel', autocompletar: 'tel', mensaje: 'Escriba un teléfono de contacto.', ayuda: 'Con indicativo de país, por ejemplo +57.' })}
   </div>
   <fieldset class="grupo-opciones">
-    <legend class="campo__etiqueta">Soluciones de interés <span class="opcional">(puede elegir varias)</span></legend>
+    <legend class="campo__etiqueta">Productos de interés <span class="opcional">(puede elegir varios)</span></legend>
     <div class="opciones">${SOLUCIONES.map(s => `
       <label class="casilla"><input type="checkbox" id="${p}-sol-${s.slug}" name="soluciones" value="${s.slug}" data-nombre="${esc(s.nombre)}"><span>${esc(s.nombre)}</span></label>`).join('')}
-      <label class="casilla"><input type="checkbox" id="${p}-sol-asesoria" name="soluciones" value="asesoria" data-nombre="Asesoría general"><span>Aún no lo sé: quiero asesoría</span></label>
+      <label class="casilla"><input type="checkbox" id="${p}-sol-general" name="soluciones" value="general" data-nombre="Varios productos"><span>Aún no lo sé: quiero conocer los productos</span></label>
     </div>
   </fieldset>
   ${campo({ id: `${p}-estudiantes`, nombre: 'estudiantes', etiqueta: 'Número aproximado de estudiantes', opciones: ESTUDIANTES, requerido: false })}
-  ${campo({ id: `${p}-mensaje`, nombre: 'mensaje', etiqueta: 'Mensaje', tipo: 'textarea', requerido: false, ayuda: 'Cuéntenos qué necesita su institución o qué le gustaría ver en la demostración.' })}
+  ${campo({ id: `${p}-mensaje`, nombre: 'mensaje', etiqueta: 'Mensaje', tipo: 'textarea', requerido: false, ayuda: 'Cuéntenos qué necesita: el producto y plan que le interesa, el número de usuarios o la incidencia técnica.' })}
   ${trampa(`${p}-web`)}
   ${consentimiento(`${p}-acepta`)}
   <div class="formulario__estado" role="status" aria-live="polite"></div>

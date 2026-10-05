@@ -16,13 +16,13 @@ await p.mouse.wheel(0, 800); await p.waitForTimeout(400);
 ok((await p.locator('.encabezado').getAttribute('class')).includes('solido'), 'encabezado sólido al hacer scroll');
 await p.evaluate(() => scrollTo(0, 0)); await p.waitForTimeout(300);
 await p.click('[data-desplegable]');
-ok(await p.isVisible('#menu-soluciones'), 'menú de soluciones se abre');
+ok(await p.isVisible('#menu-productos'), 'menú de productos se abre');
 await p.keyboard.press('Escape');
-ok(!(await p.isVisible('#menu-soluciones')), 'Escape cierra el menú de soluciones');
+ok(!(await p.isVisible('#menu-productos')), 'Escape cierra el menú de productos');
 ok(await p.evaluate(() => document.activeElement.hasAttribute('data-desplegable')), 'el foco vuelve al botón');
 await p.focus('#tab-linea-gestion'); await p.keyboard.press('ArrowRight');
-ok(await p.isVisible('#panel-linea-ia') && !(await p.isVisible('#panel-linea-gestion')), 'flecha derecha cambia de pestaña');
-ok(await p.evaluate(() => document.activeElement.id) === 'tab-linea-ia', 'el foco sigue a la pestaña activa');
+ok(await p.isVisible('#panel-linea-programacion') && !(await p.isVisible('#panel-linea-gestion')), 'flecha derecha cambia de pestaña');
+ok(await p.evaluate(() => document.activeElement.id) === 'tab-linea-programacion', 'el foco sigue a la pestaña activa');
 await p.keyboard.press('End');
 ok(await p.isVisible('#panel-linea-contenidos'), 'End lleva a la última pestaña');
 const acc = p.locator('#faq-b0');
@@ -58,28 +58,29 @@ await p.close();
 
 // --- Portafolio
 p = await b.newPage({ viewport: { width: 1280, height: 900 } });
-await p.goto(B + '/soluciones/', { waitUntil: 'networkidle' });
+await p.goto(B + '/productos/', { waitUntil: 'networkidle' });
 console.log('Portafolio');
-await p.click('[data-filtro="ia"]'); await p.waitForTimeout(700);
-ok(await p.locator('.tarjeta-solucion:visible').count() === 2, 'filtro IA deja 2 soluciones');
-ok((await p.textContent('#resultado-filtro')).includes('2 soluciones'), 'resultado anunciado por aria-live');
-ok(await p.getAttribute('[data-filtro="ia"]', 'aria-pressed') === 'true', 'aria-pressed en el filtro activo');
-await p.goto('about:blank'); await p.goto(B + '/soluciones/#programacion', { waitUntil: 'networkidle' }); await p.waitForTimeout(300);
-ok(await p.locator('.tarjeta-solucion:visible').count() === 3, 'filtro desde el hash de la URL');
+await p.click('[data-filtro="programacion"]'); await p.waitForTimeout(700);
+ok(await p.locator('.tarjeta-solucion:visible').count() === 3, 'filtro Programación deja 3 productos');
+ok((await p.textContent('#resultado-filtro')).includes('3 productos'), 'resultado anunciado por aria-live');
+ok(await p.getAttribute('[data-filtro="programacion"]', 'aria-pressed') === 'true', 'aria-pressed en el filtro activo');
+await p.goto('about:blank'); await p.goto(B + '/productos/#gestion', { waitUntil: 'networkidle' }); await p.waitForTimeout(300);
+ok(await p.locator('.tarjeta-solucion:visible').count() === 1, 'filtro desde el hash de la URL');
 await p.close();
 
 // --- Contacto
 p = await b.newPage({ viewport: { width: 1280, height: 900 } });
-await p.goto(B + '/contacto/?solucion=edunova', { waitUntil: 'networkidle' });
+await p.goto(B + '/contacto/?solucion=codexia&plan=Escuela', { waitUntil: 'networkidle' });
 console.log('Contacto');
-ok(await p.isChecked('#ct-sol-edunova'), 'preselección desde ?solucion=edunova');
+ok(await p.isChecked('#ct-sol-codexia'), 'preselección desde ?solucion=codexia');
+ok((await p.inputValue('#ct-mensaje')).includes('plan Escuela') && (await p.inputValue('#ct-motivo')) === 'Compra o cotización de licencias', 'plan y motivo prellenados desde la URL');
 await p.click('form [type=submit]');
 ok(await p.locator('[aria-invalid="true"]').count() >= 7, 'errores marcados con aria-invalid');
 ok(await p.evaluate(() => document.activeElement.id) === 'ct-nombre', 'foco en el primer campo con error');
 ok((await p.textContent('.formulario__estado')).includes('campos marcados'), 'resumen de errores anunciado');
 await p.fill('#ct-correo', 'no-es-correo'); await p.locator('#ct-correo').blur();
 ok((await p.textContent('#ct-correo-error')).includes('correo válido'), 'mensaje de correo inválido');
-await p.fill('#ct-nombre', 'Ana Pérez'); await p.selectOption('#ct-cargo', 'Rector/a');
+await p.fill('#ct-nombre', 'Ana Pérez'); await p.selectOption('#ct-cargo', 'Rector/a'); await p.selectOption('#ct-motivo', 'Soporte técnico');
 await p.fill('#ct-institucion', 'Colegio de prueba'); await p.selectOption('#ct-pais', 'Colombia');
 await p.fill('#ct-ciudad', 'Lima'); await p.fill('#ct-correo', 'ana@colegio.edu.co'); await p.fill('#ct-telefono', '+57 300 123 4567');
 await p.check('#ct-acepta'); await p.click('form [type=submit]'); await p.waitForTimeout(300);
@@ -88,7 +89,7 @@ await p.close();
 
 // --- Movimiento reducido
 p = await b.newPage({ viewport: { width: 1280, height: 900 }, reducedMotion: 'reduce' });
-await p.goto(B + '/soluciones/unticloud/', { waitUntil: 'networkidle' });
+await p.goto(B + '/productos/unticloud/', { waitUntil: 'networkidle' });
 console.log('Movimiento reducido');
 ok(await p.evaluate(() => [...document.querySelectorAll('[data-aparecer]')].every(e => getComputedStyle(e).opacity === '1')), 'todo el contenido visible sin animación');
 await p.close();

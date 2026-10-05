@@ -1,12 +1,16 @@
 # Sitio web de Grupo Logic — grupologiclatam.com
 
 Sitio corporativo estático de Grupo Logic: HTML5, CSS3 y JavaScript puro, sin frameworks.
-Presenta a Grupo Logic ante colegios de Latinoamérica, muestra el portafolio de ocho soluciones
+Presenta a Grupo Logic SAS Latinoamerica como empresa que **desarrolla y comercializa su propio software**
+para colegios, muestra sus cinco productos
 (cada una con página propia) y convierte visitas en solicitudes de demostración.
 
-> **Decisiones del propietario:** ServiVPS se retiró del alcance; se añadieron Veyon Control (línea Gestión
-> institucional) y CodeNest School (línea Programación). El portafolio tiene ocho soluciones en cuatro líneas
-> y el sitio tiene 16 páginas (incluye términos y condiciones, política de privacidad y política de reembolsos).
+> **Posicionamiento (octubre de 2026):** tras el rechazo de Paddle, que clasificó el sitio como
+> «servicios de consultoría», el sitio se reescribió como **empresa de software con productos propios**:
+> menú Productos / Precios / Soporte, precios publicados, licencias con actualizaciones y soporte técnico
+> incluidos, y sin lenguaje de consultoría (asesoría, diagnóstico, acompañamiento, implementación,
+> fabricantes). Se retiraron ServiVPS, Veyon Control (software de terceros), AulaMágica IA y EduNova.
+> Catálogo: UntiCloud, Codexia, CodeNest School, VCodePro y BookStudio, en tres líneas. 15 páginas.
 
 ---
 
@@ -16,9 +20,10 @@ Presenta a Grupo Logic ante colegios de Latinoamérica, muestra el portafolio de
 GrupoLogic/
 ├── sitio/                    ← LO QUE SE PUBLICA (raíz del dominio)
 │   ├── index.html                      Inicio
-│   ├── soluciones/index.html           Portafolio con filtro
-│   ├── soluciones/<slug>/index.html    unticloud, veyon-control, aulamagica-ia, edunova, codexia, codenest-school, vcodepro, bookstudio
-│   ├── nosotros/  contacto/  privacidad/  terminos/
+│   ├── productos/index.html            Catálogo con filtro
+│   ├── productos/<slug>/index.html     unticloud, codexia, codenest-school, vcodepro, bookstudio
+│   ├── precios/  soporte/              Precios de todos los planes · soporte técnico
+│   ├── nosotros/  contacto/  privacidad/  terminos/  reembolsos/
 │   ├── 404.html  robots.txt  sitemap.xml  site.webmanifest
 │   ├── favicon.svg  favicon-32.png  apple-touch-icon.png
 │   └── assets/
@@ -26,23 +31,23 @@ GrupoLogic/
 │       ├── js/    config.js, main.js, portfolio.js, form.js
 │       ├── fonts/ Fraunces y Manrope en WOFF2 (auto-alojadas)
 │       ├── img/   logo/, productos/ (capturas WebP), og/ (Open Graph), iconos/, mapa-puntos.svg
-│       └── data/  soluciones.json  ← fuente única de datos del portafolio
+│       └── data/  soluciones.json  ← fuente única de datos del catálogo
 ├── _build/                   ← generador opcional (Node). NO se publica.
 │   ├── build.mjs             ensambla las páginas en sitio/
 │   ├── lib/                  plantilla común (head, encabezado, pie, íconos) y formularios
 │   ├── paginas/              una función por tipo de página
-│   ├── contenido/            textos de cada página de solución
+│   ├── contenido/            textos y planes con precio de cada producto
 │   ├── imagenes.mjs          logotipo, favicons, mapa y capturas WebP
 │   ├── og.mjs                imágenes Open Graph 1200×630
-│   ├── capturar*.mjs         investigación y capturas de los sitios oficiales (Playwright)
-│   ├── investigacion/        texto extraído de cada sitio oficial (respaldo de lo publicado)
+│   ├── capturar*.mjs         capturas de los sitios de cada producto (Playwright)
+│   ├── investigacion/        texto extraído de los sitios de producto
 │   ├── verificar.mjs         validación HTML, enlaces, anclas y JSON-LD
 │   ├── pruebas.mjs           pruebas de interacción, teclado y accesibilidad
 │   └── servidor.mjs          vista previa local con gzip
 └── nginx/grupologiclatam.conf   configuración de ejemplo para producción
 ```
 
-El HTML publicado es **estático y completo**: encabezado, pie y todo el contenido de cada solución
+El HTML publicado es **estático y completo**: encabezado, pie y todo el contenido de cada producto
 están escritos en el HTML (nada se inyecta por JavaScript), para que los buscadores lo indexen.
 
 ## 2. Datos de contacto: `sitio/assets/js/config.js`
@@ -78,20 +83,25 @@ accesible y un campo trampa antispam. Opciones:
 - **Web3Forms:** `formEndpoint: "https://api.web3forms.com/submit"` y `formExtra: { access_key: "SU-CLAVE" }`.
 - **Propio:** cualquier URL que acepte `POST` con `Content-Type: application/json` y responda 2xx.
 
-Si se llega a `/contacto/?solucion=unticloud`, esa solución queda preseleccionada.
+Si se llega a `/contacto/?solucion=unticloud&plan=Profesional` (botones de los planes), el producto queda
+preseleccionado y el plan y el motivo quedan prellenados.
 
-## 3. Portafolio: `sitio/assets/data/soluciones.json`
+## 3. Catálogo: `sitio/assets/data/soluciones.json` y `_build/contenido/soluciones.mjs`
 
-Contiene las cuatro líneas (`categorias`) y, por solución: `slug`, `nombre`, `categoria`, `origen`,
-`lema`, `resumen`, `beneficios[]`, `publico[]`, `urlOficial`, `dominio`, `imagen` (captura del panel),
-`portada` (captura del sitio oficial) y `logo`.
-Las tarjetas del inicio, del portafolio, del menú y del pie se generan desde aquí en el build.
-El texto largo de cada página de solución está en `_build/contenido/soluciones.mjs`.
+`soluciones.json` contiene las líneas (`categorias`) y, por producto: `slug`, `nombre`, `categoria`, `lema`,
+`resumen`, `beneficios[]`, `publico[]`, `urlOficial` (sitio del producto), `dominio`, `imagen`, `portada`.
+Las tarjetas del inicio, del catálogo, del menú y del pie se generan desde aquí en el build.
 
-**Precios:** por decisión del proyecto no se publican. Si se decide lo contrario, añada `precioDesde`
-a cada solución en `soluciones.json` y muéstrelo en `_build/paginas/solucion.mjs`.
+`contenido/soluciones.mjs` tiene el texto de cada página de producto y sus **planes con precio**
+(`licencias.modalidades`: `{ nombre, para, precio, periodo, items }`; `precio: null` = «Cotización»).
+Los precios se muestran en la página del producto, en `/precios/`, como «Desde…» en el catálogo y como
+`Offer` en el JSON-LD. Están en COP y se tomaron de los sitios de cada producto.
 
-## 4. Cómo añadir una solución nueva
+**Regla de redacción (Paddle):** describa siempre lo que se vende como *licencia de software* con
+actualizaciones y soporte técnico. No use «asesoría», «consultoría», «diagnóstico», «acompañamiento»,
+«implementación» ni «fabricante», ni comentarios HTML en las páginas: un clasificador lee todo el HTML.
+
+## 4. Cómo añadir un producto nuevo
 
 1. Agregue el objeto en `sitio/assets/data/soluciones.json` (y la línea en `categorias` si es nueva).
 2. Agregue su contenido en `_build/contenido/soluciones.mjs` con la misma estructura de las demás
@@ -99,10 +109,10 @@ a cada solución en `soluciones.json` y muéstrelo en `_build/paginas/solucion.m
 3. Agregue su logotipo tipográfico en `MARCAS` dentro de `_build/lib/plantilla.mjs`.
 4. Investigación: `node investigar-uno.mjs <slug> <url>` guarda el texto del sitio oficial en `investigacion/`.
    Capturas: añada su URL y selectores en `_build/capturar-final.mjs` y ejecute `node capturar-final.mjs <slug>`
-   (solo esa solución); revise que no aparezcan precios ni animaciones a medias.
+   (solo ese producto); revise que no aparezcan precios ni animaciones a medias.
 5. Ejecute `npm run todo` (imágenes, páginas, Open Graph) y luego `npm run verificar`.
    El `sitemap.xml`, el menú, el pie, el filtro, el formulario de contacto y los textos con la cantidad de
-   soluciones («Ocho soluciones…») se actualizan solos.
+   productos («Cinco productos…») se actualizan solos.
 
 ## 5. Construir y previsualizar
 
@@ -172,7 +182,7 @@ El script actualiza la copia del repositorio y sincroniza solo la carpeta `sitio
 | Razón social, NIT y correo de datos | `config.js` → `legal` | **Completos:** Grupo Logic SAS Latinoamerica y gestion@grupologiclatam.com. Falta el NIT (se oculta) |
 | Logotipo oficial | `sitio/assets/img/logo/` | Se usa el logotipo tipográfico provisional |
 | Revisión legal | `/privacidad/`, `/terminos/` y `/reembolsos/` | **Deben ser revisadas por un asesor legal**; confirmar el plazo de reembolso de 14 días con el proveedor de pagos |
-| Relación comercial con fabricantes | Textos del sitio | Se usa «Grupo Logic acerca estas soluciones…»; no se afirma exclusividad ni representación oficial |
+| Checkout de Paddle | Páginas de producto y precios | Tras la aprobación, añadir los botones de pago de Paddle a los planes |
 
 **Logotipo:** `grupologic-claro.svg` (para fondos oscuros) y `grupologic-oscuro.svg` (para fondos claros)
 en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea generada por
@@ -182,27 +192,20 @@ en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea g
 
 ## 8. Veracidad del contenido
 
-- Todo lo que se afirma de cada producto proviene de su sitio oficial (consultado el 3 de octubre de 2026;
-  el texto extraído está en `_build/investigacion/`). Cada página enlaza a su sitio oficial.
-- **No se usaron** cifras ni testimonios ilustrativos de los sitios de origen: UntiCloud («1.2K colegios»,
-  «8.4M horarios», testimonios, «40 % de reducción») y Codexia («1.2M estudiantes», «45 países»,
-  testimonios — el propio sitio los marca como ilustrativos).
-- Las cifras con contador (+80 herramientas de AulaMágica IA, +120 proyectos de VCodePro) indican su fuente.
-- La estimación de EduNova («hasta 70 % menos de tiempo») se presenta como «estimado por el fabricante».
-- EduNova se contradice sobre los usuarios de su Licencia Escuela (10 en la tabla de precios, 60 en sus
-  preguntas frecuentes); por eso esa cifra no se publica.
-- El país de origen de Codexia no figura en su sitio, así que no se indica. CodeNest School indica «Hecho en
-  Colombia»; Veyon lo desarrolla Tobias Junghans en Alemania (aviso legal de veyon.io).
-- Codexia y CodeNest School cubren las mismas edades (4 a 12 años); ambas páginas explican la diferencia.
-- Las capturas de pantalla son de los sitios oficiales y de la versión de prueba pública de BookStudio.
+- Todos los productos del sitio son desarrollados por Grupo Logic (declaración del propietario). Veyon
+  Control se retiró porque Veyon lo desarrolla un tercero (Tobias Junghans, veyon.io) y no puede
+  presentarse como desarrollo propio.
+- Funciones y precios provienen de los sitios de cada producto (texto en `_build/investigacion/`).
+- No se usan las cifras ni los testimonios ilustrativos de esos sitios (p. ej. «1.2K colegios» de UntiCloud
+  o «1.2M estudiantes» de Codexia).
 
 ## 9. Calidad verificada
 
 - Lighthouse en producción (móvil simulado): Accesibilidad, Buenas prácticas y SEO en 100 en todas las
-  páginas medidas. Rendimiento, mediana de 5 corridas: inicio 96, portafolio 99; páginas de solución
-  100 (EduNova, VCodePro). El inicio varía entre corridas (88–100) por el tiempo de bloqueo simulado;
+  páginas medidas. Rendimiento, mediana de 5 corridas (versión anterior): inicio 96, catálogo 99;
+  páginas de producto 100. El inicio varía entre corridas (88–100) por el tiempo de bloqueo simulado;
   CLS 0 y LCP ≈ 2 s.
-- `npm run verificar`: 16 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
+- `npm run verificar`: 15 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
 - `npm run pruebas`: menú desplegable y móvil (Escape, foco atrapado), pestañas con flechas/Inicio/Fin,
   acordeón, filtro con anuncio `aria-live`, validación accesible del formulario, preselección por URL,
   movimiento reducido y áreas táctiles de 44 px.

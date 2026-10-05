@@ -40,19 +40,13 @@
 .logotipo--unticloud b { font-weight: 500; }
 .logotipo--vcodepro { letter-spacing: -.03em; }
 .logotipo--vcodepro b { font-weight: 500; }
-.logotipo--aulamagica b { font-weight: 500; margin-left: .2em; }
 /* Versión a color: solo el símbolo o la parte acentuada usa el color de la marca */
 .logotipo--color.logotipo--unticloud .logotipo__acento { color: #FF6A45; }
-.logotipo--color.logotipo--aulamagica .logotipo__marca { color: #8B5CF6; }
-.logotipo--color.logotipo--aulamagica b { color: #A78BFA; }
-.logotipo--color.logotipo--edunova .logotipo__marca { color: #6C8CFF; }
 .logotipo--color.logotipo--codexia .logotipo__marca { color: #8B7BFF; }
 .logotipo--color.logotipo--vcodepro b, .logotipo--color.logotipo--vcodepro .logotipo__marca { color: #38B6F5; }
 .logotipo--color.logotipo--bookstudio .logotipo__marca { color: #3B74F6; }
-.logotipo--color.logotipo--veyon-control .logotipo__marca { color: #818CF8; }
 .logotipo--color.logotipo--codenest-school .logotipo__marca { color: #38A3F5; }
 .logotipo--codenest-school b { font-weight: 500; margin-left: .22em; }
-.logotipo--veyon-control b { font-weight: 500; margin-left: .22em; }
 
 /* ---------- Franja de confianza ---------- */
 .franja { padding-block: 40px 56px; background: var(--navy-900); color: var(--ivory); border-top: 1px solid var(--linea-oscura); }
@@ -350,3 +344,6 @@ select.campo__control { background-image: url("data:image/svg+xml,%3Csvg xmlns='
 .aviso-cookies .botones { margin-top: 14px; }
 .aviso-cookies .boton { min-height: 44px; padding: 0 18px; }
 @media (max-width: 639px) { .mapa__etiqueta { font-size: 30px; } .mapa__etiqueta--sec { font-size: 24px; } }
+/* Correos y textos largos del pie no deben ensanchar las columnas en móvil */
+.pie__rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pie__contacto span, .legal a, .tarjeta a { overflow-wrap: anywhere; }

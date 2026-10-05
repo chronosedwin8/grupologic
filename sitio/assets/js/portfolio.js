@@ -31,7 +31,7 @@
 
     var boton = botones.filter(function (b) { return b.getAttribute("data-filtro") === filtro; })[0];
     var nombre = boton ? boton.getAttribute("data-nombre") : "";
-    if (anuncio) anuncio.textContent = mostrar.length + (mostrar.length === 1 ? " solución" : " soluciones") + (filtro === "todas" ? " en el portafolio." : " en " + nombre + ".");
+    if (anuncio) anuncio.textContent = mostrar.length + (mostrar.length === 1 ? " producto" : " productos") + (filtro === "todas" ? " en el catálogo." : " en " + nombre + ".");
     if (actualizarUrl && window.history.replaceState) {
       window.history.replaceState(null, "", filtro === "todas" ? window.location.pathname : "#" + filtro);
     }
@@ -41,7 +41,7 @@
     b.addEventListener("click", function () { aplicar(b.getAttribute("data-filtro"), true); });
   });
 
-  // Permite enlazar directamente a una línea: /soluciones/#ia
+  // Permite enlazar directamente a una línea: /productos/#programacion
   var inicial = window.location.hash.replace("#", "");
   if (inicial && botones.some(function (b) { return b.getAttribute("data-filtro") === inicial; })) {
     DURACION = 0;

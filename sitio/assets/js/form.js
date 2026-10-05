@@ -20,7 +20,7 @@
   // Alternativas de contacto disponibles según config.js
   function alternativas() {
     var partes = [];
-    if (util.valido(config.whatsapp)) partes.push('<a href="' + util.enlaceWhatsApp("Hola, quisiera solicitar una demostración.") + '" target="_blank" rel="noopener">WhatsApp</a>');
+    if (util.valido(config.whatsapp)) partes.push('<a href="' + util.enlaceWhatsApp("Hola, quisiera información sobre los productos de Grupo Logic.") + '" target="_blank" rel="noopener">WhatsApp</a>');
     if (util.valido(config.email)) partes.push('<a href="mailto:' + escapar(config.email) + '">' + escapar(config.email) + "</a>");
     return partes.length ? " También puede escribirnos por " + partes.join(" o ") + "." : "";
   }
@@ -35,6 +35,12 @@
     if (parametro) {
       $$('input[name="soluciones"]', form).forEach(function (c) { if (c.value === parametro) c.checked = true; });
     }
+    // Plan elegido en la página de precios: /contacto/?solucion=unticloud&plan=Profesional
+    var plan = new URLSearchParams(window.location.search).get("plan");
+    var mensaje = form.querySelector('textarea[name="mensaje"]');
+    var motivo = form.querySelector('select[name="motivo"]');
+    if (plan && mensaje && !mensaje.value) mensaje.value = "Me interesa el plan " + plan + ".";
+    if (plan && motivo) motivo.value = "Compra o cotización de licencias";
 
     function mostrarEstado(tipo, html) {
       estado.className = "formulario__estado formulario__estado--" + tipo;
@@ -110,7 +116,7 @@
         body: JSON.stringify(datos())
       }).then(function (r) {
         if (!r.ok) throw new Error("HTTP " + r.status);
-        mostrarEstado("exito", "<strong>Gracias. Hemos recibido su solicitud.</strong> Un asesor de Grupo Logic se pondrá en contacto con usted para coordinar la demostración.");
+        mostrarEstado("exito", "<strong>Gracias. Hemos recibido su solicitud.</strong> Le responderemos por correo a la mayor brevedad.");
         form.reset();
         campos.forEach(function (c) { marcar(c, ""); });
       }).catch(function () {

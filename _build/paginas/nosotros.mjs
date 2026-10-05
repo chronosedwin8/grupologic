@@ -1,23 +1,23 @@
-// Quiénes somos, misión y cómo trabajamos.
-import { SOLUCIONES, esc, icono, logotipo, migasLd, organizacionLd, N_SOLUCIONES, mayuscula } from '../lib/plantilla.mjs';
-import { pasos, PASOS_TRABAJO } from './inicio.mjs';
+// Nosotros: Grupo Logic como empresa de software educativo.
+import { SOLUCIONES, categoria, esc, icono, logotipo, migasLd, organizacionLd, N_SOLUCIONES, mayuscula, CONFIG, valido } from '../lib/plantilla.mjs';
 
-const CRITERIOS = [
-  ['birrete', 'Solidez pedagógica', 'La solución debe resolver un problema real del aula o de la gestión escolar, con un enfoque pedagógico claro y no solo tecnológico.'],
-  ['capas', 'Madurez técnica', 'Plataformas estables, que funcionen en la infraestructura habitual de los colegios de la región y que no exijan servidores propios cuando no es necesario.'],
-  ['escudo', 'Tratamiento de datos', 'Revisamos qué declara cada fabricante sobre seguridad, roles, protección de menores y uso de la información.'],
-  ['globo', 'Pertinencia regional', 'Interfaces y contenidos en español y aplicables al contexto latinoamericano: estándares, pruebas de Estado y programas como el IB.'],
+const PRINCIPIOS = [
+  ['capas', 'Productos estándar', 'Cada producto tiene funciones, planes y precios definidos y publicados, iguales para todas las instituciones.'],
+  ['reemplazo', 'Actualizaciones continuas', 'Publicamos nuevas versiones de cada producto; las licencias vigentes las reciben sin costo adicional.'],
+  ['escudo', 'Seguridad y privacidad', 'Control por roles, cifrado y especial protección de los datos de menores, conforme a la Ley 1581 de 2012.'],
+  ['tableta', 'Pensado para el aula', 'Interfaces en español, pensadas para tabletas y equipos modestos, y fáciles de usar para docentes y estudiantes.'],
 ];
 
 export default function nosotros() {
+  const razon = valido(CONFIG.legal?.razonSocial) ? CONFIG.legal.razonSocial : 'Grupo Logic';
   const cuerpo = `
 <section class="hero hero--pagina" aria-labelledby="titulo-principal">
   <div class="contenedor">
     <nav class="migas" aria-label="Migas de pan"><ol><li><a href="/">Inicio</a></li><li><span aria-current="page">Nosotros</span></li></ol></nav>
     <div class="hero__contenido">
-      <p class="ceja">Quiénes somos</p>
-      <h1 class="titulo-1" id="titulo-principal">Tecnología educativa del mundo, <em>con acompañamiento cercano</em></h1>
-      <p class="hero__texto">Grupo Logic es una empresa latinoamericana que acerca a los colegios de la región recursos pedagógicos de tipo tecnológico desarrollados en otras partes del mundo.</p>
+      <p class="ceja">Nosotros</p>
+      <h1 class="titulo-1" id="titulo-principal">Una empresa de <em>software educativo</em></h1>
+      <p class="hero__texto">${esc(razon)} diseña, desarrolla y comercializa software para instituciones educativas de Latinoamérica.</p>
     </div>
   </div>
 </section>
@@ -25,13 +25,13 @@ export default function nosotros() {
 <section class="seccion seccion--clara" aria-labelledby="titulo-quienes">
   <div class="contenedor dos-columnas">
     <div data-aparecer>
-      <p class="ceja">Nuestra razón de ser</p>
-      <h2 class="titulo-2" id="titulo-quienes">Cerrar la distancia entre <em>la innovación y el aula</em></h2>
+      <p class="ceja">Qué hacemos</p>
+      <h2 class="titulo-2" id="titulo-quienes">Construimos y operamos <em>nuestros propios productos</em></h2>
     </div>
     <div class="prosa" data-aparecer>
-      <p>En Europa y en otras regiones se desarrollan plataformas educativas de muy alto nivel que rara vez llegan a los colegios latinoamericanos, o llegan sin el acompañamiento necesario para que funcionen en el día a día.</p>
-      <p>Grupo Logic nace para cerrar esa distancia. Identificamos soluciones con valor real para la gestión escolar y para el aprendizaje, y las ponemos al alcance de rectores, coordinadores y docentes de la región, con un interlocutor local que entiende su contexto.</p>
-      <p>No vendemos licencias sueltas: acompañamos decisiones institucionales. Por eso cada solución llega con diagnóstico, demostración, implementación, formación docente y seguimiento.</p>
+      <p>Creamos productos de software que resuelven necesidades concretas de los colegios: gestionar horarios y ausentismo docente, enseñar programación desde preescolar hasta bachillerato y crear contenidos interactivos.</p>
+      <p>Cada producto tiene su propio sitio, sus planes y su precio publicado, y se puede usar de forma independiente.</p>
+      <p>Nos ocupamos del ciclo completo del software: diseño, desarrollo, operación de las plataformas web, publicación de nuevas versiones y soporte técnico a quienes lo usan.</p>
     </div>
   </div>
 </section>
@@ -40,19 +40,18 @@ export default function nosotros() {
   <div class="contenedor">
     <p class="ceja">Misión</p>
     <h2 class="sr" id="titulo-mision">Misión</h2>
-    <p class="manifiesto" data-aparecer>Poner al servicio de los colegios de Latinoamérica <em>la mejor tecnología educativa del mundo</em>, con criterio en la selección y compromiso en la implementación.</p>
+    <p class="manifiesto" data-aparecer>Construir <em>software útil para los colegios</em> de Latinoamérica, con precios claros y productos que se mantienen al día.</p>
   </div>
 </section>
 
-<section class="seccion seccion--blanca" aria-labelledby="titulo-criterios">
+<section class="seccion seccion--blanca" aria-labelledby="titulo-principios">
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
-      <p class="ceja">Cómo seleccionamos</p>
-      <h2 class="titulo-2" id="titulo-criterios">Cuatro criterios para <em>entrar al portafolio</em></h2>
-      <p class="entrada">Antes de presentar una solución a su institución, la revisamos con los mismos criterios con los que usted la evaluaría.</p>
+      <p class="ceja">Cómo construimos</p>
+      <h2 class="titulo-2" id="titulo-principios">Principios de <em>nuestros productos</em></h2>
     </div>
     <div class="rejilla-tarjetas rejilla-tarjetas--4" data-aparecer-grupo>
-      ${CRITERIOS.map(([ic, t, d]) => `<article class="tarjeta" data-aparecer>
+      ${PRINCIPIOS.map(([ic, t, d]) => `<article class="tarjeta" data-aparecer>
         <div class="tarjeta__icono">${icono(ic)}</div>
         <h3 class="tarjeta__titulo">${esc(t)}</h3>
         <p class="tarjeta__texto">${esc(d)}</p>
@@ -61,14 +60,20 @@ export default function nosotros() {
   </div>
 </section>
 
-<section class="seccion seccion--oscura" aria-labelledby="titulo-trabajo">
+<section class="seccion seccion--oscura" aria-labelledby="titulo-productos">
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
-      <p class="ceja">Cómo trabajamos</p>
-      <h2 class="titulo-2" id="titulo-trabajo">Un proceso claro, <em>de principio a fin</em></h2>
-      <p class="entrada">Su institución tiene un solo interlocutor. Nosotros coordinamos con cada fabricante.</p>
+      <p class="ceja">Productos</p>
+      <h2 class="titulo-2" id="titulo-productos">${mayuscula(N_SOLUCIONES)} productos <em>de Grupo Logic</em></h2>
     </div>
-    ${pasos(PASOS_TRABAJO)}
+    <div class="relacionadas relacionadas--3" data-aparecer-grupo>
+      ${SOLUCIONES.map(s => `<article class="tarjeta tarjeta--oscura relacionada" data-aparecer>
+        ${logotipo(s.slug)}
+        <p class="tarjeta-solucion__linea" style="color:var(--gold-500)">${esc(categoria(s.categoria).nombre)}</p>
+        <p class="relacionada__lema">${esc(s.lema)}</p>
+        <a class="enlace-flecha tarjeta-solucion__enlace" href="/productos/${s.slug}/">Ver ${esc(s.nombre)} ${icono('flecha')}</a>
+      </article>`).join('\n      ')}
+    </div>
   </div>
 </section>
 
@@ -79,32 +84,32 @@ export default function nosotros() {
       <h2 class="titulo-2" id="titulo-compromisos">Lo que puede <em>esperar de nosotros</em></h2>
     </div>
     <ul class="lista-columnas" data-aparecer>
-      <li>${icono('check')}<span>Información veraz: solo afirmamos lo que cada fabricante publica y podemos verificar.</span></li>
-      <li>${icono('check')}<span>Propuestas formales y por escrito, ajustadas a su institución.</span></li>
-      <li>${icono('check')}<span>Formación para su equipo docente en cada implementación.</span></li>
-      <li>${icono('check')}<span>Un punto de contacto para dudas, soporte y renovaciones.</span></li>
-      <li>${icono('check')}<span>Revisión conjunta del tratamiento de datos antes de contratar.</span></li>
-      <li>${icono('check')}<span>Seguimiento del uso para que la inversión se convierta en resultados.</span></li>
+      <li>${icono('check')}<span>Información veraz sobre las funciones de cada producto.</span></li>
+      <li>${icono('check')}<span>Precios publicados y condiciones claras antes de pagar.</span></li>
+      <li>${icono('check')}<span>Actualizaciones incluidas durante la vigencia de la licencia.</span></li>
+      <li>${icono('check')}<span>Soporte técnico del producto por correo, en español.</span></li>
+      <li>${icono('check')}<span>Reembolso total dentro de los 14 días siguientes al pago.</span></li>
+      <li>${icono('check')}<span>Protección de los datos personales de la comunidad educativa.</span></li>
     </ul>
   </div>
 </section>
 
 <section class="seccion seccion--profunda" aria-labelledby="titulo-cta">
   <div class="contenedor cta-simple" data-aparecer>
-    <p class="ceja">Portafolio</p>
-    <h2 class="titulo-2" id="titulo-cta">${mayuscula(N_SOLUCIONES)} soluciones, <em>un solo aliado</em></h2>
-    <ul class="franja__logos" style="margin-top:2rem">${SOLUCIONES.map(s => `<li><a href="/soluciones/${s.slug}/">${logotipo(s.slug)}</a></li>`).join('')}</ul>
+    <p class="ceja">Productos</p>
+    <h2 class="titulo-2" id="titulo-cta">Conozca <em>nuestro software</em></h2>
+    <ul class="franja__logos" style="margin-top:2rem">${SOLUCIONES.map(s => `<li><a href="/productos/${s.slug}/">${logotipo(s.slug)}</a></li>`).join('')}</ul>
     <div class="botones">
-      <a class="boton boton--primario" href="/contacto/">Solicitar demostración ${icono('flecha')}</a>
-      <a class="boton boton--secundario" href="/soluciones/">Conocer el portafolio</a>
+      <a class="boton boton--primario" href="/productos/">Ver productos ${icono('flecha')}</a>
+      <a class="boton boton--secundario" href="/precios/">Ver precios</a>
     </div>
   </div>
 </section>`;
 
   return {
     ruta: '/nosotros/',
-    titulo: 'Nosotros: tecnología educativa con criterio · Grupo Logic',
-    descripcion: 'Grupo Logic acerca a los colegios de Latinoamérica tecnología educativa seleccionada en el mundo, con diagnóstico, implementación y formación docente.',
+    titulo: 'Nosotros: empresa de software educativo · Grupo Logic',
+    descripcion: `${razon} diseña, desarrolla y comercializa software para colegios: gestión escolar, programación y contenidos interactivos.`,
     og: 'nosotros',
     cuerpo,
     jsonld: [organizacionLd(), migasLd([['Inicio', '/'], ['Nosotros', '/nosotros/']])],

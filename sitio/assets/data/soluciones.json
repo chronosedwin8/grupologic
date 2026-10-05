@@ -6,11 +6,6 @@
       "corto": "Gestión institucional"
     },
     {
-      "id": "ia",
-      "nombre": "Inteligencia artificial para la enseñanza",
-      "corto": "IA para la enseñanza"
-    },
-    {
       "id": "programacion",
       "nombre": "Programación y pensamiento computacional",
       "corto": "Programación"
@@ -26,7 +21,6 @@
       "slug": "unticloud",
       "nombre": "UntiCloud",
       "categoria": "gestion",
-      "origen": "Alemania",
       "lema": "Toda la información de Untis, en la web y en manos de quien decide.",
       "resumen": "Convierte los archivos que su colegio ya exporta desde Untis en un panel web con horarios en tiempo real, guardias de recreo, reemplazos y estadísticas de ausentismo docente.",
       "beneficios": [
@@ -44,85 +38,13 @@
       "dominio": "unticloud.de",
       "imagen": "unticloud-panel",
       "portada": "unticloud-portada",
-      "logo": "texto"
-    },
-    {
-      "slug": "veyon-control",
-      "nombre": "Veyon Control",
-      "categoria": "gestion",
-      "origen": "Alemania",
-      "lema": "Toda el aula de informática, en una sola pantalla.",
-      "resumen": "Supervise, guíe y asista cada equipo del aula de informática desde un único panel: pantallas en vivo, control remoto, demostraciones, bloqueo de puestos y envío de archivos.",
-      "beneficios": [
-        "Pantallas de todos los equipos en vivo",
-        "Demostración y bloqueo del grupo con un clic",
-        "Windows y Linux, dentro de la red del colegio"
-      ],
-      "publico": [
-        "Coordinación TIC",
-        "Docentes de informática",
-        "Coordinación académica",
-        "Rectoría"
-      ],
-      "urlOficial": "https://www.veyoncontrol.com/",
-      "dominio": "veyoncontrol.com",
-      "imagen": "veyon-control-aula",
-      "portada": "veyon-control-portada",
-      "logo": "texto"
-    },
-    {
-      "slug": "aulamagica-ia",
-      "nombre": "AulaMágica IA",
-      "categoria": "ia",
-      "origen": "España",
-      "lema": "Inteligencia artificial segura para toda su institución.",
-      "resumen": "Más de 80 herramientas de IA para docentes y más de 50 para estudiantes, administradas por la institución: usuarios, licencias, políticas de uso y paneles de adopción por sede.",
-      "beneficios": [
-        "Planeación, evaluación y comunicación con IA",
-        "Tutor para estudiantes con supervisión docente",
-        "Control institucional de usuarios y políticas de uso"
-      ],
-      "publico": [
-        "Rectoría",
-        "Coordinación TIC",
-        "Coordinación académica",
-        "Docentes"
-      ],
-      "urlOficial": "https://www.magicschools.es/",
-      "dominio": "magicschools.es",
-      "imagen": "aulamagica-ia-panel",
-      "portada": "aulamagica-ia-portada",
-      "logo": "texto"
-    },
-    {
-      "slug": "edunova",
-      "nombre": "EduNova",
-      "categoria": "ia",
-      "origen": "España",
-      "lema": "Un solo sistema para planear, enseñar, evaluar y acompañar.",
-      "resumen": "Sistema de aprendizaje con IA para todo el colegio: ocho módulos conectados, del libro de texto al boletín para las familias, con espacios para docentes, directivos, estudiantes y familias.",
-      "beneficios": [
-        "Ocho módulos conectados en una sola plataforma",
-        "Indicadores por grado, área y sede para directivos",
-        "Studio: libros propios con la identidad de su institución"
-      ],
-      "publico": [
-        "Directivos",
-        "Docentes",
-        "Estudiantes",
-        "Familias"
-      ],
-      "urlOficial": "https://www.teachy.es/",
-      "dominio": "teachy.es",
-      "imagen": "edunova-panel",
-      "portada": "edunova-portada",
-      "logo": "texto"
+      "logo": "texto",
+      "desarrollador": "Grupo Logic SAS Latinoamerica"
     },
     {
       "slug": "codexia",
       "nombre": "Codexia",
       "categoria": "programacion",
-      "origen": "",
       "lema": "Pensamiento computacional desde preescolar hasta primaria.",
       "resumen": "Plataforma gamificada para niños de 4 a 12 años que enseña programación, matemáticas, lógica e inteligencia artificial mediante retos, con editor de bloques y editor de código real.",
       "beneficios": [
@@ -140,13 +62,13 @@
       "dominio": "codexialab.com",
       "imagen": "codexia-panel",
       "portada": "codexia-portada",
-      "logo": "texto"
+      "logo": "texto",
+      "desarrollador": "Grupo Logic SAS Latinoamerica"
     },
     {
       "slug": "codenest-school",
       "nombre": "CodeNest School",
       "categoria": "programacion",
-      "origen": "Colombia",
       "lema": "Programación desde los cuatro años, antes de saber leer.",
       "resumen": "Plataforma para aprender programación de los 4 a los 12 años: 30 mundos, 600 actividades e instrucciones narradas con voz humana en español. Los más pequeños programan arrastrando flechas, sin necesidad de leer.",
       "beneficios": [
@@ -164,13 +86,13 @@
       "dominio": "codenestschool.com",
       "imagen": "codenest-school-demo",
       "portada": "codenest-school-portada",
-      "logo": "texto"
+      "logo": "texto",
+      "desarrollador": "Grupo Logic SAS Latinoamerica"
     },
     {
       "slug": "vcodepro",
       "nombre": "VCodePro",
       "categoria": "programacion",
-      "origen": "Alemania",
       "lema": "Sus estudiantes no solo usan la IA: aprenden a construirla.",
       "resumen": "Editor de código profesional con IA incorporada y estudio de agentes, pensado para enseñar programación desde los 12 años y alineado con las electivas de tecnología del Bachillerato Internacional.",
       "beneficios": [
@@ -188,13 +110,13 @@
       "dominio": "vcodepro.de",
       "imagen": "vcodepro-panel",
       "portada": "vcodepro-portada",
-      "logo": "assets/img/logo/vcodepro-logo-mark.svg"
+      "logo": "assets/img/logo/vcodepro-logo-mark.svg",
+      "desarrollador": "Grupo Logic SAS Latinoamerica"
     },
     {
       "slug": "bookstudio",
       "nombre": "BookStudio",
       "categoria": "contenidos",
-      "origen": "Reino Unido",
       "lema": "Libros interactivos creados por su comunidad educativa.",
       "resumen": "Plataforma web para crear libros interactivos con voz, video, mapas, gráficas y preguntas autocorregibles, que el alumnado crea, escucha y comparte, con valoraciones y seguimiento para el docente.",
       "beneficios": [
@@ -212,7 +134,8 @@
       "dominio": "bookstudio.uk",
       "imagen": "bookstudio-editor",
       "portada": "bookstudio-portada",
-      "logo": "texto"
+      "logo": "texto",
+      "desarrollador": "Grupo Logic SAS Latinoamerica"
     }
   ]
 }

@@ -6,6 +6,8 @@ import path from 'node:path';
 import { pagina, SITIO, DOMINIO, SOLUCIONES } from './lib/plantilla.mjs';
 import inicio from './paginas/inicio.mjs';
 import portafolio from './paginas/portafolio.mjs';
+import precios from './paginas/precios.mjs';
+import soporte from './paginas/soporte.mjs';
 import paginaSolucion from './paginas/solucion.mjs';
 import nosotros from './paginas/nosotros.mjs';
 import contacto from './paginas/contacto.mjs';
@@ -18,7 +20,9 @@ const paginas = [
   inicio(),
   portafolio(),
   ...SOLUCIONES.map(s => paginaSolucion(s.slug)),
+  precios(),
   nosotros(),
+  soporte(),
   contacto(),
   privacidad(),
   terminos(),
@@ -41,7 +45,7 @@ for (const p of paginas) {
 
 // sitemap.xml (todas las páginas indexables)
 const indexables = paginas.filter(p => p.indexar !== false);
-const prioridad = (r) => (r === '/' ? '1.0' : r.startsWith('/soluciones/') ? '0.9' : r === '/contacto/' ? '0.8' : r === '/nosotros/' ? '0.7' : '0.3');
+const prioridad = (r) => (r === '/' ? '1.0' : r.startsWith('/productos/') || r === '/precios/' ? '0.9' : r === '/contacto/' || r === '/soporte/' ? '0.8' : r === '/nosotros/' ? '0.7' : '0.3');
 fs.writeFileSync(path.join(SITIO, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${indexables.map(p => `  <url>

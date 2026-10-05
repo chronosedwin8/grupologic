@@ -11,15 +11,15 @@ export default function error404() {
     <p class="hero__texto">Es posible que la dirección haya cambiado o que el enlace esté incompleto. Estas son algunas rutas útiles:</p>
     <div class="botones">
       <a class="boton boton--primario" href="/">Ir al inicio ${icono('flecha')}</a>
-      <a class="boton boton--secundario" href="/contacto/">Solicitar demostración</a>
+      <a class="boton boton--secundario" href="/productos/">Ver productos</a>
     </div>
-    <ul class="lista-soluciones">${SOLUCIONES.map(s => `<li><a href="/soluciones/${s.slug}/">${logotipo(s.slug)}<small>${esc(categoria(s.categoria).corto)}</small></a></li>`).join('')}</ul>
+    <ul class="lista-soluciones">${SOLUCIONES.map(s => `<li><a href="/productos/${s.slug}/">${logotipo(s.slug)}<small>${esc(categoria(s.categoria).corto)}</small></a></li>`).join('')}</ul>
   </div>
 </section>`;
   return {
     ruta: '/404.html',
     titulo: 'Página no encontrada · Grupo Logic',
-    descripcion: 'La página que busca no está disponible. Visite el inicio de Grupo Logic o conozca nuestro portafolio de soluciones tecnológicas para colegios.',
+    descripcion: 'La página que busca no está disponible. Visite el inicio de Grupo Logic o conozca nuestros productos de software para colegios y sus precios.',
     og: 'inicio',
     cuerpo,
     indexar: false,

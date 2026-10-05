@@ -138,3 +138,22 @@
 .error-404 .lista-soluciones a:hover { border-color: var(--gold-500); background: rgba(255, 255, 255, .06); }
 .error-404 .lista-soluciones small { color: var(--muted-oscuro); }
 @media (min-width: 640px) { .error-404 .lista-soluciones { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Precios ---------- */
+.licencia__precio { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 14px 0 16px; border-top: 1px solid var(--linea-clara); border-bottom: 1px solid var(--linea-clara); }
+.licencia__valor { font-family: var(--serif); font-size: clamp(1.7rem, 1.4rem + 1vw, 2.15rem); font-weight: 500; line-height: 1.1; letter-spacing: -.01em; color: var(--ink); }
+.licencia__valor--cotizar { font-size: 1.5rem; }
+.licencia__periodo { font-size: .85rem; color: var(--muted); }
+.licencia__boton { margin-top: auto; align-self: flex-start; }
+.licencia .tarjeta__lista { margin-bottom: 12px; }
+.tarjeta-solucion__precio { font-size: .9rem; font-weight: 700; color: var(--ink); }
+.precios { display: grid; gap: clamp(56px, 7vw, 96px); }
+.precios-producto { display: grid; gap: 28px; scroll-margin-top: calc(var(--alto-encabezado) + 24px); }
+.precios-producto__cabecera { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; padding-bottom: 20px; border-bottom: 1px solid var(--linea-clara); }
+.precios-producto__cabecera .logotipo { font-size: 1.7rem; color: var(--ink); }
+.precios-producto__cabecera .tarjeta-solucion__linea { margin-bottom: 10px; }
+.precios-producto__lema { margin-top: 10px; color: var(--muted); }
+.precios-producto__nota { color: var(--muted); font-size: .93rem; }
+.hero .etiquetas a.etiqueta { text-decoration: none; min-height: 36px; }
+.hero .etiquetas a.etiqueta:hover { border-color: var(--gold-500); color: var(--ivory); }
+@media (min-width: 960px) and (max-width: 1100px) { .nav__enlace { padding: 0 10px; } }

@@ -1,14 +1,12 @@
 // Genera los activos gráficos del sitio:
 //  1. Logotipo provisional de Grupo Logic (texto convertido a trazos) en versión clara y oscura.
 //  2. Favicons SVG y PNG.
-//  3. Mapa de puntos (Américas y Europa) para la sección "Del mundo a su colegio".
-//  4. Capturas de producto optimizadas en WebP con dos o más tamaños.
+//  3. Capturas de producto optimizadas en WebP con dos o más tamaños.
 // Uso: node imagenes.mjs
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 import opentype from 'opentype.js';
-import { feature } from 'topojson-client';
 
 const SITIO = path.resolve('../sitio');
 const IMG = path.join(SITIO, 'assets/img');
@@ -52,49 +50,13 @@ for (const [nombre, t] of [['favicon-32.png', 32], ['apple-touch-icon.png', 180]
   await sharp(Buffer.from(faviconSvg), { density: 72 * t / 40 * 2 }).resize(t, t).png().toFile(path.join(SITIO, nombre === 'favicon-32.png' || nombre === 'apple-touch-icon.png' ? nombre : `assets/img/iconos/${nombre}`));
 }
 
-// ---------- 3. Mapa de puntos ----------
-// Proyección equirectangular recortada: longitudes -125..45, latitudes 62..-56.
-const mundo = JSON.parse(await fs.readFile('node_modules/world-atlas/land-110m.json', 'utf8'));
-const tierra = feature(mundo, mundo.objects.land);
-const poligonos = tierra.features.flatMap(f => f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates);
-function dentroAnillo([x, y], anillo) {
-  let dentro = false;
-  for (let i = 0, j = anillo.length - 1; i < anillo.length; j = i++) {
-    const [xi, yi] = anillo[i], [xj, yj] = anillo[j];
-    if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) dentro = !dentro;
-  }
-  return dentro;
-}
-const esTierra = (p) => poligonos.some(([ext, ...huecos]) => dentroAnillo(p, ext) && !huecos.some(h => dentroAnillo(p, h)));
-const MAPA = { lon0: -125, lon1: 45, lat0: 62, lat1: -56, escala: 6 };
-const proyectar = (lon, lat) => [((lon - MAPA.lon0) * MAPA.escala), ((MAPA.lat0 - lat) * MAPA.escala)];
-const paso = 1.8;
-let puntos = '';
-for (let lat = MAPA.lat0; lat >= MAPA.lat1; lat -= paso) {
-  for (let lon = MAPA.lon0; lon <= MAPA.lon1; lon += paso) {
-    if (esTierra([lon, lat])) {
-      const [x, y] = proyectar(lon, lat);
-      puntos += `M${x.toFixed(1)} ${y.toFixed(1)}h0`;
-    }
-  }
-}
-const ancho = (MAPA.lon1 - MAPA.lon0) * MAPA.escala, alto = (MAPA.lat0 - MAPA.lat1) * MAPA.escala;
-await fs.writeFile(path.join(IMG, 'mapa-puntos.svg'),
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${ancho} ${alto}" width="${ancho}" height="${alto}"><path d="${puntos}" stroke="#3A5378" stroke-width="4.2" stroke-linecap="round" fill="none"/></svg>\n`);
-const ciudades = {
-  berlin: [13.4, 52.5], londres: [-0.13, 51.5], madrid: [-3.7, 40.4],
-  latam: [-74.8, 11.0], mexico: [-99.1, 19.4], bogota: [-74.1, 4.7], lima: [-77.0, -12.0],
-  santiago: [-70.6, -33.4], buenosaires: [-58.4, -34.6], saopaulo: [-46.6, -23.5], panama: [-79.5, 9.0],
-};
-const proy = Object.fromEntries(Object.entries(ciudades).map(([k, v]) => [k, proyectar(...v).map(n => +n.toFixed(1))]));
-await fs.writeFile('mapa.json', JSON.stringify({ ancho, alto, ciudades: proy }));
-console.log('Mapa', ancho, 'x', alto, 'longitud de ruta', puntos.length);
-
 // ---------- 4. Capturas ----------
 // portada: 1440×810 (1x). paneles: capturas a 2x.
 const CAP = 'capturas/final';
 const destino = path.join(IMG, 'productos');
-const archivos = (await fs.readdir(CAP)).filter(f => f.endsWith('.png') && !f.startsWith('bs-') && f !== 'bookstudio-demo.png');
+// Solo los productos que siguen en el catálogo (assets/data/soluciones.json)
+const SLUGS = JSON.parse(await fs.readFile(path.join(SITIO, 'assets/data/soluciones.json'), 'utf8')).soluciones.map(x => x.slug);
+const archivos = (await fs.readdir(CAP)).filter(f => f.endsWith('.png') && SLUGS.some(sl => f.startsWith(sl + '-')));
 const manifiesto = {};
 for (const f of archivos) {
   const base = f.replace('.png', '');

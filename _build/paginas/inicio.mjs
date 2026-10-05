@@ -1,25 +1,17 @@
-// Página de inicio: las once secciones de la especificación (5.1).
-import fs from 'node:fs';
-import path from 'node:path';
+// Página de inicio: Grupo Logic como empresa que desarrolla y comercializa su propio software.
 import {
   SOLUCIONES, CATEGORIAS, esc, N_SOLUCIONES, N_LINEAS, mayuscula, icono, logotipo, imagen, acordeon, faqLd, organizacionLd, DOMINIO,
 } from '../lib/plantilla.mjs';
-import { formularioCorto } from '../lib/formularios.mjs';
-
-const MAPA = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname, '../mapa.json'), 'utf8'));
+import { pasos, ctaFinal } from '../lib/bloques.mjs';
 
 const DESCRIPCION_LINEA = {
-  gestion: 'Información y control para dirigir: horarios, ausentismo docente e indicadores académicos, y el manejo de las salas de informática desde un solo panel.',
-  ia: 'Inteligencia artificial bajo control institucional, para que el equipo docente recupere tiempo y los estudiantes aprendan con acompañamiento.',
-  programacion: 'Una ruta completa de pensamiento computacional: de los primeros bloques en preescolar a la creación de agentes de IA en bachillerato.',
-  contenidos: 'Herramientas para que estudiantes y docentes creen contenido propio, interactivo y accesible.',
+  gestion: 'Software para dirigir la institución con datos: horarios, guardias, reemplazos, ausentismo docente e indicadores académicos.',
+  programacion: 'Una ruta completa de programación: de los primeros bloques en preescolar a la creación de agentes de IA en bachillerato.',
+  contenidos: 'Una plataforma para que estudiantes y docentes creen contenido propio, interactivo y accesible.',
 };
 
-const ALT_PANEL = {
+export const ALT_PANEL = {
   unticloud: 'Panel de administración de UntiCloud con totales de docentes, cursos, materias, guardias y sustituciones',
-  'veyon-control': 'Veyon Master con las pantallas de los equipos del aula en miniatura y el menú de acciones del docente',
-  'aulamagica-ia': 'Buscador de herramientas de AulaMágica IA con accesos a presentaciones, plan de clase, rúbricas y quices',
-  edunova: 'Módulo de planeación de EduNova generando una clase de Ciencias Naturales con inteligencia artificial',
   codexia: 'Ventana de Codexia con instrucciones de programación por bloques para mover al personaje',
   'codenest-school': 'Actividad de CodeNest School: tablero con el personaje, una estrella y una bandera, y el programa armado con flechas',
   vcodepro: 'Editor VCodePro con un proyecto en Python y el panel del aula evaluado con criterios IB',
@@ -34,7 +26,7 @@ function vitrina(s, ancha) {
             <h4 class="vitrina__lema">${esc(s.lema)}</h4>
             <p class="vitrina__resumen">${esc(s.resumen)}</p>
             <ul class="tarjeta__lista">${s.beneficios.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
-            <a class="enlace-flecha" href="/soluciones/${s.slug}/">Ver solución<span class="sr">: ${esc(s.nombre)}</span> ${icono('flecha')}</a>
+            <a class="enlace-flecha" href="/productos/${s.slug}/">Ver producto<span class="sr">: ${esc(s.nombre)}</span> ${icono('flecha')}</a>
           </div>
         </article>`;
 }
@@ -46,7 +38,7 @@ function portafolio() {
     return `<div class="panel-pestana" role="tabpanel" id="panel-linea-${c.id}" aria-labelledby="tab-linea-${c.id}" tabindex="0"${i ? ' hidden' : ''}>
       <div class="linea__cabecera">
         <h3 class="titulo-3">${esc(c.nombre)}</h3>
-        <p class="entrada">${esc(DESCRIPCION_LINEA[c.id])}</p>
+        <p class="entrada">${esc(DESCRIPCION_LINEA[c.id] || '')}</p>
       </div>
       <div class="vitrinas${productos.length > 1 ? ' vitrinas--' + Math.min(productos.length, 3) : ''}">
         ${productos.map(s => vitrina(s, productos.length === 1)).join('\n        ')}
@@ -54,81 +46,47 @@ function portafolio() {
     </div>`;
   }).join('\n    ');
   return `<div data-pestanas>
-    <div class="pestanas__lista" role="tablist" aria-label="Líneas del portafolio">${tabs}</div>
+    <div class="pestanas__lista" role="tablist" aria-label="Líneas de producto">${tabs}</div>
     ${paneles}
   </div>`;
-}
-
-// Arco cuadrático entre dos puntos; el punto de control se desplaza en perpendicular.
-function arco(a, b, factor) {
-  const [x1, y1] = MAPA.ciudades[a], [x2, y2] = MAPA.ciudades[b];
-  const dx = x2 - x1, dy = y2 - y1, d = Math.hypot(dx, dy);
-  const cx = (x1 + x2) / 2 - (dy / d) * d * factor, cy = (y1 + y2) / 2 + (dx / d) * d * factor;
-  return `M${x1} ${y1}Q${cx.toFixed(1)} ${cy.toFixed(1)} ${x2} ${y2}`;
-}
-function mapa() {
-  const c = MAPA.ciudades;
-  const origenes = [['berlin', 0.3], ['londres', 0.26], ['madrid', 0.22]];
-  const destinos = ['mexico', 'lima', 'santiago', 'buenosaires', 'saopaulo'];
-  let orden = 0;
-  const arcos = origenes.map(([o, k]) => `<path class="mapa__arco" style="--orden:${orden++}" d="${arco(o, 'latam', k)}"/>`).join('')
-    + destinos.map(d => `<path class="mapa__arco mapa__arco--local" style="--orden:${orden++ + 1}" d="${arco('latam', d, 0.18)}"/>`).join('');
-  const punto = (k, r = 5) => `<circle class="mapa__punto" cx="${c[k][0]}" cy="${c[k][1]}" r="${r}"/>`;
-  const halo = (k, o) => `<circle class="mapa__halo" style="--orden:${o}" cx="${c[k][0]}" cy="${c[k][1]}" r="12"/>`;
-  return `<div class="mapa" data-aparecer>
-        <img src="/assets/img/mapa-puntos.svg" width="${MAPA.ancho}" height="${MAPA.alto}" alt="" loading="lazy" decoding="async">
-        <svg viewBox="0 0 ${MAPA.ancho} ${MAPA.alto}" role="img" aria-labelledby="mapa-titulo mapa-desc">
-          <title id="mapa-titulo">Del mundo a su colegio</title>
-          <desc id="mapa-desc">Mapa con arcos que parten de Alemania, Reino Unido y España, llegan a Latinoamérica y desde allí se extienden a los países de la región.</desc>
-          ${arcos}
-          ${['berlin', 'londres', 'madrid'].map(k => punto(k)).join('')}
-          ${destinos.map(k => punto(k, 3.5)).join('')}
-          ${punto('latam', 7)}${halo('latam', 0)}${halo('berlin', 1)}${halo('londres', 2)}${halo('madrid', 3)}
-          <text class="mapa__etiqueta" x="${c.berlin[0] + 14}" y="${c.berlin[1] + 26}">Alemania</text>
-          <text class="mapa__etiqueta" x="${c.londres[0] - 14}" y="${c.londres[1] - 14}" text-anchor="end">Reino Unido</text>
-          <text class="mapa__etiqueta" x="${c.madrid[0] - 16}" y="${c.madrid[1] + 6}" text-anchor="end">España</text>
-          <text class="mapa__etiqueta" x="${c.latam[0] - 18}" y="${c.latam[1] - 12}" text-anchor="end">Latinoamérica</text>
-          <text class="mapa__etiqueta mapa__etiqueta--sec" x="${c.latam[0] - 18}" y="${c.latam[1] + 12}" text-anchor="end">Grupo Logic</text>
-        </svg>
-      </div>`;
 }
 
 const ROLES = [
   {
     id: 'rectoria', nombre: 'Rectoría', titulo: 'Rectoría y dirección general',
     gana: [
-      'Indicadores para decidir con datos: ausentismo docente, cumplimiento académico y adopción tecnológica.',
+      'Indicadores para decidir con datos: ausentismo docente y cumplimiento académico.',
       'Un programa de programación e inteligencia artificial que diferencia a su colegio.',
-      'Un solo aliado que responde por la implementación completa.',
+      'Licencias anuales con precios publicados.',
     ],
-    soluciones: [['unticloud', 'Ausentismo y KPIs'], ['edunova', 'Indicadores por sede'], ['codexia', 'Programa STEM'], ['vcodepro', 'IA en bachillerato']],
+    productos: [['unticloud', 'Ausentismo y KPIs'], ['codexia', 'Programa STEM'], ['vcodepro', 'IA en bachillerato']],
   },
   {
     id: 'administrativa', nombre: 'Dirección administrativa', titulo: 'Dirección administrativa y financiera',
     gana: [
-      'Licenciamiento anual claro: por institución, por número de usuarios o por volumen.',
-      'Un único interlocutor comercial para varias plataformas.',
-      'Propuestas formales ajustadas al tamaño y las sedes de su institución.',
+      'Precios publicados y licencias anuales por institución.',
+      'Planes desde un docente hasta toda la institución.',
+      'Reembolso total dentro de los 14 días siguientes al pago.',
     ],
-    soluciones: [['aulamagica-ia', 'Licencia Escuela o por Volumen'], ['edunova', 'Studio: libros propios'], ['bookstudio', 'Desde un docente hasta todo el colegio']],
+    productos: [['bookstudio', 'Desde un docente hasta todo el colegio'], ['codenest-school', 'Sin renovación automática'], ['unticloud', 'Planes según el tamaño del colegio']],
   },
   {
     id: 'tic', nombre: 'Coordinación TIC', titulo: 'Coordinación TIC',
     gana: [
       'Plataformas web, sin servidores propios que mantener.',
-      'Inicio de sesión con cuentas institucionales e integraciones con Google Workspace y Microsoft 365, según la solución.',
       'Usuarios y roles bien definidos, con registros para auditoría.',
+      'Instalación silenciosa del editor de escritorio en las salas de cómputo.',
     ],
-    soluciones: [['veyon-control', 'Control de las salas de informática'], ['unticloud', 'Importación directa desde Untis'], ['aulamagica-ia', 'Integraciones y control por roles']],
+    productos: [['unticloud', 'Importación directa desde Untis'], ['vcodepro', 'Despliegue en salas y modo examen'], ['bookstudio', 'Integración con su directorio']],
   },
   {
     id: 'academica', nombre: 'Coordinación académica', titulo: 'Coordinación académica e IB',
     gana: [
-      'Menos tiempo del equipo docente en planeación, evaluación y boletines.',
-      'Seguimiento de horas IB y del núcleo EE·TdC·CAS, y rúbricas con criterios A–D.',
-      'Evaluaciones tipo prueba de Estado y planes de recuperación por estudiante.',
+      'Seguimiento de horas IB y del núcleo EE·TdC·CAS.',
+      'Rúbricas con criterios A–D y bitácora de diseño MYP.',
+      'Proyectos y portafolios de los estudiantes en libros interactivos.',
     ],
-    soluciones: [['unticloud', 'Indicadores IB'], ['vcodepro', 'Rúbricas IB y bitácora MYP'], ['edunova', 'Evaluación y recuperación'], ['bookstudio', 'Proyectos y portafolios']],
+    productos: [['unticloud', 'Indicadores IB'], ['vcodepro', 'Rúbricas IB y bitácora MYP'], ['bookstudio', 'Proyectos y portafolios'], ['codenest-school', 'Seguimiento por grupo']],
   },
 ];
 
@@ -138,60 +96,41 @@ function roles() {
         <div class="rol">
           <h3 class="rol__titulo">${esc(r.titulo)}</h3>
           <div class="rol__bloque">
-            <h4>Lo que gana</h4>
+            <h4>Lo que obtiene</h4>
             <ul class="lista-check">${r.gana.map(g => `<li>${icono('check')}<span>${esc(g)}</span></li>`).join('')}</ul>
           </div>
           <div class="rol__bloque">
-            <h4>Soluciones recomendadas</h4>
-            <ul class="lista-soluciones">${r.soluciones.map(([slug, nota]) => `<li><a href="/soluciones/${slug}/">${logotipo(slug)}<small>${esc(nota)}</small></a></li>`).join('')}</ul>
+            <h4>Productos recomendados</h4>
+            <ul class="lista-soluciones">${r.productos.map(([slug, nota]) => `<li><a href="/productos/${slug}/">${logotipo(slug)}<small>${esc(nota)}</small></a></li>`).join('')}</ul>
           </div>
         </div>
       </div>`).join('\n      ');
   return `<div class="roles" data-pestanas>
-      <div class="pestanas__lista" role="tablist" aria-label="Perfiles de su institución" aria-orientation="vertical">${tabs}</div>
+      <div class="pestanas__lista" role="tablist" aria-label="Perfiles de la institución" aria-orientation="vertical">${tabs}</div>
       <div>${paneles}</div>
     </div>`;
 }
 
-export const PASOS_TRABAJO = [
-  ['Diagnóstico', 'Conversamos con su equipo directivo para entender sus prioridades, su infraestructura y el momento de su institución.'],
-  ['Demostración', 'Presentamos en funcionamiento las soluciones pertinentes, con ejemplos de su contexto, y preparamos una propuesta formal.'],
-  ['Implementación y formación docente', 'Coordinamos con cada fabricante la activación, la configuración de usuarios y la formación de su equipo docente.'],
-  ['Acompañamiento continuo', 'Hacemos seguimiento al uso, resolvemos dudas y le ayudamos a medir la adopción durante toda la vigencia.'],
+export const PASOS_COMPRA = [
+  ['Explore los productos', 'Revise las funcionalidades, las capturas y las preguntas frecuentes de cada producto.'],
+  ['Elija su plan', 'Cada producto publica sus planes y precios, desde un usuario hasta toda la institución.'],
+  ['Active su licencia', 'Tras confirmarse el pago, recibe el acceso a la plataforma o la clave de licencia en su correo.'],
+  ['Úselo con soporte', 'Las licencias incluyen las actualizaciones del producto y soporte técnico durante su vigencia.'],
 ];
-export const pasos = (lista) => `<ol class="pasos" data-aparecer-grupo>${lista.map(([t, d]) => `
-        <li class="paso" data-aparecer><h3 class="paso__titulo">${esc(t)}</h3><p class="paso__texto">${d}</p></li>`).join('')}
-      </ol>`;
+
+const nombres = SOLUCIONES.map(s => s.nombre);
+const lista = nombres.slice(0, -1).join(', ') + ' y ' + nombres[nombres.length - 1];
 
 export const PREGUNTAS_INICIO = [
-  ['¿Cómo funciona el licenciamiento?', 'Cada solución tiene sus propias modalidades: licencias por institución, por número de usuarios, por volumen o por sede, en general con vigencia anual. Después del diagnóstico le enviamos una propuesta formal con la modalidad que corresponde al tamaño de su institución.'],
-  ['¿Por qué no publican precios?', 'Porque acompañamos colegios de varios países y cada propuesta depende del número de usuarios, de sedes y del alcance de la formación. Preferimos entregarle una cifra exacta y por escrito, en lugar de una referencia que no aplique a su caso.'],
-  ['¿Cuánto tarda la implementación?', 'Depende de la solución. Las plataformas web no requieren instalación y su puesta en marcha es ágil: los fabricantes de UntiCloud y de VCodePro, por ejemplo, la describen como el trabajo de una tarde. En cada propuesta incluimos un cronograma de implementación.'],
-  ['¿Incluyen formación para los docentes?', 'Sí. Nuestras propuestas contemplan la formación del equipo docente. Su alcance depende de la solución y de la modalidad: desde capacitaciones virtuales de arranque hasta planes de formación por sede.'],
-  ['¿Qué soporte recibimos?', 'Grupo Logic es su primer punto de contacto: recibimos sus solicitudes, resolvemos las dudas de uso y escalamos al fabricante los casos técnicos. Los niveles de servicio de cada solución se detallan en la propuesta.'],
-  ['¿Cómo se factura?', 'Las condiciones de facturación, la moneda y los medios de pago se definen en la propuesta según su país y la modalidad de contratación. Si su institución tiene un proceso de compras propio —registro de proveedores, órdenes de compra o documentación específica—, lo acompañamos.'],
-  ['¿Qué pasa con los datos de nuestros estudiantes?', 'Antes de contratar le compartimos lo que declara cada fabricante sobre el tratamiento de datos y le ayudamos a revisarlo con su área jurídica. Como referencia, en Colombia aplica la Ley 1581 de 2012. Puede consultar también nuestra <a href="/privacidad/">política de tratamiento de datos</a>.'],
-  ['¿Podemos empezar con una sola solución o una sola sede?', 'Sí. Varias soluciones tienen modalidades para una institución o para un grupo reducido de docentes, que después pueden ampliarse a más usuarios o sedes.'],
+  ['¿Quién desarrolla estos productos?', `Grupo Logic SAS Latinoamerica diseña, desarrolla y comercializa todos los productos de este sitio: ${lista}.`],
+  ['¿Qué compro exactamente?', 'Una licencia de uso del software por un período definido, generalmente un año. Incluye el acceso al producto, las actualizaciones y el soporte técnico durante la vigencia.'],
+  ['¿Dónde veo los precios?', 'En la página de <a href="/precios/">precios</a> y en la sección de planes de cada producto. Los precios están en pesos colombianos (COP) y los impuestos aplicables se calculan al momento del pago.'],
+  ['¿Puedo probar antes de comprar?', 'Sí. BookStudio permite usar el editor sin registrarse, VCodePro se descarga gratis, CodeNest School tiene una actividad de prueba en su sitio y Codexia ofrece una prueba de 24 horas. También puede solicitar una demostración.'],
+  ['¿Cómo recibo el producto?', 'Todos nuestros productos son digitales. Tras confirmarse el pago, recibe el acceso a la plataforma o la clave de licencia en el correo indicado en la compra. No hay envíos físicos.'],
+  ['¿Puedo cancelar o pedir un reembolso?', 'Sí. Puede solicitar el reembolso total dentro de los 14 días siguientes al pago y cancelar la renovación en cualquier momento. Consulte la <a href="/reembolsos/">política de reembolsos</a>.'],
+  ['¿Qué soporte técnico incluye la licencia?', 'Soporte técnico del producto por correo durante toda la vigencia: dudas de uso, incidencias y problemas de acceso. Más información en <a href="/soporte/">soporte</a>.'],
+  ['¿Cómo se tratan los datos de los estudiantes?', 'Conforme a la Ley 1581 de 2012 y a nuestra <a href="/privacidad/">política de privacidad</a>. Nuestros productos no muestran publicidad ni venden datos a terceros.'],
 ];
-
-export function ctaFinal() {
-  return `<section class="seccion seccion--oscura" aria-labelledby="titulo-cta">
-  <div class="contenedor cta-final">
-    <div data-aparecer>
-      <p class="ceja">Demostración</p>
-      <h2 class="titulo-2" id="titulo-cta">Conozca las soluciones <em>en funcionamiento</em></h2>
-      <p class="entrada" style="margin-top:1.2rem">Cuéntenos sobre su institución y coordinaremos una demostración con las soluciones que respondan a sus prioridades.</p>
-      <div class="cta-final__alternativas">
-        <a class="boton boton--secundario" href="#" data-gl="whatsapp" data-gl-mensaje="Hola, quisiera hablar con un asesor de Grupo Logic." target="_blank" rel="noopener" hidden>${icono('whatsapp')} Hablar con un asesor</a>
-        <a class="enlace-flecha" href="/soluciones/">Conocer el portafolio ${icono('flecha')}</a>
-      </div>
-    </div>
-    <div class="cta-final__panel oscuro" data-aparecer>
-      ${formularioCorto('fc')}
-    </div>
-  </div>
-</section>`;
-}
 
 export default function inicio() {
   const cuerpo = `
@@ -200,109 +139,93 @@ export default function inicio() {
   <div class="hero__velo" aria-hidden="true"></div>
   <div class="contenedor">
     <div class="hero__contenido">
-      <p class="ceja">Tecnología educativa de clase mundial</p>
-      <h1 class="titulo-1" id="titulo-principal">Las mejores soluciones educativas del mundo, <em>al servicio de los colegios de Latinoamérica</em></h1>
-      <p class="hero__texto">Grupo Logic selecciona tecnología educativa desarrollada en otras partes del mundo y la pone al alcance de su institución, con implementación y acompañamiento cercanos.</p>
+      <p class="ceja">Software educativo</p>
+      <h1 class="titulo-1" id="titulo-principal">Software para colegios, <em>desarrollado por Grupo Logic</em></h1>
+      <p class="hero__texto">Desarrollamos y comercializamos plataformas web y aplicaciones para la gestión escolar, la enseñanza de la programación y la creación de contenidos interactivos.</p>
       <div class="botones">
-        <a class="boton boton--primario" href="/contacto/">Solicitar demostración ${icono('flecha')}</a>
-        <a class="boton boton--secundario" href="/soluciones/">Conocer el portafolio</a>
+        <a class="boton boton--primario" href="/productos/">Ver productos ${icono('flecha')}</a>
+        <a class="boton boton--secundario" href="/precios/">Ver precios</a>
       </div>
-      <ul class="hero__lineas" aria-label="Líneas del portafolio">${CATEGORIAS.map(c => `<li class="etiqueta">${esc(c.nombre)}</li>`).join('')}</ul>
+      <ul class="hero__lineas" aria-label="Líneas de producto">${CATEGORIAS.map(c => `<li class="etiqueta">${esc(c.nombre)}</li>`).join('')}</ul>
     </div>
   </div>
-  <a class="hero__desplazar" href="#propuesta" aria-label="Ir a la siguiente sección"><span></span></a>
+  <a class="hero__desplazar" href="#empresa" aria-label="Ir a la siguiente sección"><span></span></a>
 </section>
 
-<section class="franja" aria-label="Soluciones del portafolio">
+<section class="franja" aria-label="Productos de Grupo Logic">
   <div class="contenedor">
-    <p class="franja__texto">Un portafolio seleccionado en Europa y Latinoamérica</p>
-    <ul class="franja__logos">${SOLUCIONES.map(s => `<li><a href="/soluciones/${s.slug}/">${logotipo(s.slug)}</a></li>`).join('')}</ul>
+    <p class="franja__texto">Productos desarrollados por Grupo Logic</p>
+    <ul class="franja__logos">${SOLUCIONES.map(s => `<li><a href="/productos/${s.slug}/">${logotipo(s.slug)}</a></li>`).join('')}</ul>
   </div>
 </section>
 
-<section class="seccion seccion--clara" id="propuesta" aria-labelledby="titulo-propuesta">
+<section class="seccion seccion--clara" id="empresa" aria-labelledby="titulo-empresa">
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
-      <p class="ceja">Por qué Grupo Logic</p>
-      <h2 class="titulo-2" id="titulo-propuesta">Un aliado para incorporar tecnología educativa <em>con criterio</em></h2>
-      <p class="entrada">La oferta de software para colegios crece cada año. Nuestro trabajo es ayudarle a elegir bien, implementar sin tropiezos y sostener el uso en el tiempo.</p>
+      <p class="ceja">Empresa de software</p>
+      <h2 class="titulo-2" id="titulo-empresa">Productos propios, <em>listos para usar</em></h2>
+      <p class="entrada">Cada producto resuelve una necesidad concreta del colegio y se puede usar de forma independiente.</p>
     </div>
     <div class="valores" data-aparecer-grupo>
       <article class="valor" data-aparecer>
         <p class="valor__numero">01</p>
-        <h3 class="valor__titulo">Selección rigurosa</h3>
-        <p class="valor__texto">Elegimos cada solución por su solidez pedagógica, su madurez técnica y la forma en que trata los datos de la comunidad educativa. A su institución solo llega lo que supera ese filtro.</p>
+        <h3 class="valor__titulo">Desarrollo propio</h3>
+        <p class="valor__texto">Diseñamos, desarrollamos y mantenemos cada producto. Usted trata directamente con quien construye el software.</p>
       </article>
       <article class="valor" data-aparecer>
         <p class="valor__numero">02</p>
-        <h3 class="valor__titulo">Implementación acompañada</h3>
-        <p class="valor__texto">Diagnóstico, configuración, formación docente y seguimiento: acompañamos a su equipo desde la primera demostración hasta el uso cotidiano en el aula.</p>
+        <h3 class="valor__titulo">Listo para usar</h3>
+        <p class="valor__texto">Plataformas web que no requieren servidores propios y un editor de escritorio que se instala en minutos. Active la licencia y empiece.</p>
       </article>
       <article class="valor" data-aparecer>
         <p class="valor__numero">03</p>
-        <h3 class="valor__titulo">Un solo interlocutor para su institución</h3>
-        <p class="valor__texto">Una sola relación comercial y de soporte para varias plataformas. Su institución habla con Grupo Logic; nosotros coordinamos con cada fabricante.</p>
+        <h3 class="valor__titulo">Actualizaciones y soporte incluidos</h3>
+        <p class="valor__texto">Todas las licencias incluyen las nuevas versiones del producto y soporte técnico durante su vigencia.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="seccion seccion--oscura cifras-seccion" aria-label="El portafolio en cifras">
+<section class="seccion seccion--oscura cifras-seccion" aria-label="Nuestros productos en cifras">
   <div class="contenedor">
     <div class="cifras" data-aparecer-grupo>
-      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="${SOLUCIONES.length}">${SOLUCIONES.length}</p><p class="cifra__texto">soluciones especializadas para colegios</p></div>
-      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="4">4</p><p class="cifra__texto">líneas: gestión, IA, programación y contenidos</p></div>
-      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="80" data-prefijo="+">+80</p><p class="cifra__texto">herramientas de IA para docentes en AulaMágica IA<span class="cifra__fuente">Fuente: magicschools.es</span></p></div>
-      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="120" data-prefijo="+">+120</p><p class="cifra__texto">proyectos de programación listos para el aula en VCodePro<span class="cifra__fuente">Fuente: vcodepro.de</span></p></div>
+      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="${SOLUCIONES.length}">${SOLUCIONES.length}</p><p class="cifra__texto">productos de software para colegios</p></div>
+      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="${CATEGORIAS.length}">${CATEGORIAS.length}</p><p class="cifra__texto">líneas: gestión, programación y contenidos</p></div>
+      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="600">600</p><p class="cifra__texto">actividades de programación en CodeNest School</p></div>
+      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="120" data-prefijo="+">+120</p><p class="cifra__texto">proyectos de programación listos para el aula en VCodePro</p></div>
     </div>
   </div>
 </section>
 
-<section class="seccion seccion--blanca" id="portafolio" aria-labelledby="titulo-portafolio">
+<section class="seccion seccion--blanca" id="productos" aria-labelledby="titulo-portafolio">
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
-      <p class="ceja">Portafolio</p>
-      <h2 class="titulo-2" id="titulo-portafolio">${mayuscula(N_SOLUCIONES)} soluciones, <em>${N_LINEAS} líneas</em> de trabajo</h2>
-      <p class="entrada">Software para colegios que cubre la gestión institucional, la inteligencia artificial en el aula, la programación y los contenidos interactivos. Explore cada línea.</p>
+      <p class="ceja">Nuestros productos</p>
+      <h2 class="titulo-2" id="titulo-portafolio">${mayuscula(N_SOLUCIONES)} productos, <em>${N_LINEAS} líneas</em></h2>
+      <p class="entrada">Software para la gestión escolar, la enseñanza de la programación y los contenidos interactivos. Explore cada línea.</p>
     </div>
     ${portafolio()}
-  </div>
-</section>
-
-<section class="seccion seccion--profunda" aria-labelledby="titulo-mapa">
-  <div class="contenedor mapa-seccion">
-    <div data-aparecer>
-      <p class="ceja">Nuestro modelo</p>
-      <h2 class="titulo-2" id="titulo-mapa">Del mundo <em>a su colegio</em></h2>
-      <p class="entrada" style="margin-top:1.2rem">Recorremos el ecosistema internacional de tecnología educativa para identificar soluciones que respondan a los retos de los colegios de la región, y las acercamos a su institución con acompañamiento local.</p>
-      <ul class="mapa-leyenda">
-        <li><strong>Origen</strong><span>Plataformas desarrolladas en Alemania, Reino Unido, España y Latinoamérica.</span></li>
-        <li><strong>Selección</strong><span>Revisamos su propuesta pedagógica, su madurez técnica y su tratamiento de datos.</span></li>
-        <li><strong>Llegada</strong><span>Acompañamos a colegios de toda Latinoamérica, con un equipo cercano a la región.</span></li>
-      </ul>
-    </div>
-    ${mapa()}
   </div>
 </section>
 
 <section class="seccion seccion--clara" aria-labelledby="titulo-roles">
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
-      <p class="ceja">Soluciones por rol</p>
-      <h2 class="titulo-2" id="titulo-roles">Lo que gana <em>cada área</em> de su institución</h2>
-      <p class="entrada">Una decisión de tecnología educativa involucra a varias personas. Esto es lo que cada una obtiene.</p>
+      <p class="ceja">Productos por perfil</p>
+      <h2 class="titulo-2" id="titulo-roles">El producto adecuado para <em>cada área</em></h2>
+      <p class="entrada">Qué producto sirve a cada perfil de la institución.</p>
     </div>
     ${roles()}
   </div>
 </section>
 
-<section class="seccion seccion--oscura" aria-labelledby="titulo-trabajo">
+<section class="seccion seccion--oscura" aria-labelledby="titulo-compra">
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
-      <p class="ceja">Cómo trabajamos</p>
-      <h2 class="titulo-2" id="titulo-trabajo">Cuatro pasos, <em>un mismo equipo</em> a su lado</h2>
+      <p class="ceja">Cómo comprar</p>
+      <h2 class="titulo-2" id="titulo-compra">De la elección <em>al primer uso</em></h2>
     </div>
-    ${pasos(PASOS_TRABAJO)}
+    ${pasos(PASOS_COMPRA)}
   </div>
 </section>
 
@@ -310,16 +233,16 @@ export default function inicio() {
   <div class="contenedor seguridad">
     <div data-aparecer>
       <p class="ceja">Seguridad y protección de datos</p>
-      <h2 class="titulo-2" id="titulo-seguridad">La información de su comunidad, <em>tratada con cuidado</em></h2>
-      <p class="entrada" style="margin-top:1.2rem">Los datos de estudiantes y docentes exigen un cuidado especial. Por eso revisamos cómo los trata cada solución antes de presentarla a su institución.</p>
-      <p class="nota-legal"><strong>Marco de referencia.</strong> En Colombia, la Ley 1581 de 2012 regula el tratamiento de datos personales y da especial protección a los datos de niñas, niños y adolescentes. Los compromisos de esta sección son los que declara cada fabricante en su sitio oficial; le recomendamos revisarlos con su área jurídica antes de contratar.</p>
+      <h2 class="titulo-2" id="titulo-seguridad">Datos de la comunidad educativa, <em>protegidos</em></h2>
+      <p class="entrada" style="margin-top:1.2rem">Nuestros productos se construyen pensando en la información de estudiantes y docentes, con especial cuidado de los datos de menores.</p>
+      <p class="nota-legal">Tratamos los datos personales conforme a la Ley 1581 de 2012. Consulte nuestra <a href="/privacidad/">política de privacidad</a>.</p>
     </div>
     <ul class="compromisos" data-aparecer-grupo>
-      <li class="compromiso" data-aparecer>${icono('llave')}<div><h3>Control por roles</h3><p>Cada perfil ve solo lo que necesita: directivos, coordinadores, docentes y estudiantes tienen permisos distintos en UntiCloud, AulaMágica IA y EduNova.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('ojo')}<div><h3>Supervisión docente</h3><p>En AulaMágica IA, las actividades de los estudiantes las crea y supervisa el docente; en VCodePro, cada conversación con la IA queda registrada para la coordinación.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('escudo')}<div><h3>Datos que no entrenan modelos</h3><p>AulaMágica IA declara que no usa los datos de docentes ni estudiantes para entrenar modelos de inteligencia artificial y que trata la información conforme al RGPD europeo.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('candado')}<div><h3>Cifrado y respaldo</h3><p>AulaMágica IA declara cifrado en tránsito y en reposo; BookStudio, cifrado en tránsito, copia de seguridad diaria y ningún seguimiento publicitario; Veyon Control, comunicación cifrada con TLS y claves propias por institución.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('familia')}<div><h3>Datos de menores</h3><p>Codexia declara cumplir normas de protección de datos de menores, como la Ley 1581 en Colombia, con consentimiento de los tutores; EduNova indica tratar los datos conforme a esa misma ley; CodeNest School registra el consentimiento del tutor y audita todo acceso a los datos de un menor.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('llave')}<div><h3>Control por roles</h3><p>Cada perfil ve solo lo que necesita: en UntiCloud, rectoría, coordinaciones y docentes tienen permisos distintos.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('ojo')}<div><h3>IA con supervisión</h3><p>En VCodePro, cada conversación con la IA queda registrada para el docente y el modo examen la desactiva.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('escudo')}<div><h3>Ejecución aislada</h3><p>En Codexia, el código de los estudiantes se ejecuta en un entorno aislado, con límites de tiempo y de instrucciones.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('candado')}<div><h3>Cifrado y respaldo</h3><p>BookStudio cifra los datos en tránsito y hace copia de seguridad diaria, sin seguimiento publicitario.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('familia')}<div><h3>Datos de menores</h3><p>En CodeNest School, los niños entran sin correo, con un PIN de dibujos; el consentimiento del tutor queda registrado y todo acceso a sus datos queda auditado.</p></div></li>
     </ul>
   </div>
 </section>
@@ -328,7 +251,7 @@ export default function inicio() {
   <div class="contenedor">
     <div class="cabecera-seccion" data-aparecer>
       <p class="ceja">Preguntas frecuentes</p>
-      <h2 class="titulo-2" id="titulo-preguntas">Lo que suelen preguntarnos <em>antes de decidir</em></h2>
+      <h2 class="titulo-2" id="titulo-preguntas">Preguntas sobre <em>compra y licencias</em></h2>
     </div>
     ${acordeon(PREGUNTAS_INICIO, 'faq')}
   </div>
@@ -338,11 +261,10 @@ ${ctaFinal()}`;
 
   return {
     ruta: '/',
-    titulo: 'Grupo Logic · Tecnología educativa para colegios de Latinoamérica',
-    descripcion: 'Software para colegios seleccionado en Europa y Latinoamérica: gestión, IA, programación y contenidos, con implementación y acompañamiento.',
+    titulo: 'Grupo Logic · Software educativo para colegios de Latinoamérica',
+    descripcion: `Grupo Logic desarrolla software para colegios: ${lista}. Precios publicados y soporte incluido.`,
     og: 'inicio',
     cuerpo,
-    precargar: '',
     scripts: ['form'],
     jsonld: [
       organizacionLd(),

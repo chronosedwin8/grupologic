@@ -70,7 +70,7 @@
     if (destino) destino.focus({ preventScroll: true });
   });
 
-  /* ---------- Menú desplegable de soluciones ---------- */
+  /* ---------- Menú desplegable de productos ---------- */
   $$("[data-desplegable]").forEach(function (boton) {
     var panel = document.getElementById(boton.getAttribute("aria-controls"));
     if (!panel) return;
@@ -220,7 +220,7 @@
   /* ---------- Botón flotante de WhatsApp ---------- */
   var flotanteWa = $(".flotante--whatsapp");
   if (flotanteWa && valido(config.whatsapp)) {
-    flotanteWa.href = enlaceWhatsApp(flotanteWa.getAttribute("data-mensaje") || "Hola, quisiera información sobre las soluciones de Grupo Logic.");
+    flotanteWa.href = enlaceWhatsApp(flotanteWa.getAttribute("data-mensaje") || "Hola, quisiera información sobre los productos de Grupo Logic.");
     flotanteWa.hidden = false;
   }
 
