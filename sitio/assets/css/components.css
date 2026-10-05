@@ -42,6 +42,10 @@
 .logotipo--vcodepro b { font-weight: 500; }
 /* Versión a color: solo el símbolo o la parte acentuada usa el color de la marca */
 .logotipo--color.logotipo--unticloud .logotipo__acento { color: #FF6A45; }
+.logotipo--aulamagica b { font-weight: 500; margin-left: .2em; }
+.logotipo--color.logotipo--aulamagica .logotipo__marca { color: #8B5CF6; }
+.logotipo--color.logotipo--aulamagica b { color: #A78BFA; }
+.logotipo--color.logotipo--edunova .logotipo__marca { color: #6C8CFF; }
 .logotipo--color.logotipo--codexia .logotipo__marca { color: #8B7BFF; }
 .logotipo--color.logotipo--vcodepro b, .logotipo--color.logotipo--vcodepro .logotipo__marca { color: #38B6F5; }
 .logotipo--color.logotipo--bookstudio .logotipo__marca { color: #3B74F6; }

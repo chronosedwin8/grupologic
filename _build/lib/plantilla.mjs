@@ -163,6 +163,8 @@ export const logoGrupoLogic = () =>
 // con { color: true } solo el símbolo o la parte acentuada toma el color de la marca.
 const MARCAS = {
   unticloud: () => ['', '<span class="logotipo__acento">Unti</span><b>Cloud</b>'],
+  'aulamagica-ia': () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 6.5l1.4 4.1 4.1 1.4-4.1 1.4L12 17.5l-1.4-4.1L6.5 12l4.1-1.4z" fill="currentColor"/></svg></span>`, 'AulaMágica<b>IA</b>'],
+  edunova: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg></span>`, 'EduNova'],
   codexia: () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="21" height="21" rx="6"/><path d="m9.5 8.5-3.5 3.5 3.5 3.5M14.5 8.5l3.5 3.5-3.5 3.5"/></svg></span>`, 'Codexia'],
   vcodepro: () => [`<span class="logotipo__marca"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 30 L50 88 L82 30" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><rect x="58" y="4" width="24" height="11" rx="5.5" fill="currentColor"/></svg></span>`, 'vcode<b>pro</b>'],
   'codenest-school': () => [`<span class="logotipo__marca"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13" r="9.5"/><circle cx="9" cy="12" r="1.6" fill="currentColor"/><circle cx="15" cy="12" r="1.6" fill="currentColor"/><path d="M9.5 16.2q2.5 1.8 5 0"/><path d="M12 3.5V1.5M8.5 4.2 7.3 2.6M15.5 4.2l1.2-1.6"/></svg></span>`, 'CodeNest<b>School</b>'],
@@ -170,7 +172,7 @@ const MARCAS = {
 };
 export function logotipo(slug, { color = false, etiqueta = true } = {}) {
   const s = solucion(slug);
-  const clase = slug;
+  const clase = slug === 'aulamagica-ia' ? 'aulamagica' : slug;
   return `<span class="logotipo logotipo--${clase}${color ? ' logotipo--color' : ''}"${etiqueta ? ` role="img" aria-label="${esc(s.nombre)}"` : ' aria-hidden="true"'}>${(([m, t]) => `${m}<span class="logotipo__texto">${t}</span>`)(MARCAS[slug]())}</span>`;
 }
 

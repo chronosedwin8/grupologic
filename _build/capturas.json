@@ -139,20 +139,5 @@
    640
   ],
   "ratio": 0.5625
- },
- "veyon-control-aula": {
-  "anchos": [
-   1100,
-   560
-  ],
-  "ratio": 0.5244
- },
- "veyon-control-portada": {
-  "anchos": [
-   1440,
-   960,
-   640
-  ],
-  "ratio": 0.5139
  }
 }

@@ -6,12 +6,15 @@ import { pasos, ctaFinal } from '../lib/bloques.mjs';
 
 const DESCRIPCION_LINEA = {
   gestion: 'Software para dirigir la institución con datos: horarios, guardias, reemplazos, ausentismo docente e indicadores académicos.',
+  ia: 'Inteligencia artificial bajo control de la institución, para que el equipo docente recupere tiempo y los estudiantes aprendan con apoyo.',
   programacion: 'Una ruta completa de programación: de los primeros bloques en preescolar a la creación de agentes de IA en bachillerato.',
   contenidos: 'Una plataforma para que estudiantes y docentes creen contenido propio, interactivo y accesible.',
 };
 
 export const ALT_PANEL = {
   unticloud: 'Panel de administración de UntiCloud con totales de docentes, cursos, materias, guardias y sustituciones',
+  'aulamagica-ia': 'Buscador de herramientas de AulaMágica IA con accesos a presentaciones, plan de clase, rúbricas y quices',
+  edunova: 'Módulo de planeación de EduNova generando una clase de Ciencias Naturales con inteligencia artificial',
   codexia: 'Ventana de Codexia con instrucciones de programación por bloques para mover al personaje',
   'codenest-school': 'Actividad de CodeNest School: tablero con el personaje, una estrella y una bandera, y el programa armado con flechas',
   vcodepro: 'Editor VCodePro con un proyecto en Python y el panel del aula evaluado con criterios IB',
@@ -59,7 +62,7 @@ const ROLES = [
       'Un programa de programación e inteligencia artificial que diferencia a su colegio.',
       'Licencias anuales con precios publicados.',
     ],
-    productos: [['unticloud', 'Ausentismo y KPIs'], ['codexia', 'Programa STEM'], ['vcodepro', 'IA en bachillerato']],
+    productos: [['unticloud', 'Ausentismo y KPIs'], ['edunova', 'Indicadores por sede'], ['codexia', 'Programa STEM'], ['vcodepro', 'IA en bachillerato']],
   },
   {
     id: 'administrativa', nombre: 'Dirección administrativa', titulo: 'Dirección administrativa y financiera',
@@ -68,7 +71,7 @@ const ROLES = [
       'Planes desde un docente hasta toda la institución.',
       'Reembolso total dentro de los 14 días siguientes al pago.',
     ],
-    productos: [['bookstudio', 'Desde un docente hasta todo el colegio'], ['codenest-school', 'Sin renovación automática'], ['unticloud', 'Planes según el tamaño del colegio']],
+    productos: [['aulamagica-ia', 'Licencia Escuela o por Volumen'], ['bookstudio', 'Desde un docente hasta todo el colegio'], ['codenest-school', 'Sin renovación automática'], ['unticloud', 'Planes según el tamaño del colegio']],
   },
   {
     id: 'tic', nombre: 'Coordinación TIC', titulo: 'Coordinación TIC',
@@ -77,16 +80,16 @@ const ROLES = [
       'Usuarios y roles bien definidos, con registros para auditoría.',
       'Instalación silenciosa del editor de escritorio en las salas de cómputo.',
     ],
-    productos: [['unticloud', 'Importación directa desde Untis'], ['vcodepro', 'Despliegue en salas y modo examen'], ['bookstudio', 'Integración con su directorio']],
+    productos: [['unticloud', 'Importación directa desde Untis'], ['aulamagica-ia', 'Integraciones y control por roles'], ['vcodepro', 'Despliegue en salas y modo examen']],
   },
   {
     id: 'academica', nombre: 'Coordinación académica', titulo: 'Coordinación académica e IB',
     gana: [
       'Seguimiento de horas IB y del núcleo EE·TdC·CAS.',
       'Rúbricas con criterios A–D y bitácora de diseño MYP.',
-      'Proyectos y portafolios de los estudiantes en libros interactivos.',
+      'Evaluaciones tipo prueba de Estado y planes de recuperación por estudiante.',
     ],
-    productos: [['unticloud', 'Indicadores IB'], ['vcodepro', 'Rúbricas IB y bitácora MYP'], ['bookstudio', 'Proyectos y portafolios'], ['codenest-school', 'Seguimiento por grupo']],
+    productos: [['unticloud', 'Indicadores IB'], ['vcodepro', 'Rúbricas IB y bitácora MYP'], ['edunova', 'Evaluación y recuperación'], ['bookstudio', 'Proyectos y portafolios']],
   },
 ];
 
@@ -141,7 +144,7 @@ export default function inicio() {
     <div class="hero__contenido">
       <p class="ceja">Software educativo</p>
       <h1 class="titulo-1" id="titulo-principal">Software para colegios, <em>desarrollado por Grupo Logic</em></h1>
-      <p class="hero__texto">Desarrollamos y comercializamos plataformas web y aplicaciones para la gestión escolar, la enseñanza de la programación y la creación de contenidos interactivos.</p>
+      <p class="hero__texto">Desarrollamos y comercializamos plataformas web y aplicaciones para la gestión escolar, la inteligencia artificial en el aula, la enseñanza de la programación y los contenidos interactivos.</p>
       <div class="botones">
         <a class="boton boton--primario" href="/productos/">Ver productos ${icono('flecha')}</a>
         <a class="boton boton--secundario" href="/precios/">Ver precios</a>
@@ -190,8 +193,8 @@ export default function inicio() {
   <div class="contenedor">
     <div class="cifras" data-aparecer-grupo>
       <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="${SOLUCIONES.length}">${SOLUCIONES.length}</p><p class="cifra__texto">productos de software para colegios</p></div>
-      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="${CATEGORIAS.length}">${CATEGORIAS.length}</p><p class="cifra__texto">líneas: gestión, programación y contenidos</p></div>
-      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="600">600</p><p class="cifra__texto">actividades de programación en CodeNest School</p></div>
+      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="${CATEGORIAS.length}">${CATEGORIAS.length}</p><p class="cifra__texto">líneas: gestión, IA, programación y contenidos</p></div>
+      <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="80" data-prefijo="+">+80</p><p class="cifra__texto">herramientas de IA para docentes en AulaMágica IA</p></div>
       <div class="cifra" data-aparecer><p class="cifra__valor" data-contador="120" data-prefijo="+">+120</p><p class="cifra__texto">proyectos de programación listos para el aula en VCodePro</p></div>
     </div>
   </div>
@@ -202,7 +205,7 @@ export default function inicio() {
     <div class="cabecera-seccion" data-aparecer>
       <p class="ceja">Nuestros productos</p>
       <h2 class="titulo-2" id="titulo-portafolio">${mayuscula(N_SOLUCIONES)} productos, <em>${N_LINEAS} líneas</em></h2>
-      <p class="entrada">Software para la gestión escolar, la enseñanza de la programación y los contenidos interactivos. Explore cada línea.</p>
+      <p class="entrada">Software para la gestión escolar, la inteligencia artificial en el aula, la enseñanza de la programación y los contenidos interactivos. Explore cada línea.</p>
     </div>
     ${portafolio()}
   </div>
@@ -240,8 +243,9 @@ export default function inicio() {
     <ul class="compromisos" data-aparecer-grupo>
       <li class="compromiso" data-aparecer>${icono('llave')}<div><h3>Control por roles</h3><p>Cada perfil ve solo lo que necesita: en UntiCloud, rectoría, coordinaciones y docentes tienen permisos distintos.</p></div></li>
       <li class="compromiso" data-aparecer>${icono('ojo')}<div><h3>IA con supervisión</h3><p>En VCodePro, cada conversación con la IA queda registrada para el docente y el modo examen la desactiva.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('escudo')}<div><h3>Ejecución aislada</h3><p>En Codexia, el código de los estudiantes se ejecuta en un entorno aislado, con límites de tiempo y de instrucciones.</p></div></li>
-      <li class="compromiso" data-aparecer>${icono('candado')}<div><h3>Cifrado y respaldo</h3><p>BookStudio cifra los datos en tránsito y hace copia de seguridad diaria, sin seguimiento publicitario.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('escudo')}<div><h3>Datos que no entrenan modelos</h3><p>En AulaMágica IA, los datos de docentes y estudiantes no se usan para entrenar modelos de IA, y las actividades de los estudiantes las crea y supervisa el docente.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('codigo')}<div><h3>Ejecución aislada</h3><p>En Codexia, el código de los estudiantes se ejecuta en un entorno aislado, con límites de tiempo y de instrucciones.</p></div></li>
+      <li class="compromiso" data-aparecer>${icono('candado')}<div><h3>Cifrado y respaldo</h3><p>AulaMágica IA cifra la información en tránsito y en reposo; BookStudio cifra en tránsito y hace copia de seguridad diaria, sin seguimiento publicitario.</p></div></li>
       <li class="compromiso" data-aparecer>${icono('familia')}<div><h3>Datos de menores</h3><p>En CodeNest School, los niños entran sin correo, con un PIN de dibujos; el consentimiento del tutor queda registrado y todo acceso a sus datos queda auditado.</p></div></li>
     </ul>
   </div>
@@ -262,7 +266,7 @@ ${ctaFinal()}`;
   return {
     ruta: '/',
     titulo: 'Grupo Logic · Software educativo para colegios de Latinoamérica',
-    descripcion: `Grupo Logic desarrolla software para colegios: ${lista}. Precios publicados y soporte incluido.`,
+    descripcion: 'Grupo Logic desarrolla software para colegios: gestión escolar, IA para la enseñanza, programación y contenidos interactivos. Precios publicados.',
     og: 'inicio',
     cuerpo,
     scripts: ['form'],

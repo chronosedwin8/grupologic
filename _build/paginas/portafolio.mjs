@@ -5,6 +5,8 @@ import { CONTENIDO } from '../contenido/soluciones.mjs';
 
 const ALT = {
   unticloud: 'Panel de UntiCloud con los totales de la institución importados desde Untis',
+  'aulamagica-ia': 'Herramientas de inteligencia artificial de AulaMágica IA para docentes',
+  edunova: 'Planeación de una clase con inteligencia artificial en EduNova',
   codexia: 'Reto de programación por bloques en Codexia',
   'codenest-school': 'Actividad de programación con flechas en CodeNest School',
   vcodepro: 'Editor de código VCodePro con un proyecto evaluado con criterios IB',
@@ -56,7 +58,7 @@ export default function portafolio() {
     <div class="hero__contenido">
       <p class="ceja">Productos</p>
       <h1 class="titulo-1" id="titulo-principal">Software para colegios <em>de Grupo Logic</em></h1>
-      <p class="hero__texto">${mayuscula(N_SOLUCIONES)} productos propios en ${N_LINEAS} líneas: gestión escolar, programación y pensamiento computacional, y contenidos digitales interactivos. Cada uno con sus planes y precios publicados.</p>
+      <p class="hero__texto">${mayuscula(N_SOLUCIONES)} productos propios en ${N_LINEAS} líneas: gestión escolar, inteligencia artificial para la enseñanza, programación y contenidos interactivos. Cada uno con sus planes y precios publicados.</p>
     </div>
   </div>
 </section>
@@ -94,12 +96,39 @@ export default function portafolio() {
   </div>
 </section>
 
+<section class="seccion seccion--blanca" aria-labelledby="titulo-comparar">
+  <div class="contenedor">
+    <div class="cabecera-seccion" data-aparecer>
+      <p class="ceja">Inteligencia artificial para la enseñanza</p>
+      <h2 class="titulo-2" id="titulo-comparar">AulaMágica IA y EduNova: <em>¿cuál necesita?</em></h2>
+      <p class="entrada">Los dos productos usan inteligencia artificial, pero resuelven necesidades distintas.</p>
+    </div>
+    <div class="tabla-envoltura" data-aparecer>
+      <table class="tabla">
+        <caption>Comparación de AulaMágica IA y EduNova.</caption>
+        <thead><tr><th scope="col">Aspecto</th><th scope="col">AulaMágica IA</th><th scope="col">EduNova</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Qué es</th><td>Conjunto de herramientas de IA para docentes y estudiantes.</td><td>Sistema integrado para todo el ciclo de aprendizaje.</td></tr>
+          <tr><th scope="row">Alcance</th><td>Más de 80 herramientas para docentes y más de 50 para estudiantes.</td><td>Ocho módulos conectados, del libro de texto al boletín.</td></tr>
+          <tr><th scope="row">Perfiles</th><td>Directivos, docentes y estudiantes.</td><td>Directivos, docentes, estudiantes y familias.</td></tr>
+          <tr><th scope="row">Ideal cuando</th><td>Quiere llevar IA segura al trabajo diario del docente, con control institucional.</td><td>Quiere unificar planeación, evaluación, recuperación y comunicación en un solo sistema.</td></tr>
+          <tr><th scope="row">Precio desde</th><td>$4.600.000 COP / 12 meses</td><td>$4.500.000 COP / año</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="botones" style="margin-top:28px">
+      <a class="enlace-flecha" href="/productos/aulamagica-ia/">Ver AulaMágica IA ${icono('flecha')}</a>
+      <a class="enlace-flecha" href="/productos/edunova/">Ver EduNova ${icono('flecha')}</a>
+    </div>
+  </div>
+</section>
+
 ${ctaFinal()}`;
 
   return {
     ruta: '/productos/',
     titulo: 'Productos de software para colegios · Grupo Logic',
-    descripcion: 'Software de Grupo Logic para colegios: gestión escolar, programación para niños y jóvenes y libros interactivos. Planes y precios publicados.',
+    descripcion: 'Software de Grupo Logic para colegios: gestión escolar, IA para la enseñanza, programación y libros interactivos. Planes y precios publicados.',
     og: 'productos',
     cuerpo,
     scripts: ['portfolio', 'form'],

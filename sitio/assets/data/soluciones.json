@@ -6,6 +6,11 @@
       "corto": "Gestión institucional"
     },
     {
+      "id": "ia",
+      "nombre": "Inteligencia artificial para la enseñanza",
+      "corto": "IA para la enseñanza"
+    },
+    {
       "id": "programacion",
       "nombre": "Programación y pensamiento computacional",
       "corto": "Programación"
@@ -38,6 +43,54 @@
       "dominio": "unticloud.de",
       "imagen": "unticloud-panel",
       "portada": "unticloud-portada",
+      "logo": "texto",
+      "desarrollador": "Grupo Logic SAS Latinoamerica"
+    },
+    {
+      "slug": "aulamagica-ia",
+      "nombre": "AulaMágica IA",
+      "categoria": "ia",
+      "lema": "Inteligencia artificial segura para toda su institución.",
+      "resumen": "Más de 80 herramientas de IA para docentes y más de 50 para estudiantes, administradas por la institución: usuarios, licencias, políticas de uso y paneles de adopción por sede.",
+      "beneficios": [
+        "Planeación, evaluación y comunicación con IA",
+        "Tutor para estudiantes con supervisión docente",
+        "Control institucional de usuarios y políticas de uso"
+      ],
+      "publico": [
+        "Rectoría",
+        "Coordinación TIC",
+        "Coordinación académica",
+        "Docentes"
+      ],
+      "urlOficial": "https://www.magicschools.es/",
+      "dominio": "magicschools.es",
+      "imagen": "aulamagica-ia-panel",
+      "portada": "aulamagica-ia-portada",
+      "logo": "texto",
+      "desarrollador": "Grupo Logic SAS Latinoamerica"
+    },
+    {
+      "slug": "edunova",
+      "nombre": "EduNova",
+      "categoria": "ia",
+      "lema": "Un solo sistema para planear, enseñar, evaluar y comunicar.",
+      "resumen": "Sistema de aprendizaje con IA para todo el colegio: ocho módulos conectados, del libro de texto al boletín para las familias, con espacios para docentes, directivos, estudiantes y familias.",
+      "beneficios": [
+        "Ocho módulos conectados en una sola plataforma",
+        "Indicadores por grado, área y sede para directivos",
+        "Studio: libros propios con la identidad de su institución"
+      ],
+      "publico": [
+        "Directivos",
+        "Docentes",
+        "Estudiantes",
+        "Familias"
+      ],
+      "urlOficial": "https://www.teachy.es/",
+      "dominio": "teachy.es",
+      "imagen": "edunova-panel",
+      "portada": "edunova-portada",
       "logo": "texto",
       "desarrollador": "Grupo Logic SAS Latinoamerica"
     },

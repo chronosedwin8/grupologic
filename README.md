@@ -2,15 +2,16 @@
 
 Sitio corporativo estático de Grupo Logic: HTML5, CSS3 y JavaScript puro, sin frameworks.
 Presenta a Grupo Logic SAS Latinoamerica como empresa que **desarrolla y comercializa su propio software**
-para colegios, muestra sus cinco productos
+para colegios, muestra sus siete productos
 (cada una con página propia) y convierte visitas en solicitudes de demostración.
 
 > **Posicionamiento (octubre de 2026):** tras el rechazo de Paddle, que clasificó el sitio como
 > «servicios de consultoría», el sitio se reescribió como **empresa de software con productos propios**:
 > menú Productos / Precios / Soporte, precios publicados, licencias con actualizaciones y soporte técnico
 > incluidos, y sin lenguaje de consultoría (asesoría, diagnóstico, acompañamiento, implementación,
-> fabricantes). Se retiraron ServiVPS, Veyon Control (software de terceros), AulaMágica IA y EduNova.
-> Catálogo: UntiCloud, Codexia, CodeNest School, VCodePro y BookStudio, en tres líneas. 15 páginas.
+> fabricantes). Se retiraron ServiVPS y Veyon Control (software de terceros).
+> Catálogo: UntiCloud, AulaMágica IA, EduNova, Codexia, CodeNest School, VCodePro y BookStudio, en cuatro
+> líneas. 17 páginas.
 
 ---
 
@@ -21,7 +22,7 @@ GrupoLogic/
 ├── sitio/                    ← LO QUE SE PUBLICA (raíz del dominio)
 │   ├── index.html                      Inicio
 │   ├── productos/index.html            Catálogo con filtro
-│   ├── productos/<slug>/index.html     unticloud, codexia, codenest-school, vcodepro, bookstudio
+│   ├── productos/<slug>/index.html     unticloud, aulamagica-ia, edunova, codexia, codenest-school, vcodepro, bookstudio
 │   ├── precios/  soporte/              Precios de todos los planes · soporte técnico
 │   ├── nosotros/  contacto/  privacidad/  terminos/  reembolsos/
 │   ├── 404.html  robots.txt  sitemap.xml  site.webmanifest
@@ -112,7 +113,7 @@ actualizaciones y soporte técnico. No use «asesoría», «consultoría», «di
    (solo ese producto); revise que no aparezcan precios ni animaciones a medias.
 5. Ejecute `npm run todo` (imágenes, páginas, Open Graph) y luego `npm run verificar`.
    El `sitemap.xml`, el menú, el pie, el filtro, el formulario de contacto y los textos con la cantidad de
-   productos («Cinco productos…») se actualizan solos.
+   productos («Siete productos…») se actualizan solos.
 
 ## 5. Construir y previsualizar
 
@@ -205,7 +206,7 @@ en `sitio/assets/img/logo/`. El encabezado y el pie usan la versión en línea g
   páginas medidas. Rendimiento, mediana de 5 corridas (versión anterior): inicio 96, catálogo 99;
   páginas de producto 100. El inicio varía entre corridas (88–100) por el tiempo de bloqueo simulado;
   CLS 0 y LCP ≈ 2 s.
-- `npm run verificar`: 15 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
+- `npm run verificar`: 17 páginas sin errores de HTML, sin enlaces internos rotos, JSON-LD válido.
 - `npm run pruebas`: menú desplegable y móvil (Escape, foco atrapado), pestañas con flechas/Inicio/Fin,
   acordeón, filtro con anuncio `aria-live`, validación accesible del formulario, preselección por URL,
   movimiento reducido y áreas táctiles de 44 px.

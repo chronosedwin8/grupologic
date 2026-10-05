@@ -67,7 +67,7 @@ export default function precios() {
   return {
     ruta: '/precios/',
     titulo: 'Precios y planes de licencia · Grupo Logic',
-    descripcion: 'Precios de UntiCloud, Codexia, CodeNest School, VCodePro y BookStudio: licencias de software con actualizaciones y soporte técnico incluidos.',
+    descripcion: 'Precios y planes de licencia de los productos de software de Grupo Logic para colegios, con actualizaciones y soporte técnico incluidos.',
     og: 'precios',
     cuerpo,
     jsonld: [

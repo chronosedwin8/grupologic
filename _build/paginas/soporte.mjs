@@ -80,7 +80,7 @@ export default function soporte() {
   return {
     ruta: '/soporte/',
     titulo: 'Soporte técnico de productos · Grupo Logic',
-    descripcion: 'Soporte técnico de UntiCloud, Codexia, CodeNest School, VCodePro y BookStudio: uso, acceso, incidencias, licencias, pagos y reembolsos.',
+    descripcion: 'Soporte técnico de los productos de software de Grupo Logic: uso, acceso, incidencias, activación de licencias, pagos y reembolsos.',
     og: 'soporte',
     cuerpo,
     jsonld: [migasLd([['Inicio', '/'], ['Soporte', '/soporte/']])],

@@ -1,7 +1,10 @@
 // Páginas legales: política de privacidad (Ley 1581 de 2012), términos y condiciones y política de reembolsos.
 // IMPORTANTE (propietario): textos generales; conviene revisarlos con un abogado. Confirme el plazo de
 // reembolso (14 días) con su proveedor de pagos. La razón social, el NIT y el correo se toman de config.js.
-import { migasLd } from '../lib/plantilla.mjs';
+import { migasLd, SOLUCIONES } from '../lib/plantilla.mjs';
+
+const NOMBRES = SOLUCIONES.map(s => s.nombre);
+const LISTA_PRODUCTOS = NOMBRES.slice(0, -1).join(', ') + ' y ' + NOMBRES[NOMBRES.length - 1];
 
 const ACTUALIZACION = '5 de octubre de 2026';
 
@@ -163,7 +166,7 @@ ${pagina(secciones, true)}`;
 
 export function reembolsos() {
   const secciones = [
-    ['alcance', 'Alcance', '<p>Esta política aplica a las licencias de los productos de software de Grupo Logic: UntiCloud, Codexia, CodeNest School, VCodePro y BookStudio.</p>'],
+    ['alcance', 'Alcance', `<p>Esta política aplica a las licencias de los productos de software de Grupo Logic: ${LISTA_PRODUCTOS}.</p>`],
     ['plazo', 'Reembolso dentro de los 14 días', '<p>Si no está satisfecho con su compra, puede solicitar el <strong>reembolso total</strong> dentro de los <strong>catorce (14) días calendario</strong> siguientes a la fecha del pago, sin necesidad de justificar el motivo. Este plazo aplica tanto a la compra inicial como a cada renovación.</p>'],
     ['despues', 'Después de los 14 días', '<p>Pasado ese plazo, los pagos no son reembolsables por el período en curso, salvo que la ley aplicable disponga otra cosa o que exista un incumplimiento de nuestra parte. En ese caso, evaluaremos un reembolso proporcional al tiempo no utilizado.</p>'],
     ['incumplimiento', 'Fallas del producto', '<p>Si no podemos activar la licencia, o el producto presenta una falla que impide su uso y no logramos solucionarla, le reembolsaremos el valor pagado por la parte no entregada, sin importar la fecha de la solicitud.</p>'],
