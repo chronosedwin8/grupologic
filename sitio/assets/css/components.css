@@ -314,22 +314,33 @@ select.campo__control { background-image: url("data:image/svg+xml,%3Csvg xmlns='
 .cta-simple .botones { justify-content: center; margin-top: 2.2rem; }
 
 /* ---------- Pie ---------- */
-.pie { background: var(--navy-900); color: var(--muted-oscuro); padding-block: 88px 32px; font-size: .95rem; border-top: 1px solid var(--linea-oscura); }
-.pie__rejilla { display: grid; gap: 48px 32px; grid-template-columns: repeat(2, 1fr); }
-.pie__marca { grid-column: 1 / -1; }
-@media (min-width: 960px) { .pie__rejilla { grid-template-columns: 4fr 2.4fr 2fr 2fr 2.6fr; } .pie__marca { grid-column: auto; } }
-.pie__marca p { margin-top: 20px; max-width: 34ch; }
-.pie__titulo { font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-500); margin-bottom: 16px; }
-.pie ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.pie { background: var(--navy-900); color: var(--muted-oscuro); padding-block: clamp(64px, 8vw, 96px) 28px; font-size: .95rem; border-top: 1px solid var(--linea-oscura); }
+/* Móvil: marca arriba; Productos y Empresa en dos columnas; Legal a lo ancho */
+.pie__rejilla { display: grid; gap: 44px 24px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pie__marca { grid-column: 1 / -1; display: grid; gap: 20px; align-content: start; }
+.pie__columna--legal { grid-column: 1 / -1; }
+/* Tableta: marca arriba y tres columnas */
+@media (min-width: 640px) { .pie__rejilla { grid-template-columns: repeat(3, minmax(0, 1fr)); } .pie__columna--legal { grid-column: auto; } }
+/* Escritorio: una sola fila de cuatro bloques */
+@media (min-width: 960px) {
+  .pie__rejilla { grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: 48px; }
+  .pie__marca { grid-column: auto; padding-right: 24px; }
+}
+.pie__descripcion { max-width: 38ch; line-height: 1.6; }
+.pie__titulo { font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-500); margin-bottom: 14px; }
+.pie ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
 .pie a { color: var(--muted-oscuro); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; min-height: 40px; transition: color .2s; }
 .pie a:hover { color: var(--ivory); text-decoration: underline; }
-.pie__contacto .icono { width: 18px; height: 18px; color: var(--gold-500); }
+.pie__contacto .icono { width: 18px; height: 18px; color: var(--gold-500); flex: none; }
 .pie__contacto li > span { display: inline-flex; align-items: center; gap: 10px; min-height: 40px; }
-.pie__redes { display: flex; gap: 8px; margin-top: 12px; }
+.pie__contacto span { overflow-wrap: anywhere; }
+.pie__redes { display: flex; gap: 8px; }
+.pie__redes:not(:has(a:not([hidden]))) { display: none; }
 .pie__redes a { width: 44px; height: 44px; justify-content: center; border: 1px solid var(--linea-oscura); border-radius: 50%; }
 .pie__redes a:hover { border-color: var(--gold-500); color: var(--gold-300); }
 .pie__redes .icono { width: 18px; height: 18px; }
-.pie__base { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--linea-oscura); display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font-size: .84rem; }
+.pie__base { margin-top: clamp(48px, 6vw, 72px); padding-top: 24px; border-top: 1px solid var(--linea-oscura); display: flex; flex-direction: column; gap: 6px; font-size: .84rem; }
+@media (min-width: 960px) { .pie__base { flex-direction: row; justify-content: space-between; gap: 32px; } }
 
 /* ---------- Botones flotantes ---------- */
 .flotante { position: fixed; right: 16px; z-index: 90; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(227, 205, 154, .5); background: var(--navy-700); color: var(--ivory); box-shadow: 0 12px 30px rgba(6, 16, 31, .35); text-decoration: none; transition: transform .3s var(--transicion), opacity .3s, background-color .3s, visibility .3s; }
@@ -348,6 +359,5 @@ select.campo__control { background-image: url("data:image/svg+xml,%3Csvg xmlns='
 .aviso-cookies .botones { margin-top: 14px; }
 .aviso-cookies .boton { min-height: 44px; padding: 0 18px; }
 @media (max-width: 639px) { .mapa__etiqueta { font-size: 30px; } .mapa__etiqueta--sec { font-size: 24px; } }
-/* Correos y textos largos del pie no deben ensanchar las columnas en móvil */
-.pie__rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.pie__contacto span, .legal a, .tarjeta a { overflow-wrap: anywhere; }
+/* Enlaces largos (correos) no deben ensanchar columnas en móvil */
+.legal a, .tarjeta a { overflow-wrap: anywhere; }

@@ -297,42 +297,14 @@ function encabezado(ruta) {
 
 /* ---------------- Pie ---------------- */
 function pie() {
+  const razon = esc(valido(CONFIG.legal?.razonSocial) ? CONFIG.legal.razonSocial : 'Grupo Logic');
   return `
 <footer class="pie">
   <div class="contenedor">
     <div class="pie__rejilla">
       <div class="pie__marca">
         <a class="marca" href="/" aria-label="Grupo Logic, ir al inicio">${logoGrupoLogic()}</a>
-        <p>Desarrollamos y comercializamos software para colegios de Latinoamérica: gestión escolar, programación y contenidos interactivos.</p>
-        <div class="pie__redes">
-          <a href="#" data-gl="redes.linkedin" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en LinkedIn">${icono('linkedin')}</a>
-          <a href="#" data-gl="redes.instagram" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en Instagram">${icono('instagram')}</a>
-          <a href="#" data-gl="redes.youtube" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en YouTube">${icono('youtube')}</a>
-        </div>
-      </div>
-      <nav aria-label="Productos">
-        <p class="pie__titulo">Productos</p>
-        <ul>${SOLUCIONES.map(s => `<li><a href="/productos/${s.slug}/">${esc(s.nombre)}</a></li>`).join('')}</ul>
-      </nav>
-      <nav aria-label="Empresa">
-        <p class="pie__titulo">Empresa</p>
-        <ul>
-          <li><a href="/nosotros/">Nosotros</a></li>
-          <li><a href="/precios/">Precios</a></li>
-          <li><a href="/soporte/">Soporte</a></li>
-          <li><a href="/contacto/">Contacto</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Legal">
-        <p class="pie__titulo">Legal</p>
-        <ul>
-          <li><a href="/terminos/">Términos y condiciones</a></li>
-          <li><a href="/privacidad/">Política de privacidad</a></li>
-          <li><a href="/reembolsos/">Política de reembolsos</a></li>
-        </ul>
-      </nav>
-      <div>
-        <p class="pie__titulo">Contacto</p>
+        <p class="pie__descripcion">Desarrollamos y comercializamos software para colegios de Latinoamérica: gestión escolar, inteligencia artificial, programación y contenidos interactivos.</p>
         <ul class="pie__contacto">
           <li data-gl="email" hidden><a href="#" data-gl-enlace>${icono('correo')}<span data-gl-texto></span></a></li>
           <li data-gl="telefono" hidden><a href="#" data-gl-enlace>${icono('telefono')}<span data-gl-texto></span></a></li>
@@ -340,13 +312,39 @@ function pie() {
           <li data-gl="direccion" hidden><span>${icono('ubicacion')}<span data-gl-texto></span></span></li>
           <li data-gl="ciudad" hidden><span>${icono('ubicacion')}<span data-gl-texto></span></span></li>
           <li><span>${icono('globo')}<span>Latinoamérica</span></span></li>
-          <li><a href="/contacto/">${icono('mensaje')}<span>Formulario de contacto</span></a></li>
         </ul>
+        <div class="pie__redes">
+          <a href="#" data-gl="redes.linkedin" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en LinkedIn">${icono('linkedin')}</a>
+          <a href="#" data-gl="redes.instagram" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en Instagram">${icono('instagram')}</a>
+          <a href="#" data-gl="redes.youtube" target="_blank" rel="noopener" hidden aria-label="Grupo Logic en YouTube">${icono('youtube')}</a>
+        </div>
       </div>
+      <nav class="pie__columna" aria-label="Productos">
+        <p class="pie__titulo">Productos</p>
+        <ul>${SOLUCIONES.map(s => `<li><a href="/productos/${s.slug}/">${esc(s.nombre)}</a></li>`).join('')}</ul>
+      </nav>
+      <nav class="pie__columna" aria-label="Empresa">
+        <p class="pie__titulo">Empresa</p>
+        <ul>
+          <li><a href="/nosotros/">Nosotros</a></li>
+          <li><a href="/productos/">Productos</a></li>
+          <li><a href="/precios/">Precios</a></li>
+          <li><a href="/soporte/">Soporte</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav class="pie__columna pie__columna--legal" aria-label="Legal">
+        <p class="pie__titulo">Legal</p>
+        <ul>
+          <li><a href="/terminos/">Términos y condiciones</a></li>
+          <li><a href="/privacidad/">Política de privacidad</a></li>
+          <li><a href="/reembolsos/">Política de reembolsos</a></li>
+        </ul>
+      </nav>
     </div>
     <div class="pie__base">
-      <p>© ${ANIO} ${esc(valido(CONFIG.legal?.razonSocial) ? CONFIG.legal.razonSocial : 'Grupo Logic')}. Todos los derechos reservados.</p>
-      <p>${SOLUCIONES.map(s => esc(s.nombre)).join(', ')} son productos de ${esc(valido(CONFIG.legal?.razonSocial) ? CONFIG.legal.razonSocial : 'Grupo Logic')}.</p>
+      <p>© ${ANIO} ${razon}. Todos los derechos reservados.</p>
+      <p>Todos los productos de este sitio son desarrollados por ${razon}.</p>
     </div>
   </div>
 </footer>`;
